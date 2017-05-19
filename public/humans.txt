@@ -1,0 +1,7 @@
+/* TEAM */
+
+
+/* SITE */
+Last Updated: 2017/05/19
+Standards: HTML5, CSS3
+Software: Jekyll, Git, React, Sass

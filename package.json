@@ -1,0 +1,27 @@
+{
+  "name": "hyper-and-non-linear-in-real-time-run-time",
+  "description": "a short free visual poetry publication made with Google Charts",
+  "version": "1.0.0",
+  "author": "Tomer Lichtash",
+  "bugs": {
+    "url": "https://github.com/tomerlichtash/hyper-and-non-linear-in-real-time-run-time/issues"
+  },
+  "devDependencies": {
+    "breakpoint-sass": "^2.7.1",
+    "susy": "^2.2.12"
+  },
+  "homepage": "https://github.com/tomerlichtash/hyper-and-non-linear-in-real-time-run-time#readme",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomerlichtash/hyper-and-non-linear-in-real-time-run-time.github.io.git"
+  },
+  "scripts": {
+    "start": "bundle exec jekyll serve",
+    "lint": "bundle exec sass-lint '_sass/**/*.scss' -v -q -i '_sass/vendor/**/*.scss'"
+  },
+  "dependencies": {
+    "normalize.css": "^7.0.0"
+  }
+}

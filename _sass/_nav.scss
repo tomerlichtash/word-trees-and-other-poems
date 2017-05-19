@@ -1,0 +1,131 @@
+@import 'colors';
+
+%disable-user-select {
+  // -webkit-user-select: none;
+  // -moz-user-select: none;
+  // -ms-user-select: none;
+  user-select: none;
+}
+
+.nav {
+  margin-bottom: 4rem;
+
+  .menu-container {
+    @include container(1200px);
+  }
+
+  .site-title {
+    display: inline-block;
+    float: left;
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+
+  .menu {
+    @extend %disable-user-select;
+
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+
+    &.right {
+      float: right;
+    }
+
+    &.left {
+      float: left;
+    }
+
+    li {
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      vertical-align: top;
+
+      a {
+        border-bottom: 0;
+        border-top: 7px solid transparent;
+        display: block;
+        outline: 0;
+        padding: .75rem 1rem 1rem;
+
+        &:hover {
+          border-top: 7px solid $c1;
+        }
+
+        &:focus {
+          border-top: 7px solid $c3;
+          color: $c3;
+        }
+
+        &[disabled='true'] {
+          &:hover {
+            border-top: 7px solid transparent;
+          }
+        }
+
+        &::before,
+        &::after {
+          position: relative;
+          transition: border 75ms ease-in;
+        }
+
+        &::before {
+          left: 2px;
+        }
+
+        &::after {
+          right: 2px;
+        }
+      }
+
+      &[data-active='true'] {
+        a {
+          border-top: 7px solid $nav-selected-color;
+
+          &:focus {
+            border-color: $c3;
+            color: $c3;
+          }
+        }
+      }
+
+      &:hover {
+        a {
+          &::before,
+          &::after {
+            left: 0;
+          }
+        }
+
+        &.next,
+        &.prev {
+          a {
+            &::before,
+            &::after {
+              right: 0;
+            }
+          }
+        }
+      }
+
+      &.next {
+        a {
+          &::after {
+            content: '\203A';
+            margin-left: .5rem;
+          }
+        }
+      }
+
+      &.prev {
+        a {
+          &::before {
+            content: '\2039';
+            margin-right: .5rem;
+          }
+        }
+      }
+    }
+  }
+}

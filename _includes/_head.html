@@ -1,0 +1,97 @@
+{% capture ignore %}
+{% assign url = site.baseurl | prepend: site.url %}
+{% capture description %}{% if page.meta_description %}{{ page.meta_description }}{% elsif page.teaser %}{{ page.teaser }}{% elsif page.excerpt %}{{ page.excerpt }}{% elsif site.description %}{{ site.description }}{% endif %}{% endcapture %}
+{% assign description = description | strip_html | escape | strip %}
+{% capture title %}{% if page.meta_title %}{{ page.meta_title}}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title | strip_html | strip }}{% endif %}{% endcapture %}
+{% assign title = title | strip_html | escape | strip_newlines %}
+{% endcapture %}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title }}</title>
+<!-- <link rel="stylesheet" type="text/css" href="{{ url }}/assets/css/normalize.css"> -->
+<link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700,800|Cinzel+Decorative:400,700,900|Gloria+Hallelujah|Miriam+Libre:400,700&amp;subset=hebrew,latin-ext" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+
+<meta name="description" content="{{ description }}">
+
+{% if site.google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification}}">{% endif %}
+{% if site.bing_webmastertools_id %}<meta name="msvalidate.01" content="{{ site.bing_webmastertools_id }}" >{% endif %}
+{% if site.google_author %}<link rel="author" href="{{ site.google_author }}">{% endif %}
+{% if page.noindex == true or layout.noindex == true %}<meta name="robots" content="noindex">{% endif %}
+
+<link rel="canonical" href="{{ url }}{{ page.url }}">
+
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ url }}{{ page.url }}">
+<meta property="og:locale" content="{% if site.og_locale == nil %}en_EN{% else %}{{ site.og_locale }}{% endif %}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.title }}">
+
+{% if page.image.title %}<meta property="og:image" content="{{ site.urlimg }}{{ page.image.title }}">{% endif %}
+{% if site.socialmedia.facebook %}<meta property="article:author" content="https://www.facebook.com/{{ site.socialmedia.facebook }}">{% endif %}
+{% if site.socialmedia.twitter %}
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="{{ site.socialmedia.twitter }}">
+<meta name="twitter:creator" content="{{ site.socialmedia.twitter }}">
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="{{ description }}">{% if page.image.title %}
+<meta name="twitter:image" content="{{ site.urlimg }}{{ page.image.title }}">{% endif %}
+{% endif %}
+
+<link type="text/plain" rel="author" href="{{url}}/humans.txt">
+
+{% include _favicon.html %}
+
+{% if page.path == 'index.html' %}
+  {% assign bgColor = '#165aff' %}
+  {% assign fgColor = '#fff' %}
+{% else %}
+  {% assign bgColor = '#fff' %}
+  {% assign fgColor = '#165aff' %}
+{% endif %}
+
+<script type="text/javascript" src="/assets/vendor/loader.js"></script>
+<script type="text/javascript">
+  function drawWordTree(id, word, format, type, str, maxFontSize, bgColor, fgColor) {
+    var poems = [{
+      "id": id,
+      "items": str
+    }];
+
+    var poemData = [['childLabel', 'size', { role: 'style' }]];
+
+    poems.forEach(function(poem, index) {
+      return poem.items.forEach(function(item, itemIndex) {
+        var color = fgColor || "#064aef"; //"{{ fgColor }}"
+        poemData.push([item, 10, color]);
+      });
+    });
+
+    var data = google.visualization.arrayToDataTable(poemData);
+
+    var options = {
+      backgroundColor: "#fff", //"{{ bgColor }}",
+      maxFontSize: maxFontSize || 26,
+      fontName: "Miriam Libre",
+      wordtree: {
+        format: format,
+        type: type,
+        word: word
+      }
+    };
+
+    var wordtree = new google.visualization.WordTree(document.getElementById(id));
+    wordtree.draw(data, options);
+  }
+</script>
+<script type="text/javascript">
+  function drawWordTreePoem(id, word, format, type, str, maxFontSize, bgColor, fgColor) {
+    google.charts.load('current', {
+      packages: ['wordtree']
+    });
+    google.charts.setOnLoadCallback(function() {
+      drawWordTree(id, word, format, type, str, maxFontSize, bgColor, fgColor);
+    });    
+  }
+</script>

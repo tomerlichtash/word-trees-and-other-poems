@@ -1,0 +1,55 @@
+@import 'colors';
+
+$bar-code-height: 70px;
+
+.barcode {
+  bottom: 2rem;
+  height: $bar-code-height + 50;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+
+  .container {
+    background: $white;
+    display: inline-block;
+    vertical-align: middle;
+
+    .serial {
+      color: $black;
+      display: block;
+      font-family: $font2;
+      font-size: .8rem;
+      letter-spacing: .1rem;
+      padding-bottom: 10px;
+    }
+
+    .values {
+      background: $white;
+      display: inline-block;
+      overflow: hidden;
+      padding: 10px;
+      text-align: center;
+      vertical-align: top;
+
+      b {
+        background: $black;
+        font-weight: none;
+      }
+
+      i {
+        background: $white;
+        font-style: normal;
+      }
+
+      b,
+      i {
+        float: left;
+        line-height: $bar-code-height;
+        text-indent: -1000px;
+        width: 2px;
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+title: 'Hyper & Non-Linear in Real Time Run Time'
+bookserial: 0-123456789
+
+# Config
+source: .
+destination: public
+url: 'https://tomerlichtash.com/nlp'
+baseurl: '/'
+permalink: /:title/
+
+markdown: kramdown
+highlight: rouge
+excerpt_separator: "<!--more-->"
+
+# Used: default.html front-matter and compress.html
+# Options: http://jch.penibelst.de
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  profile: false
+  ignore:
+    envs: [development]
+
+category-list: [poem]
+
+exclude:
+    - .bundle
+    - .sass-cache
+    - Gemfile
+    - Gemfile.lock
+    - LICENSE
+    - README.md
+    - package.json
+    - assets/scss
+    - assets/xslt
+
+# Favicons - https://mathiasbynens.be/notes/touch-icons
+favicon-32x32: 'favicon-32x32.png'
+touch-icon-192x192: 'touch-icon-192x192.png'
+apple-touch-icon-180x180-precomposed: 'apple-touch-icon-180x180-precomposed.png'
+apple-touch-icon-152x152-precomposed: 'apple-touch-icon-152x152-precomposed.png'
+apple-touch-icon-144x144-precomposed: 'apple-touch-icon-144x144-precomposed.png'
+apple-touch-icon-120x120-precomposed: 'apple-touch-icon-120x120-precomposed.png'
+apple-touch-icon-114x114-precomposed: 'apple-touch-icon-114x114-precomposed.png'
+apple-touch-icon-76x76-precomposed: 'apple-touch-icon-76x76-precomposed.png'
+apple-touch-icon-72x72-precomposed: 'apple-touch-icon-72x72-precomposed.png'
+apple-touch-icon-precomposed: 'apple-touch-icon-precomposed.png'
+msapplication_tileimage: 'msapplication_tileimage.png' # Size 144x144
+msapplication_tilecolor: '#fabb00'
+
+# SEO
+google_author: 'https://plus.google.com/103964054247332182133' # tomerlichtash
+google_site_verification: ''
+bing_webmastertools_id: ''
+
+# Analytics
+google_analytics_tracking_id: UA-26201270-10 # hyper-and-non-linear web book
+
+# Facebook - https://developers.facebook.com/docs/sharing/opengraph/custom#propertytypes
+og_image: 'http://images.phlow.de/phlow/phlow_de-logo-512x.png'
+og_locale: 'en_EN'
+og_type: 'website'
+
+socialmedia:
+  twitter: tomerlichtash
+  facebook: tomerlichtash

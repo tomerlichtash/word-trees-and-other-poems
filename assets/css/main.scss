@@ -1,0 +1,63 @@
+---
+# DO NOT REMOVE THIS COMMENT
+---
+@import 'vendor/normalize';
+@import 'vendor/susy';
+@import 'colors';
+@import 'typography';
+@import 'mixins';
+@import 'settings';
+@import 'header';
+@import 'footer';
+@import 'nav';
+@import 'layout';
+
+html,
+body {
+  background: $bg-color;
+  color: $body-text-color;
+  font-weight: 100;
+  margin: 0;
+}
+
+a {
+  border-bottom: 2px solid transparent;
+  color: $c1;
+  font-family: $font2;
+  font-weight: 500;
+  text-decoration: none;
+  transition: border 100ms;
+
+  &:hover {
+    border-bottom: 2px solid $c1;
+  }
+
+  &[disabled='true'] {
+    cursor: default;
+    opacity: .5;
+
+    &:hover {
+      border-bottom: 2px solid transparent;
+    }
+  }
+}
+
+.book-nav {
+  overflow: hidden;
+
+  .next,
+  .close,
+  .start {
+    display: block;
+    float: right;
+    padding: 0 0 1rem;
+    text-align: right;
+
+    &::after {
+      content: '\203A';
+      font-size: 1rem;
+      font-weight: 100;
+      margin-left: .5rem;
+    }
+  }
+}

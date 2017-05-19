@@ -1,0 +1,28 @@
+---
+layout: default
+format: word-tree-poem
+---
+<div class="book">
+  {% include _page_nav.html %}
+  <div class="pages single-page">
+    <div class="page word-tree-poem">
+      <div class="page-content">
+        <article itemscope itemtype="http://schema.org/Article">
+          <header>
+            <div itemprop="name">
+              {% if page.subheadline %}<p class="subheadline">{{ page.subheadline }}</p>{% endif %}
+              <h1 class="page-title">{{ page.order }}. {{ page.title }}</h1>
+            </div>
+          </header>
+          <div itemprop="articleSection">
+            <div id="{{page.wordtreeid}}" style="width: 100%; margin: 0 auto; height: 800px;"></div>
+            {{ content }}
+          </div>
+          <!-- <div class="page-order">
+            <i>{{ page.order }}</i>
+          </div> -->
+        </article>
+      </div>
+    </div>
+  </div>
+</div>

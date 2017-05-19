@@ -1,0 +1,53 @@
+---
+layout: default
+---
+<main role="main" class="book">
+  {% include _page_nav.html %}
+  <div class="pages">
+    <article class="page leaflet">
+      <div class="page-content">
+        <div class="inner">
+          <p class="teaser">It's a free poetry book for visual poems made of <strong>Word Trees</strong>.<sup>*</sup></p>
+          <p class="small">
+            <span class="sup">*</span>
+            <span class="text">
+              <strong>Word Trees</strong> are an experimental visualization tool in <a target="_blank" href="https://developers.google.com/chart/interactive/docs/gallery/wordtree">Google Charts</a>. No trees were harmed in the making these poems. Can't promise then same for certain words.
+            </span>
+          </p>
+        </div>        
+      </div>
+    </article>
+    <article class="page front-cover">
+      <div class="page-content">
+        <div class="inner">
+          <header class="header">
+            <a href="/toc">
+              <span class="meta">
+                <h1 class="title"><span>Hyper &amp; Non-Linear <i>in</i> Real Time Run Time</span></h1>
+                <span class="subtitle">
+                <!-- <span>Code &amp; Poetry</span> -->
+                <span class="author">Tomer Lichtash</span>
+                </span>
+              </span>
+            </a>
+            {% include _social_bar.html %}
+          </header>
+          <div class="overlay blur">
+            <div id="front-cover-visual" class="word-tree-basic"></div>
+          </div>
+        </div>
+      </div>
+    </article>    
+  </div>
+</main>
+<script type="text/javascript">
+  drawWordTreePoem('front-cover-visual', 'is', 'implicit', 'double', [
+    "this is a pocket book",
+    "this pocket is beyond pockets",
+    "quite optimistic, an implementation of poetry",
+    "poetry is text",
+    "not all text is text",
+    "a poem is placed inside this these pages",
+    "this book is made of these pages"
+  ], 24, "#fff", "#5d87ec");
+</script>

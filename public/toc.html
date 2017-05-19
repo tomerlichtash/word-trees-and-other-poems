@@ -1,0 +1,385 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hyper &amp; Non-Linear in Real Time Run Time</title>
+<!-- <link rel="stylesheet" type="text/css" href="http://localhost:4000//assets/css/normalize.css"> -->
+<link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700,800|Cinzel+Decorative:400,700,900|Gloria+Hallelujah|Miriam+Libre:400,700&amp;subset=hebrew,latin-ext" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+
+<meta name="description" content="">
+
+<meta name="google-site-verification" content="">
+<meta name="msvalidate.01" content="" >
+<link rel="author" href="https://plus.google.com/103964054247332182133">
+
+
+<link rel="canonical" href="http://localhost:4000//toc">
+
+<meta property="og:title" content="Hyper &amp; Non-Linear in Real Time Run Time">
+<meta property="og:description" content="">
+<meta property="og:url" content="http://localhost:4000//toc">
+<meta property="og:locale" content="en_EN">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Hyper & Non-Linear in Real Time Run Time">
+
+
+<meta property="article:author" content="https://www.facebook.com/tomerlichtash">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="tomerlichtash">
+<meta name="twitter:creator" content="tomerlichtash">
+<meta name="twitter:title" content="Hyper &amp; Non-Linear in Real Time Run Time">
+<meta name="twitter:description" content="">
+
+
+<link type="text/plain" rel="author" href="http://localhost:4000//humans.txt">
+
+
+
+	<link rel="icon" sizes="32x32" href="http://localhost:4000//assets/img/favicon-32x32.png">
+
+	<link rel="icon" sizes="192x192" href="http://localhost:4000//assets/img/touch-icon-192x192.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="180x180" href="http://localhost:4000//assets/img/apple-touch-icon-180x180-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="http://localhost:4000//assets/img/apple-touch-icon-152x152-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000//assets/img/apple-touch-icon-144x144-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="http://localhost:4000//assets/img/apple-touch-icon-120x120-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000//assets/img/apple-touch-icon-114x114-precomposed.png">
+
+	
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="http://localhost:4000//assets/img/apple-touch-icon-76x76-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000//assets/img/apple-touch-icon-72x72-precomposed.png">
+
+	<link rel="apple-touch-icon-precomposed" href="http://localhost:4000//assets/img/apple-touch-icon-precomposed.png">	
+
+	<meta name="msapplication-TileImage" content="http://localhost:4000//assets/img/msapplication_tileimage.png">
+
+	<meta name="msapplication-TileColor" content="#fabb00">
+
+
+
+
+<script type="text/javascript" src="/assets/vendor/loader.js"></script>
+<script type="text/javascript">
+  function drawWordTree(id, word, format, type, str, maxFontSize, bgColor, fgColor) {
+    var poems = [{
+      "id": id,
+      "items": str
+    }];
+
+    var poemData = [['childLabel', 'size', { role: 'style' }]];
+
+    poems.forEach(function(poem, index) {
+      return poem.items.forEach(function(item, itemIndex) {
+        var color = fgColor || "#064aef"; //"#165aff"
+        poemData.push([item, 10, color]);
+      });
+    });
+
+    var data = google.visualization.arrayToDataTable(poemData);
+
+    var options = {
+      backgroundColor: "#fff", //"#fff",
+      maxFontSize: maxFontSize || 26,
+      fontName: "Miriam Libre",
+      wordtree: {
+        format: format,
+        type: type,
+        word: word
+      }
+    };
+
+    var wordtree = new google.visualization.WordTree(document.getElementById(id));
+    wordtree.draw(data, options);
+  }
+</script>
+<script type="text/javascript">
+  function drawWordTreePoem(id, word, format, type, str, maxFontSize, bgColor, fgColor) {
+    google.charts.load('current', {
+      packages: ['wordtree']
+    });
+    google.charts.setOnLoadCallback(function() {
+      drawWordTree(id, word, format, type, str, maxFontSize, bgColor, fgColor);
+    });    
+  }
+</script>
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=564853676858795";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+
+<main role="main" class="book">
+  <!-- <div class="preface">
+    <div class="tree-wrapper">
+      <div id="preface" class="word-tree-basic"></div>
+    </div>
+  </div> -->
+
+  <nav class="nav">
+
+
+
+
+  <div class="menu-container">
+    <ul class="menu left">
+      <li class="home"><a href="http://localhost:4000">Front Page</a></li>
+      <li class="toc" data-active="true"><a href="http://localhost:4000/toc">Table of Contents</a></li>
+      <li class="end"><a href="http://localhost:4000/end">Back Cover</a></li>
+    </ul>    
+    <ul class="menu right">
+      
+
+        
+          
+            
+            <li class="prev"><a href="http://localhost:4000">Previous</a></li>
+            
+          
+
+          
+            
+            <li class="next"><a href="http://localhost:4000/poem1">Next</a></li>
+                  
+          
+        
+
+      
+      
+      
+    </ul>
+  </div>
+  
+</nav>
+
+
+  <div class="pages two-fold">
+    <article class="page moto">
+      <div class="page-content">
+        <div class="inner">
+          <blockquote cite="https://developers.google.com/chart/interactive/docs/gallery/wordtree">
+            <p><span class="highlight">A <strong>Word Tree</strong> depicts multiple parallel sequences of words</span>.</p>
+            <span class="source"><a target="_blank" href="https://developers.google.com/chart/interactive/docs/gallery/wordtree">Google Charts</a></span>
+          </blockquote>
+        </div>
+        <div class="page-order">
+          <i>i</i>
+        </div>
+      </div>
+    </article>
+    <article class="page">
+      <div class="page-content">
+        <h2 class="page-title">Table of Contents</h2>
+        <div class="toc">
+          <div class="toc-list">
+            <ol class="toc-entry-list">
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+                  <li class="toc-entry"><a href="http://localhost:4000/poem1/">Everything About Me</a></li>
+                
+              
+                
+                  <li class="toc-entry"><a href="http://localhost:4000/poem2/">Moving Time</a></li>
+                
+              
+                
+                  <li class="toc-entry"><a href="http://localhost:4000/poem3/">Linear 1</a></li>
+                
+              
+                
+                  <li class="toc-entry"><a href="http://localhost:4000/poem4/">Linear 2</a></li>
+                
+              
+                
+                  <li class="toc-entry"><a href="http://localhost:4000/poem5/">Array</a></li>
+                
+              
+                
+                  <li class="toc-entry"><a href="http://localhost:4000/poem6/">Oriented</a></li>
+                
+              
+                
+                  <li class="toc-entry"><a href="http://localhost:4000/poem7/">Let</a></li>
+                
+              
+                
+                  <li class="toc-entry"><a href="http://localhost:4000/poem8/">Lines Poem</a></li>
+                
+              
+                
+                  <li class="toc-entry"><a href="http://localhost:4000/poem9/">Poem</a></li>
+                
+              
+                
+              
+                
+              
+                
+              
+            </ol>
+          </div>
+          <div class="toc-list">
+            <ol class="toc-entry-list">
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+                
+              
+            </ol>
+          </div>
+        </div>
+        <div class="page-order">
+          <i>ii</i>
+        </div>
+      </div>
+    </article>
+  </div>
+</main>
+
+<script type="text/javascript">
+  drawWordTreePoem('preface', 'a', 'implicit', 'suffix', [
+    "a pocket book",
+    "a book about code",
+    "a book about poetry"
+    // "hyper and non linear",
+    // "real time run time",
+    // "hyper text",
+    // "linear time",
+    // "non linear time",
+    // "non hyper text"
+  ], 18, "#add");
+</script>
+
+
+
+
+<footer class="footer">
+  <div class="site-content-strip">
+    <div class="appendix">
+      
+      <div class="col author">
+        
+        <div class="photo">
+          <span class="image">
+            <img src="/assets/img/tomer-lichtash.jpg" alt="Tomer Lichtash">
+          </span>
+        </div>
+        
+        <div class="meta">
+          <span class="name">Tomer Lichtash</span>
+          <span class="description">Writer &amp; Developer</span>
+          <span class="location">Tel-Aviv, Israel</span>
+
+          <ul class="social">
+            <li class="channel facebook" title="Facebook">
+              <a  class="facebook" target="_blank" href="http://facebook.com/tomerlichtash">
+                <span>Find me on Facebook</span>
+              </a>
+            </li>
+            <li class="channel twitter" aria-label="Twitter"><a class="twitter"  target="_blank" href="http://twitter.com/tomerlichtash"><span>Follow my Twitter updates</span></a></li>
+            <li class="channel instagram" aria-label="Instagram"><a class="instagram" target="_blank" href="http://instagram.com/tomerlichtash"><span>My photos on Instagram</span></a></li>
+            <!-- <li class="channel linkedin" title="LinkedIn"><a target="_blank" href="http://linkedin.com/tomerlichtash">LinkedIn</a></li> -->
+            <!-- <li class="channel flickr" title="Flickr"><a target="_blank" href="http://flickr.com/tomerlichtash">Flickr</a></li> -->
+            <!-- <li class="channel metafilter" title="MetaFilter"><a target="_blank" href="http://metafilter.com/lipsum">MetaFilter</a></li> -->
+            <!-- <li class="channel soundcloud" title="SoundCloud"><a target="_blank" href="http://soundcloud.com/tomerlichtash">SoundCloud</a></li> -->
+            <!-- <li class="channel github" title="Github"><a target="_blank" href="http://github.com/tomerlichtash">Github</a></li> -->
+            <!-- <li class="channel codepen" title="CodePen"><a target="_blank" href="http://codepen.com/loremipsum">CodePen</a></li> -->
+            <li class="channel linkedin" aria-label="LinkedIn"><a class="linkedin"  target="_blank" href="http://linkedin.com/tomerlichtash"><span>Join my professional network on LinkedIn</span></a></li>
+            <!-- <li class="channel flickr" title="Flickr"><a target="_blank" href="http://flickr.com/tomerlichtash">Flickr</a></li> -->
+            <!-- <li class="channel metafilter" title="MetaFilter"><a target="_blank" href="http://metafilter.com/lipsum">MetaFilter</a></li> -->
+            <!-- <li class="channel soundcloud" title="SoundCloud"><a target="_blank" href="http://soundcloud.com/tomerlichtash">SoundCloud</a></li> -->
+            <li class="channel github" aria-label="Github"><a class="github"  target="_blank" href="http://github.com/tomerlichtash"><span>Check out my code on Github</span></a></li>
+            <!-- <li class="channel codepen" title="CodePen"><a target="_blank" href="http://codepen.com/loremipsum"><span>CodePen</span></a></li> -->
+          </ul>
+
+        </div>
+
+      </div>
+      <div class="col license">
+        <p><strong>Hyper & Non-Linear in Real Time Run Time</strong> is licensed under a <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a> &mdash; 2017 (cc) Tomer Lichtash. The source code for this website is availble on Github.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>
+
