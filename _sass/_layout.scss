@@ -1,83 +1,307 @@
+@import 'vendor/susy';
 @import 'barcode';
+@import 'colors';
+@import 'typography';
 
-@mixin reset-page {
-  @include box-shadow(0, 0, 0, rgba(0, 0, 0, 0));
-  background: none;
-  border: 0;
-}
-
-@mixin strong-text {
-  font-family: $font3;
-  font-size: 80%;
-  font-weight: 300;
-  letter-spacing: .1rem;
-  text-transform: uppercase;
-}
+// todo: move to settings
+$desktop: (min-device-width: 960px);
+$mobile: (min-device-width: 375px) and (max-device-height: 667px);
 
 .book {
-  @include span(12 of 12 no-gutters);
+  @include container(100%);
+  @include box-shadow(0, -1px, 0, $pages-border-color);
 
-  margin-top: 0;
-  @include box-shadow(0, 0, .5rem, rgba(0, 0, 0, 0.2));
+  background: $book-background;
+  border-bottom: 1px solid $pages-border-color;
 
   .pages {
-    @include container(1200px);
-    padding-bottom: 6rem;
+    @include span(12 of 12 no-gutters);
+    @include box-shadow(0, 0, 1em, rgba(0, 0, 0, .1));
+    padding: 2rem 0;
+  }
 
-    .page-content {
-      @include span(12 of 12 no-gutters);
-      padding: 0 4rem 6rem;
+  .page-title {
+    display: block;
+    font-family: $font3;
+    margin: 0;
+    text-transform: uppercase;
+
+    input {
+      border: 0;
+      font-family: $font3;
+      text-transform: uppercase;
     }
 
-    &.single-page {
-      .page {
-        @include span(12 of 12 no-gutters);
+    .page-index {
+      &::after {
+        content: '.';
+      }
+    }
+  }
+
+  .page-content {
+    @include span(12 of 12 no-gutters);
+  }
+
+  .page {
+    background: $white;
+    position: relative;
+
+    .page-order {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      text-align: right;
+      width: 100%;
+
+      i {
+        display: inline-block;
+        font-family: $font2;
+        font-style: normal;
+        line-height: 2rem;
+        margin: 1rem 2rem;
       }
     }
 
-    .page-title {
-      display: block;
-      font-family: $font3;
-      font-size: 2.5rem;
-      font-weight: 100;
-      margin: 0;
-      text-transform: uppercase;
-
-      &::after {
-        content: '\2014';
-        display: block;
-        font-size: 1.5rem;
+    &:first-child {
+      .page-order {
         text-align: left;
       }
+
+      &::after {
+        left: 0;
+        right: 100%;
+      }
     }
 
-    .page {
-      @include box-shadow(0, 0, 1rem, rgba(0, 0, 0, .2));
-      @include span(6 of 12 no-gutters);
+    &.leaflet {
+      @include reset-page;
 
-      background: $white;
-      border: 1px solid darken($footer-background, 50%);
-      min-height: 800px;
+      .page-content {
+        position: relative;
+
+        a {
+          font-family: $font3;
+        }
+
+        p {
+          font-family: $font3;
+          font-size: 1.2rem;
+          font-weight: 300;
+          line-height: 1.8rem;
+        }
+
+        strong {
+          font-weight: 400;
+        }
+      }
+    }
+
+    &.back-cover {
+      background: $c1;
+      color: $white;
       position: relative;
 
-      .page-order {
-        bottom: 0;
-        left: 0;
-        position: absolute;
-        text-align: right;
-        width: 100%;
+      .page-content {
+        padding: 0;
+      }
 
-        i {
-          display: inline-block;
-          font-family: $font2;
-          font-style: normal;
-          line-height: 2rem;
-          margin: 1rem 2rem;
+      strong {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      p,
+      a {
+        font-family: $font2;
+      }
+
+      p {
+        font-weight: 500;
+        margin: 0;
+      }
+
+      .summary {
+        margin-bottom: 2rem;
+        padding: 4rem 6rem 0;
+
+        p {
+          line-height: 1.7rem;
+          text-shadow: 0 1px 1px rgba(0, 0, 255, .5);
+        }
+
+        a {
+          color: $white;
+        }
+
+        //.signature {
+        //  display: inline-block;
+        //  // font-size: 1rem;
+        //  float: right;
+        //  font-size: .8rem;
+        //  line-height: 1.4rem;
+        //  margin-top: 4rem;
+        //  text-align: left;
+        //
+        //  .initials {
+        //    display: block;
+        //    font-weight: 900;
+        //    letter-spacing: .1rem;
+        //  }
+        //
+        //  .date,
+        //  .location {
+        //    display: block;
+        //    text-transform: uppercase;
+        //  }
+        //}
+      }
+
+      // back cover author
+      //.author {
+      //  overflow: hidden;
+      //
+      //  .author-image {
+      //    @include span(3 of 12);
+      //    float: right;
+      //
+      //    img {
+      //      @include radius(50%);
+      //      display: block;
+      //      width: 100%;
+      //    }
+      //  }
+      //
+      //  .author-bio {
+      //    @include span(8 of 12);
+      //
+      //    .name,
+      //    .location {
+      //      display: block;
+      //      font-size: .9rem;
+      //      line-height: 1.6rem;
+      //    }
+      //  }
+      //}
+    }
+
+    &.appendix {
+      @include box-shadow(0, 0, 0, rgba(0, 0, 0, 0));
+      background: none;
+      border: 0;
+    }
+
+    &.front-cover {
+      float: right;
+
+      .title {
+        display: block;
+        //font-family: $font4;
+        font-family: $font5;
+        font-size: 2rem;
+        font-weight: 100;
+        line-height: 2.25rem;
+        margin: 1rem auto;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .subtitle {
+        display: block;
+        font-family: $font5;
+        font-size: 1rem;
+        font-weight: normal;
+        text-transform: lowercase;
+      }
+
+      .author-name {
+        display: block;
+        font-family: $font5;
+        font-size: 1.4rem;
+        font-weight: 100;
+      }
+
+      .meta {
+        @include bg1;
+        //border-bottom: 1rem double $white;
+        border-top: 1rem double $white;
+        bottom: 0;
+        color: $white;
+        display: block;
+        padding: 2rem 0;
+        position: absolute;
+        text-align: center;
+        transition: background 125ms;
+        width: 100%;
+        z-index: 10000;
+
+        .title {
+          text-align: center;
+          text-shadow: 0 5px 5px solid $white;
+        }
+
+        .subtitle {
+          text-align: center;
         }
       }
 
-      &:first-child {
-        .page-order {
+      .page-content {
+        padding: 0;
+      }
+    }
+
+    &.moto {
+      display: table;
+      height: 100%;
+
+      .page-content {
+        display: table;
+        height: 100%;
+        padding: 0;
+        vertical-align: middle;
+      }
+
+      .inner {
+        display: table-cell;
+        height: 100%;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .sheet {
+    .page {
+      @include span(12 of 12 no-gutters);
+    }
+  }
+
+  @include breakpoint($desktop) {
+    .wrap {
+      @include box-shadow-inset(0, 0, .2rem, rgba(0, 0, 0, .02));
+      @include container(1200px);
+
+      margin: 2rem auto;
+      padding: .15rem;
+      position: relative;
+    }
+
+    .page {
+      @include span(6 of 12 no-gutters);
+      @include box-shadow(0, 0, 1rem, rgba(0, 0, 0, .2));
+
+      border: 1px solid $image-border-color;
+      min-height: 800px;
+
+      .page-title {
+        font-size: 2.5rem;
+        font-weight: 100;
+
+        input {
+          font-size: 2.5rem;
+          font-weight: 100;
+        }
+
+        &::after {
           text-align: left;
         }
       }
@@ -86,296 +310,122 @@
         padding: 4rem 6rem;
       }
 
-      &.leaflet {
-        @include reset-page;
-        @include span(6 of 12);
-
-        background: none;
-
-        .page-content {
-          min-height: 500px;
-          padding-left: 0;
-          padding-top: 0;
-          position: relative;
-
-          .teaser {
-            text-transform: uppercase;
-          }
-
-          a,
-          p {
-            font-family: $font5;
-          }
-
-          p {
-            font-size: 2rem;
-            line-height: 3rem;
-            margin: 0;
-            opacity: .7;
-            text-align: center;
-          }
-
-          .small {
-            display: block;
-            font-size: 1rem;
-            line-height: 1.8rem;
-            margin-top: 4rem;
-            text-align: left;
-
-            strong {
-              font-weight: 900;
-            }
-
-            .sup {
-              @include span(1 of 12 no-gutters);
-            }
-
-            .text {
-              @include span(11 of 12 no-gutters);
-            }
-          }
-        }
-      }
-
-      &.back-cover-leaflet {
-        @include reset-page;
-
-        background: none;
-        padding-right: 0;
-        padding-top: 0;
-
-        .social-bar {
-          margin-top: 2rem;
-
-          .share-buttons {
-            text-align: center;
-          }
-
-          .share-button {
-            display: inline-block;
-            vertical-align: top;
-          }
-        }
-
-        .simple-info-box {
-          @include span(12 of 12);
-
-          display: block;
-          margin-bottom: 8rem;
-          text-align: center;
-          text-transform: uppercase;
-
-          &.info-foss {
-            display: block;
-            padding: 4rem;
-          }
-
-          .title {
-            font-size: 1.4rem;
-            font-weight: 900;
-            margin-bottom: 1rem;
-          }
-
-          .subtitle {
-            font-size: 1rem;
-            text-transform: uppercase;
-          }
-        }
-      }
-
-      &.back-cover {
-        background: $c1;
-        color: $white;
-        position: relative;
-
-        p {
-          font-family: $font2;
-          font-weight: 300;
-          margin: 0;
-        }
-
-        a {
-          border-bottom: 2px solid $white;
-          color: $white;
-
-          &:hover {
-            border-bottom: 3px solid $white;
-          }
-        }
-
-        .summary {
-          margin-bottom: 2rem;
-          padding-bottom: 2rem;
-
-          p {
-            font-size: 1.15rem;
-            line-height: 1.85rem;
-          }
-
-          .signature {
-            display: inline-block;
-            // font-size: 1rem;
-            float: right;
-            font-size: .8rem;
-            line-height: 1.4rem;
-            margin-top: 4rem;
-            text-align: left;
-
-            .initials {
-              display: block;
-              font-weight: 900;
-              letter-spacing: .1rem;
-            }
-
-            .date,
-            .location {
-              display: block;
-              text-transform: uppercase;
-            }
-          }
-        }
-
-        .author {
-          overflow: hidden;
-
-          .author-image {
-            @include span(3 of 12);
-            float: right;
-
-            img {
-              @include radius(50%);
-              display: block;
-              width: 100%;
-            }
-          }
-
-          .author-bio {
-            @include span(8 of 12);
-
-            .name,
-            .location {
-              display: block;
-              font-size: .9rem;
-              line-height: 1.6rem;
-            }
-          }
-        }
-      }
-
-      &.front-cover {
-        .social-bar {
-          position: absolute;
-          right: -100px;
-          top: 0;
-          width: 100px;
-
-          .share-button {
-            margin-bottom: 5px;
-          }
-        }
-
-        .meta {
-          .author {
-            text-transform: uppercase;
-          }
-
-          .subtitle {
-            line-height: 2rem;
-          }
-        }
-
-        .page-content {
-          // @include span(8 of 12);
-          // display: table-cell;
-          // height: 100%;
-          padding: 0;
-          // vertical-align: bottom;
-        }
+      .toc {
+        margin-top: 6rem;
       }
 
       &.moto {
-        display: table;
-        height: 100%;
+        padding: 4rem;
 
-        .page-content {
-          display: table;
-          height: 100%;
-          padding: 0;
-          vertical-align: middle;
-        }
-
-        .inner {
-          display: table-cell;
-          height: 100%;
-          padding: 4rem;
-          vertical-align: middle;
-        }
-      }
-
-      p {
-        font-family: $font3;
-        font-size: 1rem;
-        font-weight: 300;
-        line-height: 2rem;
-      }
-
-      blockquote {
-        font-family: $font3;
-        overflow: hidden;
-
-        p {
-          font-size: 1.5rem;
-          line-height: 2rem;
-          margin: 0;
-
-          strong {
-            @include strong-text;
-          }
-        }
-
-        .source {
-          display: block;
-          font-size: 1rem;
-          margin-top: 1rem;
-          text-align: right;
-
-          a {
-            display: inline-block;
+        blockquote {
+          p {
+            font-size: 1.25rem;
             font-weight: 500;
-            line-height: 1rem;
-          }
-
-          &::before {
-            content: '\2014';
-            margin-right: .5rem;
+            line-height: 2rem;
           }
         }
       }
     }
   }
 
-  .toc {
-    margin-top: 6rem;
+  @include breakpoint($mobile) {
+    @include container(100%);
+    overflow: hidden;
 
-    .toc-list {
+    .page {
+      @include span(12 of 12);
 
-      .toc-list-title {
-        font-family: $font3;
-        font-size: 1.5rem;
-        font-style: italic;
-        font-weight: 300;
+      .page-content {
+        padding: 2rem;
       }
 
-      .toc-entry-list {
-        color: $toc-neutral-text-color;
+      .page-title {
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-align: center;
 
-        .toc-entry {
-          font-family: $font3;
-          font-size: 1.5rem;
-          font-weight: 300;
-          line-height: 2rem;
-          padding-left: .75rem;
+        &::after {
+          text-align: center;
         }
+      }
+
+      .page-order {
+        display: none;
+      }
+
+      &.moto {
+        padding: 2rem 0;
+
+        blockquote {
+          text-align: center;
+
+          p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            line-height: 1.8rem;
+
+          }
+
+          .source {
+            text-align: center;
+          }
+        }
+      }
+
+      &.leaflet {
+        @include span(12 of 12);
+
+        min-height: 0;
+        // margin-top: 1rem;
+
+        .page-content {
+          background: none;
+          overflow: hidden;
+
+          p {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            margin: 0 2rem;
+          }
+
+          .small {
+            font-size: .8rem;
+            line-height: 1.5rem;
+            margin-top: 2rem;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.toc {
+  .toc-list {
+    .toc-list-title {
+      font-family: $font3;
+      font-size: 1.5rem;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .toc-entry-list {
+      color: $toc-neutral-text-color;
+      list-style-position: inside;
+      list-style-type: cjk-ideographic;
+      margin: 0;
+      padding: 0;
+
+      .toc-entry {
+        font-family: $font3;
+        font-size: 1.15rem;
+        font-weight: 300;
+        line-height: 2rem;
+      }
+
+      a {
+        font-weight: 900;
+        margin-left: .5rem;
       }
     }
   }

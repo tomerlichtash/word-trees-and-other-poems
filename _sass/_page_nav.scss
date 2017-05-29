@@ -1,0 +1,104 @@
+@import 'typography';
+@import 'mixins';
+@import 'colors';
+
+.inner-page-nav {
+  @include transition(all, 255ms);
+
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 50px;
+  z-index: 10000;
+
+  .link-wrap {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  .next,
+  .prev {
+    display: table;
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 50px;
+
+    a {
+      border-bottom: 0;
+      display: table-cell;
+      height: 100%;
+      position: relative;
+      vertical-align: middle;
+      width: 50px;
+      z-index: 10000;
+
+      .link-caption {
+        display: none;
+      }
+
+      &:hover {
+        border-bottom: 0;
+      }
+
+      &::after {
+        display: table-cell;
+        font-family: $font3;
+        font-size: 4rem;
+        font-weight: 100;
+        right: 0;
+        text-align: center;
+        vertical-align: middle;
+        width: 50px;
+      }
+    }
+  }
+
+  .next {
+    a {
+      &::after {
+        content: '\203A';
+      }
+    }
+  }
+
+  .prev {
+    a {
+      &::after {
+        content: '\2039';
+      }
+    }
+  }
+}
+
+.inner-page-nav-next {
+  @include transition(all, 150ms);
+  right: -50px;
+
+  &:hover {
+    a {
+      right: -3px;
+      color: $c3;
+    }
+  }
+}
+
+.inner-page-nav-prev {
+  @include transition(all, 125ms);
+
+  left: -50px;
+
+  &:hover {
+    a {
+      left: -3px;
+      color: $c3;
+    }
+  }
+}

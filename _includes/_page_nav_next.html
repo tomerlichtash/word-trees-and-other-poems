@@ -1,0 +1,41 @@
+{% assign prevPage = page.order | minus:1 %}
+{% assign nextPage = page.order | plus:1 %}
+{% assign isHome = page.path == 'index.html' %}
+
+<nav class="inner-page-nav inner-page-nav-next">
+  <div class="menu-container">
+
+    <ul class="link-wrap link-wrap-next">
+      {% if page.path == 'index.html' %}
+      <li class="next">
+        <a href="{{ site.url }}/toc">
+          <span class="link-caption-wrap">
+            <span class="link-caption" aria-label="Next Page">Next Page</span>
+          </span>
+        </a>
+      </li>
+      {% else %}
+        {% if nextPage > site.page_count %}
+        <li class="next">
+          <a href="{{ site.url }}/end">
+            <span class="link-caption-wrap">
+              <span class="link-caption" aria-label="Back Cover">Back Cover</span>
+            </span>
+          </a>
+        </li>
+        {% else %}
+        <li class="next">
+          <a href="{{ site.url }}/poem{{ nextPage }}">
+            <span class="link-caption-wrap">
+              <span class="link-caption" aria-label="Next Page">Next Page</span>
+            </span>
+          </a>
+        </li>
+        {% endif %}
+
+      {% endif %}
+    </ul>
+
+
+  </div>
+</nav>

@@ -1,14 +1,14 @@
 ---
 layout: "word-tree-poem"
 wordtreeid: "word-tree-poem-8"
-title: "Lines Poem"
+title: "line"
 permalink: "/poem8/"
 order: 8
 categories:
   - poem
 ---
 <script>
-  drawWordTreePoem('word-tree-poem-8', 'line', 'implicit', 'double', [
+  drawWordTreePoem('word-tree-poem-{{ page.order }}', '{{ page.title }}', 'implicit', 'double', [
     "i wrote the first line",
     "then i wrote the second line",
     "then i wrote the third line",

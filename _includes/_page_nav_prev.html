@@ -1,0 +1,51 @@
+{% assign prevPage = page.order | minus:1 %}
+{% assign nextPage = page.order | plus:1 %}
+{% assign isHome = page.path == 'index.html' %}
+
+<nav class="inner-page-nav inner-page-nav-prev">
+  <div class="menu-container">
+
+    <ul class="link-wrap link-wrap-prev">
+      {% if prevPage == 0 %}
+      <li class="prev">
+        <a href="{{ site.url }}/toc">
+          <span class="link-caption-wrap">
+            <span class="link-caption" aria-label="Previous Page">Previous Page</span>
+          </span>
+        </a>
+      </li>
+      {% else %}
+        {% if page.is_last_page %}
+        <li class="prev">
+          <a href="{{ site.url }}/poem{{ page.page_count }}">
+            <span class="link-caption-wrap">
+              <span class="link-caption" aria-label="Back to Last Poem">Back</span>
+            </span>
+          </a>
+        </li>
+        {% else %}
+          {% if prevPage == -1 %}
+
+          <li class="prev">
+            <a href="{{ site.url }}/">
+              <span class="link-caption-wrap">
+                <span class="link-caption" aria-label="Back to Last Poem">Back</span>
+              </span>
+            </a>
+          </li>
+          {% else %}
+          <li class="prev">
+            <a href="{{ site.url }}/poem{{ prevPage }}">
+              <span class="link-caption-wrap">
+                <span class="link-caption" aria-label="Previous Page">Previous Page</span>
+              </span>
+            </a>
+          </li>
+          {% endif %}
+        {% endif %}
+      {% endif %}
+    </ul>
+
+  </div>
+</nav>
+

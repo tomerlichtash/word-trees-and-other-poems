@@ -54,6 +54,25 @@
 <script type="text/javascript" src="/assets/vendor/loader.js"></script>
 <script type="text/javascript">
   function drawWordTree(id, word, format, type, str, maxFontSize, bgColor, fgColor) {
+
+    var titleInput = document.getElementById('word-tree-input');
+    var originalPoemTitle = word;
+
+    function render(e) {
+      var res = e.target.value;
+      if (!res) {
+        titleInput.value = '{{ page.title }}';
+      }
+      
+      titleInput.removeEventListener('change', render);
+      
+      drawWordTree(id, res ? res.toLowerCase() : '{{ page.title }}', format, type, str, maxFontSize, bgColor, fgColor);
+    }
+
+    if (titleInput) {
+      titleInput.addEventListener('change', render);
+    }
+
     var poems = [{
       "id": id,
       "items": str
@@ -72,7 +91,7 @@
 
     var options = {
       backgroundColor: "#fff", //"{{ bgColor }}",
-      maxFontSize: maxFontSize || 26,
+      maxFontSize: maxFontSize || 15,
       fontName: "Miriam Libre",
       wordtree: {
         format: format,

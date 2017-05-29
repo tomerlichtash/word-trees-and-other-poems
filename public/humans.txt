@@ -2,6 +2,6 @@
 
 
 /* SITE */
-Last Updated: 2017/05/19
+Last Updated: 2017/05/29
 Standards: HTML5, CSS3
 Software: Jekyll, Git, React, Sass

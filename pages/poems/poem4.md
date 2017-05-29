@@ -1,14 +1,14 @@
 ---
 layout: "word-tree-poem"
 wordtreeid: "word-tree-poem-4"
-title: "Linear 2"
+title: "poem"
 permalink: "/poem4/"
 order: 4
 categories:
   - poem
 ---
 <script>
-  drawWordTreePoem('word-tree-poem-4', 'poem', 'implicit', 'double', [
+  drawWordTreePoem('word-tree-poem-{{ page.order }}', '{{ page.title }}', 'implicit', 'double', [
     "visual poetry",
     "i am sick and tired of hearing about it, visual poetry",
     "poetry is invisible",

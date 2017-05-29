@@ -23,7 +23,7 @@
 <meta property="og:url" content="http://localhost:4000//404.html">
 <meta property="og:locale" content="en_EN">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Hyper & Non-Linear in Real Time Run Time">
+<meta property="og:site_name" content="Word Trees">
 
 
 <meta property="article:author" content="https://www.facebook.com/tomerlichtash">
@@ -70,6 +70,25 @@
 <script type="text/javascript" src="/assets/vendor/loader.js"></script>
 <script type="text/javascript">
   function drawWordTree(id, word, format, type, str, maxFontSize, bgColor, fgColor) {
+
+    var titleInput = document.getElementById('word-tree-input');
+    var originalPoemTitle = word;
+
+    function render(e) {
+      var res = e.target.value;
+      if (!res) {
+        titleInput.value = 'Error 404';
+      }
+      
+      titleInput.removeEventListener('change', render);
+      
+      drawWordTree(id, res ? res.toLowerCase() : 'Error 404', format, type, str, maxFontSize, bgColor, fgColor);
+    }
+
+    if (titleInput) {
+      titleInput.addEventListener('change', render);
+    }
+
     var poems = [{
       "id": id,
       "items": str
@@ -88,7 +107,7 @@
 
     var options = {
       backgroundColor: "#fff", //"#fff",
-      maxFontSize: maxFontSize || 26,
+      maxFontSize: maxFontSize || 15,
       fontName: "Miriam Libre",
       wordtree: {
         format: format,
@@ -136,6 +155,111 @@
   return t;
 }(document, "script", "twitter-wjs"));</script>
 
+
+
+
+
+
+<div class="site-header">
+  <div class="inner">
+    <h1 class="site-title">
+      <a href="/">
+        <strong>Word Trees</strong><br/>and Other Poems
+      </a>
+    </h1>
+    
+<div class="social-bar" id="social-bar">
+
+  <div class="social-bar-inner">
+
+    <div class="btn toggle">
+      <i class="icon"></i>
+      <span class="caption" title="Share">
+        Share
+        <!--<span class="off-screen" aria-hidden="false"></span>-->
+      </span>
+    </div>
+
+    <div class="social-media-channels-menu">
+      <div class="social-media-channels-menu-inner">
+        <div class="share-button">
+          <div class="fb-share-button"
+               data-href="https://developers.facebook.com/docs/plugins/"
+               data-layout="button"
+               data-size="large"
+               data-mobile-iframe="true">
+            <a class="fb-xfbml-parse-ignore"
+               target="_blank"
+               href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a>
+          </div>
+        </div>
+        <div class="share-button">
+          <a class="twitter-share-button customer"
+             href="https://twitter.com/share"
+             target="_blank"
+             data-size="large"
+             data-text="Word Trees &mdash; "
+             data-url="http://localhost:4000"
+             data-hashtags="visual_poetry,web_book"
+             data-via="tomerlichtash">Tweet</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+<nav class="nav" id="primary-nav" data-page-count="9">
+  <div class="menu-container">
+    <ul class="menu left">
+      <li class="home site-title" >
+        <a href="http://localhost:4000">
+          <span class="caption">Front Page</span>
+        </a>
+      </li>
+      <li class="toc" >
+      <a href="http://localhost:4000/toc">
+        <span class="short-caption">Index</span>
+        <span class="caption">Table of Contents</span>
+      </a>
+      </li>
+      <li class="end" ><a href="http://localhost:4000/end">Back Cover</a></li>
+
+      <li class="random"><i class="icon random"></i><a id="random-poem" href="http://localhost:4000/poem">Random Page</a></li>
+      
+        
+          
+            <li class="page-index-preview" data-active="true"><a href="http://localhost:4000/poem9999">Page 9999/9: <strong>Error 404</strong></a></li>
+          
+        
+      
+
+      
+    </ul>
+
+    <ul class="menu right">
+      
+        
+          
+            
+            <li class="prev"><a href="http://localhost:4000/poem9998">Previous</a></li>
+            <!--<li class="page-index-preview" data-active="true"><a href="http://localhost:4000/poem9999"><strong>9999</strong>/9</a></li>-->
+            
+          
+          
+            
+            <li class="next"><a href="http://localhost:4000/poem10000">Next</a></li>
+            
+          
+        
+      
+      
+    </ul>
+  </div>
+</nav>
+
+
 <div>
   <article itemscope itemtype="http://schema.org/Article">
     <header>
@@ -169,54 +293,22 @@
 
 <footer class="footer">
   <div class="site-content-strip">
-    <div class="appendix">
-      
-      <div class="col author">
-        
-        <div class="photo">
-          <span class="image">
-            <img src="/assets/img/tomer-lichtash.jpg" alt="Tomer Lichtash">
-          </span>
-        </div>
-        
-        <div class="meta">
-          <span class="name">Tomer Lichtash</span>
-          <span class="description">Writer &amp; Developer</span>
-          <span class="location">Tel-Aviv, Israel</span>
-
-          <ul class="social">
-            <li class="channel facebook" title="Facebook">
-              <a  class="facebook" target="_blank" href="http://facebook.com/tomerlichtash">
-                <span>Find me on Facebook</span>
-              </a>
-            </li>
-            <li class="channel twitter" aria-label="Twitter"><a class="twitter"  target="_blank" href="http://twitter.com/tomerlichtash"><span>Follow my Twitter updates</span></a></li>
-            <li class="channel instagram" aria-label="Instagram"><a class="instagram" target="_blank" href="http://instagram.com/tomerlichtash"><span>My photos on Instagram</span></a></li>
-            <!-- <li class="channel linkedin" title="LinkedIn"><a target="_blank" href="http://linkedin.com/tomerlichtash">LinkedIn</a></li> -->
-            <!-- <li class="channel flickr" title="Flickr"><a target="_blank" href="http://flickr.com/tomerlichtash">Flickr</a></li> -->
-            <!-- <li class="channel metafilter" title="MetaFilter"><a target="_blank" href="http://metafilter.com/lipsum">MetaFilter</a></li> -->
-            <!-- <li class="channel soundcloud" title="SoundCloud"><a target="_blank" href="http://soundcloud.com/tomerlichtash">SoundCloud</a></li> -->
-            <!-- <li class="channel github" title="Github"><a target="_blank" href="http://github.com/tomerlichtash">Github</a></li> -->
-            <!-- <li class="channel codepen" title="CodePen"><a target="_blank" href="http://codepen.com/loremipsum">CodePen</a></li> -->
-            <li class="channel linkedin" aria-label="LinkedIn"><a class="linkedin"  target="_blank" href="http://linkedin.com/tomerlichtash"><span>Join my professional network on LinkedIn</span></a></li>
-            <!-- <li class="channel flickr" title="Flickr"><a target="_blank" href="http://flickr.com/tomerlichtash">Flickr</a></li> -->
-            <!-- <li class="channel metafilter" title="MetaFilter"><a target="_blank" href="http://metafilter.com/lipsum">MetaFilter</a></li> -->
-            <!-- <li class="channel soundcloud" title="SoundCloud"><a target="_blank" href="http://soundcloud.com/tomerlichtash">SoundCloud</a></li> -->
-            <li class="channel github" aria-label="Github"><a class="github"  target="_blank" href="http://github.com/tomerlichtash"><span>Check out my code on Github</span></a></li>
-            <!-- <li class="channel codepen" title="CodePen"><a target="_blank" href="http://codepen.com/loremipsum"><span>CodePen</span></a></li> -->
-          </ul>
-
-        </div>
-
-      </div>
-      <div class="col license">
-        <p><strong>Hyper & Non-Linear in Real Time Run Time</strong> is licensed under a <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a> &mdash; 2017 (cc) Tomer Lichtash. The source code for this website is availble on Github.</p>
-      </div>
-    </div>
+    <p><a class="btn" href=http://localhost:4000><strong>Word Trees and Other Poems</strong></a> &mdash; 2017 <a rel="license" class="license-type" target="_blank" title="This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><i class="icon license"></i><span class="caption">cc</span></a> <strong>Tomer Lichtash</strong></p>
   </div>
 </footer>
 
+<script>
+  var primaryNav = document.getElementById('primary-nav');
+  var countTotal = Number(primaryNav.getAttribute('data-page-count'));
 
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+
+  document.getElementById('random-poem').setAttribute('href', 'http://localhost:4000/poem' + getRandomInt(1, countTotal));
+</script>
 
 
 </body>

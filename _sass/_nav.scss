@@ -1,131 +1,330 @@
+@import './../node_modules/susy/sass/susy';
+@import './../node_modules/breakpoint-sass/stylesheets/breakpoint';
 @import 'colors';
+@import 'typography';
+@import 'mixins';
+
+$desktop: (min-device-width: 960px);
+$mobile: (min-device-width: 375px) and (max-device-height: 667px);
 
 %disable-user-select {
-  // -webkit-user-select: none;
-  // -moz-user-select: none;
-  // -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
+.site-header {
+  //border-bottom: 1px solid $transparent1;
+  //background: $white;
+  font-family: $font2;
+
+  .inner {
+    @include container(1200px);
+    position: relative;
+    //line-height: 2rem;
+    //border-top: 2px solid $c1;
+    //padding: .5rem 1.75rem;
+  }
+
+  .site-title {
+    //@include span(6 of 12);
+    text-align: left;
+    margin: 0;
+    padding: 2rem 0;
+    font-size: 1.25rem;
+    font-weight: 100;
+    text-transform: lowercase;
+
+    strong {
+      font-weight: 900;
+      font-size: 2rem;
+      text-transform: capitalize;
+    }
+
+    a {
+      //text-shadow: 0 1px 1px rgba(255, 255, 255, .5);
+      font-family: $font5;
+      color: $c1;
+      border: 0;
+
+      &:hover {
+        color: $c3;
+        border: 0;
+      }
+    }
+  }
+}
+
 .nav {
-  margin-bottom: 4rem;
+  //border-top: 1px solid $white;
+  //padding-top: 1rem;
+  background: $nav-background;
+  overflow: hidden;
+}
+
+.menu {
+  @extend %disable-user-select;
+
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+
+  li {
+    position: relative;
+  }
+
+  .start-here {
+    //color: $c1;
+    //font-family: $font5;
+    //font-size: 1rem;
+    //font-weight: 900;
+  }
+
+  a {
+    @include transition(all, 75ms, ease-out);
+    border: 1px solid transparent;
+    border-bottom: 0;
+    color: mix($black, $transparent2);
+    display: block;
+    font-size: .9rem;
+    font-weight: 500;
+    line-height: 3rem;
+    outline: 0;
+    padding: 0 2rem;
+
+    &:hover {
+      background: $c1;
+      border-bottom: 0;
+      color: $white;
+    }
+
+    &::before,
+    &::after {
+      position: relative;
+      transition: border 75ms ease-in;
+    }
+
+    &::before {
+      left: 2px;
+    }
+
+    &::after {
+      right: 2px;
+    }
+  }
+
+  [data-active='true'] {
+    a {
+      @include box-shadow(0, 0, .5rem, $transparent2);
+      background: $book-background;
+      border: 1px solid $transparent2;
+      border-bottom: 0;
+      color: $c1;
+
+      &:focus {
+        color: $c1;
+      }
+    }
+  }
+
+  .next {
+    a {
+      &::after {
+        content: '\203A';
+        margin-left: .5rem;
+      }
+    }
+  }
+
+  .prev {
+    a {
+      &::before {
+        content: '\2039';
+        margin-right: .5rem;
+      }
+    }
+  }
+
+
+}
+
+@include breakpoint($desktop) {
+  .short-caption {
+    display: none;
+  }
 
   .menu-container {
     @include container(1200px);
   }
 
-  .site-title {
-    display: inline-block;
-    float: left;
-    font-size: 1rem;
-    line-height: 2rem;
-  }
-
   .menu {
-    @extend %disable-user-select;
-
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
-
     &.right {
       float: right;
     }
 
     &.left {
       float: left;
+
     }
 
     li {
       display: inline-block;
       list-style: none;
       margin: 0;
-      vertical-align: top;
+      vertical-align: bottom;
+    }
+  }
+}
 
-      a {
-        border-bottom: 0;
-        border-top: 7px solid transparent;
-        display: block;
-        outline: 0;
-        padding: .75rem 1rem 1rem;
+@include breakpoint($mobile) {
+  .caption {
+    display: none;
+  }
 
-        &:hover {
-          border-top: 7px solid $c1;
-        }
+  .short-caption {
+    display: block;
+  }
 
-        &:focus {
-          border-top: 7px solid $c3;
-          color: $c3;
-        }
+  .menu-container {
+    @include span(12 of 12 no-gutters);
+  }
 
-        &[disabled='true'] {
-          &:hover {
-            border-top: 7px solid transparent;
-          }
-        }
+  .menu {
+    &.right {
+      @include span(12 of 12 no-gutters);
 
-        &::before,
-        &::after {
-          position: relative;
-          transition: border 75ms ease-in;
-        }
+      background: $footer-background;
+      border-bottom: 1px solid $footer-background;
+      border-top: 1px solid $footer-background;
+      text-align: center;
 
-        &::before {
-          left: 2px;
-        }
-
-        &::after {
-          right: 2px;
-        }
+      .prev,
+      .next {
+        display: inline-block;
       }
+    }
 
-      &[data-active='true'] {
-        a {
-          border-top: 7px solid $nav-selected-color;
+    &.left {
+      @include span(12 of 12 no-gutters);
 
-          &:focus {
-            border-color: $c3;
-            color: $c3;
-          }
-        }
-      }
-
-      &:hover {
-        a {
-          &::before,
-          &::after {
-            left: 0;
-          }
-        }
-
-        &.next,
-        &.prev {
-          a {
-            &::before,
-            &::after {
-              right: 0;
-            }
-          }
-        }
-      }
-
-      &.next {
-        a {
-          &::after {
-            content: '\203A';
-            margin-left: .5rem;
-          }
-        }
-      }
-
-      &.prev {
-        a {
-          &::before {
-            content: '\2039';
-            margin-right: .5rem;
-          }
-        }
+      li {
+        float: left;
+        list-style: none;
+        margin: 0;
+        text-align: center;
+        width: 33.33%;
       }
     }
   }
+}
+
+
+.btn {
+  padding: .5rem;
+
+  .caption {
+    //visibility: hidden;
+    @include transition(all, 100ms, ease-in);
+    position: relative;
+    opacity: 0;
+    right: -5px;
+  }
+
+  .icon {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background-color: $c1;
+    -webkit-mask-image: url('./../img/social/share.svg');
+    mask-image: url('./../img/social/share.svg');
+    vertical-align: middle;
+  }
+}
+
+.social-bar {
+  position: absolute;
+  top: 3rem;
+  right: -1rem;
+  //left: -50px;
+  z-index: 10000;
+}
+
+.share-button {
+  margin: 0.25rem 0 0;
+}
+
+.social-bar-inner {
+  position: relative;
+  text-align: center;
+  float: right;
+
+
+  &:hover {
+    .toggle {
+      //@include box-shadow(0, 0, .5rem, rgba(0, 0, 0, .5));
+      //background-color: rgba(0, 0, 0, .2);
+      margin-right: 1rem;
+    }
+
+    .caption {
+      right: 0;
+      opacity: 1;
+    }
+
+    .icon {
+      background-color: $c3;
+    }
+
+    .social-media-channels-menu {
+      background: $white;
+      display: block;
+    }
+  }
+}
+
+.toggle {
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  z-index: 10000;
+  margin-right: 0;
+  @include transition(all, 75ms, ease-in);
+
+  //border-bottom: 0;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  font-family: $font2;
+  font-size: .8rem;
+  float: left;
+}
+
+.social-media-channels-menu {
+  .social-media-channels-menu-inner {
+    padding: 1rem;
+  }
+
+  -webkit-border-radius: 5px;
+  -webkit-border-top-right-radius: 0;
+  -moz-border-radius: 5px;
+  -moz-border-radius-topright: 0;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+
+  @include box-shadow(0, 0, .5rem, rgba(0, 0, 0, .2));
+  border: 1px solid $transparent2;
+
+  position: absolute;
+  display: none;
+  background: $white;
+  right: 0;
+  top: 0;
+  //width: 100px;
+  z-index: -1;
+  text-align: center;
+  padding: 2rem 0 0;
 }

@@ -1,7 +1,16 @@
 @import './../node_modules/susy/sass/susy';
 @import './../node_modules/breakpoint-sass/stylesheets/breakpoint';
-@import './typography';
+@import 'typography';
+@import 'colors';
 
+//@mixin dashify {
+//&::before,
+//&::after {
+//  content: '\2014';
+//  margin: 0 .5rem;
+//  opacity: .7;
+//}
+//}
 // @mixin opacity($opacity) {
 //   opacity: $opacity;
 //   $opacity-ie: $opacity * 100;
@@ -28,19 +37,53 @@
   transition: $prop $time $ease;
 }
 
-@mixin rotate($deg: 0, $deg2: 0) {
-  height: 32px;
-  left: 0;
-  line-height: 32px;
-  padding: 0 1em;
-  position: absolute;
-  top: 0;
-  transform: rotate(-90deg) translateX(-100%);
-  transform-origin: top left;
-}
-
 @mixin radius($rad) {
   // -webkit-border-radius: $rad;
   // -moz-border-radius: $rad;
   border-radius: $rad;
+}
+
+
+@mixin reset-page {
+  @include box-shadow(0, 0, 0, rgba(0, 0, 0, 0));
+  background: none;
+  border: 0;
+}
+
+@mixin strong-text {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@mixin bg1 {
+  animation: basicBg 59s ease infinite;
+  background: linear-gradient(90deg, $c1, $c3);
+  background-size: 800% 800%;
+
+  //-webkit-animation: basicBg 59s ease infinite;
+  //-moz-animation: basicBg 59s ease infinite;
+
+  //@-webkit-keyframes basicBg {
+  //    0%{background-position:0% 82%}
+  //    50%{background-position:100% 19%}
+  //    100%{background-position:0% 82%}
+  //}
+  //@-moz-keyframes basicBg {
+  //    0%{background-position:0% 82%}
+  //    50%{background-position:100% 19%}
+  //    100%{background-position:0% 82%}
+  //}
+  @keyframes basicBg {
+    0% {
+      background-position: 0% 82%;
+    }
+
+    50% {
+      background-position: 70% 50%;
+    }
+
+    100% {
+      background-position: 0% 82%;
+    }
+  }
 }

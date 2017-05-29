@@ -1,5 +1,19 @@
-title: 'Hyper & Non-Linear in Real Time Run Time'
-bookserial: 0-123456789
+title: Word Trees
+subtitle: and Other Poems
+bookserial: 3-14159265359
+page_count: 9
+author:
+  name: Tomer Lichtash
+  description: Writer / Developer
+  location: Tel-Aviv, Israel
+  url: http://tomerlichtash.com
+
+license:
+  symbol: cc
+  description: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+  url: http://creativecommons.org/licenses/by-nc-sa/4.0/
+#teaser: It's a free web book for interactive visual poems made of Word Trees
+#description: Interactive Visual Poetry by Tomer Lichtash
 
 # Config
 source: .

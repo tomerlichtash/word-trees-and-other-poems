@@ -1,14 +1,14 @@
 ---
 layout: "word-tree-poem"
 wordtreeid: "word-tree-poem-6"
-title: "Oriented"
+title: "object"
 permalink: "/poem6/"
 order: 6
 categories:
   - poem
 ---
 <script>
-  drawWordTreePoem('word-tree-poem-6', 'object', 'implicit', 'double', [
+  drawWordTreePoem('word-tree-poem-{{ page.order }}', '{{ page.title }}', 'implicit', 'double', [
     "object oriented",
     "object oriented poems",
     "poem oriented",

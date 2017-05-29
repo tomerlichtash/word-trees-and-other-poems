@@ -1,0 +1,136 @@
+@import 'colors';
+@import 'mixins';
+
+.author {
+  @include box-shadow(0, 0, .5rem, rgba(0, 0, 0, .2));
+  @include span(12 of 12 no-gutters);
+  border-bottom: 1px solid $white-on-color;
+  border-top: 1px solid $white-on-color;
+  color: $white;
+
+  .title {
+    color: $white;
+    font-family: $font5;
+    margin: 0 0 2rem;
+    padding: 0;
+    text-transform: uppercase;
+  }
+
+  .inner {
+    @include container(100%);
+    background: rgba(255, 255, 255, .1);
+    padding: 4rem 6rem;
+  }
+
+  .photo {
+    @include box-shadow(0, 0, .5rem, rgba(0, 0, 0, .2));
+
+    float: left;
+    margin-right: 1rem;
+    overflow: hidden;
+    width: 105px;
+
+    .image {
+      border: 1px solid $image-border-color;
+      display: block;
+      padding: 2px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .meta {
+    float: left;
+    font-family: $font5;
+    width: 60%;
+
+    .name,
+    .location,
+    .description {
+      display: block;
+      font-size: .9rem;
+      line-height: 1.2rem;
+      //margin-bottom: 0.25rem;
+    }
+
+    .name {
+      //font-size: 1rem;
+      font-weight: 900;
+      letter-spacing: .2rem;
+      margin-bottom: .5rem;
+      text-transform: uppercase;
+    }
+  }
+
+  .social {
+    margin: 1rem 0 0;
+    padding: 0;
+    position: relative;
+  }
+
+  .channel {
+    display: inline-block;
+    float: left;
+    font-size: .9rem;
+    list-style: none;
+    margin: 0;
+    padding: 0 1rem 0 0;
+    text-transform: lowercase;
+
+    a {
+      background-position: top left;
+      display: inline-block;
+      height: 18px;
+      padding-bottom: .25rem;
+      vertical-align: middle;
+      width: 18px;
+
+      span {
+        display: none;
+      }
+
+      &:hover {
+        span {
+          opacity: 0;
+        }
+      }
+
+      &.facebook {
+        background: $icon-bg-color url('./../img/social/facebook.png') no-repeat;
+        background-size: contain;
+      }
+
+      &.instagram {
+        background: $icon-bg-color url('./../img/social/instagram.png') no-repeat;
+        background-size: contain;
+      }
+
+      &.linkedin {
+        background: $icon-bg-color url('./../img/social/linkedin.png') no-repeat;
+        background-size: contain;
+      }
+
+      &.twitter {
+        background: $icon-bg-color url('./../img/social/twitter.png') no-repeat;
+        background-size: contain;
+      }
+
+      &.github {
+        background: $icon-bg-color url('./../img/social/github.png') no-repeat;
+        background-size: contain;
+      }
+    }
+
+    span {
+      @include transition(all, 125ms, ease-in);
+
+      bottom: -55px;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+    }
+  }
+}

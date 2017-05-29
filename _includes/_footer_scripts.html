@@ -8,5 +8,17 @@
     ga('create', 'UA-26201270-10', 'auto');
     ga('send', 'pageview');
   </script>
-  {% endif %}
+    {% endif %}
 {% endif %}
+<script>
+  var primaryNav = document.getElementById('primary-nav');
+  var countTotal = Number(primaryNav.getAttribute('data-page-count'));
+
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+
+  document.getElementById('random-poem').setAttribute('href', '{{ site.url }}/poem' + getRandomInt(1, countTotal));
+</script>

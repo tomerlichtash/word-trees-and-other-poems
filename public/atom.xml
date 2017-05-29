@@ -3,11 +3,20 @@
 <?xml-stylesheet type="text/css" href="//assets/css/atom.css" ?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<id>http://localhost:4000//</id>
-	<title>Hyper &amp; Non-Linear in Real Time Run Time</title>
-	<updated>2017-05-19T15:36:31+03:00</updated>
+	<title>Word Trees</title>
+	<updated>2017-05-29T09:25:43+03:00</updated>
 
 	<subtitle></subtitle>
 
+	
+		
+		<author>
+			
+				<name>{&quot;name&quot;=&gt;&quot;Tomer Lichtash&quot;, &quot;description&quot;=&gt;&quot;Writer / Developer&quot;, &quot;location&quot;=&gt;&quot;Tel-Aviv, Israel&quot;, &quot;url&quot;=&gt;&quot;http://tomerlichtash.com&quot;}</name>
+			
+			
+			
+		</author>
 	
 
 	<link href="http://localhost:4000//atom.xml" rel="self" type="application/rss+xml" />

@@ -1,158 +1,68 @@
 @import 'colors';
+@import 'mixins';
+@import 'typography';
+
+// todo: move to settings
+$desktop: (min-device-width: 960px);
+$mobile: (min-device-width: 375px) and (max-device-height: 667px);
 
 .footer {
   @include span(12 of 12);
 
-  background: $footer-background;
-  border-top: 1px solid darken($footer-background, 50%);
   color: $footer-color-text;
   display: block;
   font-family: $font2;
-  font-size: .9rem;
   font-weight: 300;
-  line-height: 1.66rem;
-  padding: 2rem 0;
-  text-shadow: 0 0 1px $white;
+  padding: 1rem 0;
 
   strong {
     font-weight: 900;
   }
 
-  .site-content-strip {
-    @include container(1200px);
-  }
-
-  .col {
-    @include span(5 of 12);
-    padding: 1rem;
+  @include breakpoint($desktop) {
+    font-size: .8rem;
 
     p {
-      margin: 0 0 1rem;
-    }
-
-    .list {
       margin: 0;
-      padding: 0;
-
-      li {
-        list-style: none;
-        margin: 0;
-      }
-    }
-  }
-
-  .social-bar {
-    .share-buttons {
-      text-align: left;
-    }
-  }
-
-  .author {
-    @include span(7 of 12);
-
-    .photo {
-      float: left;
-      margin-right: 1rem;
-      overflow: hidden;
-      width: 160px;
-
-      .image {
-        background: $image-background-color;
-        border: 1px solid $image-border-color;
-        display: block;
-        padding: 7px;
-      }
-
-      img {
-        display: block;
-        width: 100%;
-      }
     }
 
+    .site-content-strip {
+      @include container(1200px);
+    }
+
+    .license,
     .meta {
-      float: left;
-      width: 60%;
-      padding: 0.25rem;
-
-      .name,
-      .location,
-      .description {
-        display: block;
-        text-transform: uppercase;
-      }
-
-      .name {
-        font-size: 1rem;
-        letter-spacing: .1rem;
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
-        border-bottom: 7px solid $transp2;
-      }
+      @include span(6 of 12 no-gutters);
     }
 
-    .social {
-      margin: 1rem 0 0;
-      padding: 0;
-      position: relative;
-    }
+    .col {
+      @include span(6 of 12 no-gutters);
 
-    .channel {
-      display: inline-block;
-      float: left;
-      font-size: .9rem;
-      list-style: none;
-      margin: 0;
-      padding: 0 1rem 0 0;
-      text-transform: lowercase;
-
-      a {
-        background-position: top left;
-        display: inline-block;
-        height: 15px;
-        padding-bottom: .25rem;
-        vertical-align: middle;
-        width: 15px;
-
-        &:hover {
-          span {
-            opacity: 1;
-          }
-        }
-
-        &.facebook {
-          background: $icon-bg-color url('./../img/social/facebook.png') no-repeat;
-          background-size: contain;
-        }
-
-        &.instagram {
-          background: $icon-bg-color url('./../img/social/instagram.png') no-repeat;
-          background-size: contain;
-        }
-
-        &.linkedin {
-          background: $icon-bg-color url('./../img/social/linkedin.png') no-repeat;
-          background-size: contain;
-        }
-
-        &.twitter {
-          background: $icon-bg-color url('./../img/social/twitter.png') no-repeat;
-          background-size: contain;
-        }
-
-        &.github {
-          background: $icon-bg-color url('./../img/social/github.png') no-repeat;
-          background-size: contain;
-        }
-      }
-
-      span {
-        @include transition(all, 125ms, ease-in);
-
-        bottom: -55px;
-        left: 0;
-        opacity: 0;
-        position: absolute;
+      &:last-child {
+        text-align: right;
       }
     }
+  }
+
+  @include breakpoint($mobile) {
+    font-size: .8rem;
+
+    .site-content-strip {
+      @include container(90%);
+    }
+
+    //.col {
+    //  @include span(12 of 12);
+    //}
+  }
+}
+
+.license-type {
+  &::before {
+    content: '(';
+  }
+
+  &::after {
+    content: ')';
   }
 }

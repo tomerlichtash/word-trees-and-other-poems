@@ -1,3 +1,6 @@
+.menu, .off-screen {
+  user-select: none; }
+
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -389,66 +392,6 @@ template {
 [hidden] {
   display: none; }
 
-.header {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: "Cinzel Decorative", cursive;
-  margin: 0;
-  text-align: center;
-  user-select: none; }
-  .header:after {
-    content: " ";
-    display: block;
-    clear: both; }
-
-.front-cover {
-  position: relative; }
-  .front-cover .title {
-    font-family: "Cinzel Decorative", cursive;
-    font-size: 1.75rem;
-    font-weight: 900;
-    line-height: 2.25rem;
-    margin: 0;
-    text-align: center; }
-    .front-cover .title i {
-      display: block;
-      font-size: 1rem;
-      font-style: italic;
-      font-weight: 900;
-      margin: 0 1rem;
-      vertical-align: middle; }
-  .front-cover .subtitle {
-    display: block;
-    font-family: "Miriam Libre", sans-serif;
-    font-size: 1rem;
-    margin: 2rem 0 0; }
-    .front-cover .subtitle::before, .front-cover .subtitle::after {
-      content: '\2014';
-      margin: 0 .5rem;
-      opacity: .7; }
-  .front-cover .author {
-    font-family: "Miriam Libre", sans-serif;
-    font-weight: 600; }
-  .front-cover .meta {
-    background: #fff;
-    bottom: 0;
-    color: #165aff;
-    display: block;
-    padding: 2rem 0;
-    position: absolute;
-    transition: background 125ms;
-    width: 100%;
-    z-index: 10000; }
-    .front-cover .meta:hover {
-      background: #165aff;
-      color: #fff; }
-    .front-cover .meta .title {
-      text-align: center;
-      text-shadow: 0 5px 5px solid #fff; }
-    .front-cover .meta .subtitle {
-      text-align: center; }
-
 .footer {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -457,190 +400,346 @@ template {
   float: left;
   padding-left: 0.46296%;
   padding-right: 0.46296%;
-  background: rgba(0, 0, 0, 0.05);
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-  color: #232a3b;
+  color: rgba(25, 25, 25, 0.6);
   display: block;
   font-family: "Miriam Libre", sans-serif;
-  font-size: .9rem;
   font-weight: 300;
-  line-height: 1.66rem;
-  padding: 2rem 0;
-  text-shadow: 0 0 1px #fff; }
+  padding: 1rem 0; }
   .footer strong {
     font-weight: 900; }
-  .footer .site-content-strip {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto; }
-    .footer .site-content-strip:after {
-      content: " ";
-      display: block;
-      clear: both; }
-  .footer .col {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 41.66667%;
-    float: left;
-    padding-left: 0.46296%;
-    padding-right: 0.46296%;
-    padding: 1rem; }
-    .footer .col p {
-      margin: 0 0 1rem; }
-    .footer .col .list {
-      margin: 0;
-      padding: 0; }
-      .footer .col .list li {
-        list-style: none;
+  @media (min-device-width: 960px) {
+    .footer {
+      font-size: .8rem; }
+      .footer p {
         margin: 0; }
-  .footer .social-bar .share-buttons {
-    text-align: left; }
-  .footer .author {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 58.33333%;
-    float: left;
-    padding-left: 0.46296%;
-    padding-right: 0.46296%; }
-    .footer .author .photo {
-      float: left;
-      margin-right: 1rem;
-      overflow: hidden;
-      width: 160px; }
-      .footer .author .photo .image {
-        background: #fafafa;
-        border: 1px solid #e0e0e0;
-        display: block;
-        padding: 7px; }
-      .footer .author .photo img {
-        display: block;
-        width: 100%; }
-    .footer .author .meta {
-      float: left;
-      width: 60%;
-      padding: 0.25rem; }
-      .footer .author .meta .name,
-      .footer .author .meta .location,
-      .footer .author .meta .description {
-        display: block;
-        text-transform: uppercase; }
-      .footer .author .meta .name {
-        font-size: 1rem;
-        letter-spacing: .1rem;
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
-        border-bottom: 7px solid rgba(0, 0, 0, 0.1); }
-    .footer .author .social {
-      margin: 1rem 0 0;
-      padding: 0;
-      position: relative; }
-    .footer .author .channel {
-      display: inline-block;
-      float: left;
-      font-size: .9rem;
-      list-style: none;
-      margin: 0;
-      padding: 0 1rem 0 0;
-      text-transform: lowercase; }
-      .footer .author .channel a {
-        background-position: top left;
-        display: inline-block;
-        height: 15px;
-        padding-bottom: .25rem;
-        vertical-align: middle;
-        width: 15px; }
-        .footer .author .channel a:hover span {
-          opacity: 1; }
-        .footer .author .channel a.facebook {
-          background: transparent url("./../img/social/facebook.png") no-repeat;
-          background-size: contain; }
-        .footer .author .channel a.instagram {
-          background: transparent url("./../img/social/instagram.png") no-repeat;
-          background-size: contain; }
-        .footer .author .channel a.linkedin {
-          background: transparent url("./../img/social/linkedin.png") no-repeat;
-          background-size: contain; }
-        .footer .author .channel a.twitter {
-          background: transparent url("./../img/social/twitter.png") no-repeat;
-          background-size: contain; }
-        .footer .author .channel a.github {
-          background: transparent url("./../img/social/github.png") no-repeat;
-          background-size: contain; }
-      .footer .author .channel span {
-        transition: all 125ms ease-in;
-        bottom: -55px;
-        left: 0;
-        opacity: 0;
-        position: absolute; }
+      .footer .site-content-strip {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto; }
+        .footer .site-content-strip:after {
+          content: " ";
+          display: block;
+          clear: both; }
+      .footer .license,
+      .footer .meta {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 50%;
+        float: left; }
+      .footer .col {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 50%;
+        float: left; }
+        .footer .col:last-child {
+          text-align: right; } }
+  @media (max-device-height: 667px) {
+    .footer {
+      font-size: .8rem; }
+      .footer .site-content-strip {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto; }
+        .footer .site-content-strip:after {
+          content: " ";
+          display: block;
+          clear: both; } }
 
-.nav .menu {
+.license-type::before {
+  content: '('; }
+.license-type::after {
+  content: ')'; }
+
+.menu, .off-screen {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none; }
 
-.nav {
-  margin-bottom: 4rem; }
-  .nav .menu-container {
+.site-header {
+  font-family: "Miriam Libre", sans-serif; }
+  .site-header .inner {
     max-width: 1200px;
     margin-left: auto;
-    margin-right: auto; }
-    .nav .menu-container:after {
+    margin-right: auto;
+    position: relative; }
+    .site-header .inner:after {
       content: " ";
       display: block;
       clear: both; }
-  .nav .site-title {
-    display: inline-block;
-    float: left;
-    font-size: 1rem;
-    line-height: 2rem; }
-  .nav .menu {
+  .site-header .site-title {
+    text-align: left;
     margin: 0;
-    padding: 0;
-    text-transform: uppercase; }
-    .nav .menu.right {
-      float: right; }
-    .nav .menu.left {
-      float: left; }
-    .nav .menu li {
-      display: inline-block;
+    padding: 2rem 0;
+    font-size: 1.25rem;
+    font-weight: 100;
+    text-transform: lowercase; }
+    .site-header .site-title strong {
+      font-weight: 900;
+      font-size: 2rem;
+      text-transform: capitalize; }
+    .site-header .site-title a {
+      font-family: "Gloria Hallelujah", cursive;
+      color: #165aff;
+      border: 0; }
+      .site-header .site-title a:hover {
+        color: #c00;
+        border: 0; }
+
+.nav {
+  background: #f6f9ff;
+  overflow: hidden; }
+
+.menu {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase; }
+  .menu li {
+    position: relative; }
+  .menu a {
+    transition: all 75ms ease-out;
+    border: 1px solid transparent;
+    border-bottom: 0;
+    color: rgba(0, 0, 0, 0.6);
+    display: block;
+    font-size: .9rem;
+    font-weight: 500;
+    line-height: 3rem;
+    outline: 0;
+    padding: 0 2rem; }
+    .menu a:hover {
+      background: #165aff;
+      border-bottom: 0;
+      color: #fff; }
+    .menu a::before, .menu a::after {
+      position: relative;
+      transition: border 75ms ease-in; }
+    .menu a::before {
+      left: 2px; }
+    .menu a::after {
+      right: 2px; }
+  .menu [data-active='true'] a {
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    background: #fcfdff;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 0;
+    color: #165aff; }
+    .menu [data-active='true'] a:focus {
+      color: #165aff; }
+  .menu .next a::after {
+    content: '\203A';
+    margin-left: .5rem; }
+  .menu .prev a::before {
+    content: '\2039';
+    margin-right: .5rem; }
+
+@media (min-device-width: 960px) {
+  .short-caption {
+    display: none; }
+
+  .menu-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto; }
+    .menu-container:after {
+      content: " ";
+      display: block;
+      clear: both; }
+
+  .menu.right {
+    float: right; }
+  .menu.left {
+    float: left; }
+  .menu li {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    vertical-align: bottom; } }
+@media (max-device-height: 667px) {
+  .caption {
+    display: none; }
+
+  .short-caption {
+    display: block; }
+
+  .menu-container {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left; }
+
+  .menu.right {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    background: rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center; }
+    .menu.right .prev,
+    .menu.right .next {
+      display: inline-block; }
+  .menu.left {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left; }
+    .menu.left li {
+      float: left;
       list-style: none;
       margin: 0;
-      vertical-align: top; }
-      .nav .menu li a {
-        border-bottom: 0;
-        border-top: 7px solid transparent;
-        display: block;
-        outline: 0;
-        padding: .75rem 1rem 1rem; }
-        .nav .menu li a:hover {
-          border-top: 7px solid #165aff; }
-        .nav .menu li a:focus {
-          border-top: 7px solid #c00;
-          color: #c00; }
-        .nav .menu li a[disabled='true']:hover {
-          border-top: 7px solid transparent; }
-        .nav .menu li a::before, .nav .menu li a::after {
-          position: relative;
-          transition: border 75ms ease-in; }
-        .nav .menu li a::before {
-          left: 2px; }
-        .nav .menu li a::after {
-          right: 2px; }
-      .nav .menu li[data-active='true'] a {
-        border-top: 7px solid #063adf; }
-        .nav .menu li[data-active='true'] a:focus {
-          border-color: #c00;
-          color: #c00; }
-      .nav .menu li:hover a::before, .nav .menu li:hover a::after {
-        left: 0; }
-      .nav .menu li:hover.next a::before, .nav .menu li:hover.next a::after, .nav .menu li:hover.prev a::before, .nav .menu li:hover.prev a::after {
-        right: 0; }
-      .nav .menu li.next a::after {
-        content: '\203A';
-        margin-left: .5rem; }
-      .nav .menu li.prev a::before {
-        content: '\2039';
-        margin-right: .5rem; }
+      text-align: center;
+      width: 33.33%; } }
+.btn {
+  padding: .5rem; }
+  .btn .caption {
+    transition: all 100ms ease-in;
+    position: relative;
+    opacity: 0;
+    right: -5px; }
+  .btn .icon {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background-color: #165aff;
+    -webkit-mask-image: url("./../img/social/share.svg");
+    mask-image: url("./../img/social/share.svg");
+    vertical-align: middle; }
+
+.social-bar {
+  position: absolute;
+  top: 3rem;
+  right: -1rem;
+  z-index: 10000; }
+
+.share-button {
+  margin: 0.25rem 0 0; }
+
+.social-bar-inner {
+  position: relative;
+  text-align: center;
+  float: right; }
+  .social-bar-inner:hover .toggle {
+    margin-right: 1rem; }
+  .social-bar-inner:hover .caption {
+    right: 0;
+    opacity: 1; }
+  .social-bar-inner:hover .icon {
+    background-color: #c00; }
+  .social-bar-inner:hover .social-media-channels-menu {
+    background: #fff;
+    display: block; }
+
+.toggle {
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  z-index: 10000;
+  margin-right: 0;
+  transition: all 75ms ease-in;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  font-family: "Miriam Libre", sans-serif;
+  font-size: .8rem;
+  float: left; }
+
+.social-media-channels-menu {
+  -webkit-border-radius: 5px;
+  -webkit-border-top-right-radius: 0;
+  -moz-border-radius: 5px;
+  -moz-border-radius-topright: 0;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  position: absolute;
+  display: none;
+  background: #fff;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  text-align: center;
+  padding: 2rem 0 0; }
+  .social-media-channels-menu .social-media-channels-menu-inner {
+    padding: 1rem; }
+
+.inner-page-nav {
+  transition: all 255ms ease-in-out;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 50px;
+  z-index: 10000; }
+  .inner-page-nav .link-wrap {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0; }
+  .inner-page-nav .next,
+  .inner-page-nav .prev {
+    display: table;
+    height: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 50px; }
+    .inner-page-nav .next a,
+    .inner-page-nav .prev a {
+      border-bottom: 0;
+      display: table-cell;
+      height: 100%;
+      position: relative;
+      vertical-align: middle;
+      width: 50px;
+      z-index: 10000; }
+      .inner-page-nav .next a .link-caption,
+      .inner-page-nav .prev a .link-caption {
+        display: none; }
+      .inner-page-nav .next a:hover,
+      .inner-page-nav .prev a:hover {
+        border-bottom: 0; }
+      .inner-page-nav .next a::after,
+      .inner-page-nav .prev a::after {
+        display: table-cell;
+        font-family: "Assistant", sans-serif;
+        font-size: 4rem;
+        font-weight: 100;
+        right: 0;
+        text-align: center;
+        vertical-align: middle;
+        width: 50px; }
+  .inner-page-nav .next a::after {
+    content: '\203A'; }
+  .inner-page-nav .prev a::after {
+    content: '\2039'; }
+
+.inner-page-nav-next {
+  transition: all 150ms ease-in-out;
+  right: -50px; }
+  .inner-page-nav-next:hover a {
+    right: -3px;
+    color: #c00; }
+
+.inner-page-nav-prev {
+  transition: all 125ms ease-in-out;
+  left: -50px; }
+  .inner-page-nav-prev:hover a {
+    left: -3px;
+    color: #c00; }
 
 .barcode {
   bottom: 2rem;
@@ -655,7 +754,7 @@ template {
     display: inline-block;
     vertical-align: middle; }
     .barcode .container .serial {
-      color: #232a3b;
+      color: #000;
       display: block;
       font-family: "Miriam Libre", sans-serif;
       font-size: .8rem;
@@ -669,7 +768,7 @@ template {
       text-align: center;
       vertical-align: top; }
       .barcode .container .values b {
-        background: #232a3b;
+        background: #000;
         font-weight: none; }
       .barcode .container .values i {
         background: #fff;
@@ -682,137 +781,250 @@ template {
         width: 2px; }
 
 .book {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  float: left;
-  margin-top: 0;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2); }
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 -1px 0 rgba(193, 196, 204, 0.5);
+  background: #fcfdff;
+  border-bottom: 1px solid rgba(193, 196, 204, 0.5); }
+  .book:after {
+    content: " ";
+    display: block;
+    clear: both; }
   .book .pages {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 6rem; }
-    .book .pages:after {
-      content: " ";
-      display: block;
-      clear: both; }
-    .book .pages .page-content {
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      width: 100%;
-      float: left;
-      padding: 0 4rem 6rem; }
-    .book .pages.single-page .page {
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      width: 100%;
-      float: left; }
-    .book .pages .page-title {
-      display: block;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+    padding: 2rem 0; }
+  .book .page-title {
+    display: block;
+    font-family: "Assistant", sans-serif;
+    margin: 0;
+    text-transform: uppercase; }
+    .book .page-title input {
+      border: 0;
       font-family: "Assistant", sans-serif;
-      font-size: 2.5rem;
-      font-weight: 100;
-      margin: 0;
       text-transform: uppercase; }
-      .book .pages .page-title::after {
-        content: '\2014';
+    .book .page-title .page-index::after {
+      content: '.'; }
+  .book .page-content {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left; }
+  .book .page {
+    background: #fff;
+    position: relative; }
+    .book .page .page-order {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      text-align: right;
+      width: 100%; }
+      .book .page .page-order i {
+        display: inline-block;
+        font-family: "Miriam Libre", sans-serif;
+        font-style: normal;
+        line-height: 2rem;
+        margin: 1rem 2rem; }
+    .book .page:first-child .page-order {
+      text-align: left; }
+    .book .page:first-child::after {
+      left: 0;
+      right: 100%; }
+    .book .page.leaflet {
+      box-shadow: 0 0 0 transparent;
+      background: none;
+      border: 0; }
+      .book .page.leaflet .page-content {
+        position: relative; }
+        .book .page.leaflet .page-content a {
+          font-family: "Assistant", sans-serif; }
+        .book .page.leaflet .page-content p {
+          font-family: "Assistant", sans-serif;
+          font-size: 1.2rem;
+          font-weight: 300;
+          line-height: 1.8rem; }
+        .book .page.leaflet .page-content strong {
+          font-weight: 400; }
+    .book .page.back-cover {
+      background: #165aff;
+      color: #fff;
+      position: relative; }
+      .book .page.back-cover .page-content {
+        padding: 0; }
+      .book .page.back-cover strong {
+        font-weight: 700;
+        text-transform: uppercase; }
+      .book .page.back-cover p,
+      .book .page.back-cover a {
+        font-family: "Miriam Libre", sans-serif; }
+      .book .page.back-cover p {
+        font-weight: 500;
+        margin: 0; }
+      .book .page.back-cover .summary {
+        margin-bottom: 2rem;
+        padding: 4rem 6rem 0; }
+        .book .page.back-cover .summary p {
+          line-height: 1.7rem;
+          text-shadow: 0 1px 1px rgba(0, 0, 255, 0.5); }
+        .book .page.back-cover .summary a {
+          color: #fff; }
+    .book .page.appendix {
+      box-shadow: 0 0 0 transparent;
+      background: none;
+      border: 0; }
+    .book .page.front-cover {
+      float: right; }
+      .book .page.front-cover .title {
         display: block;
-        font-size: 1.5rem;
-        text-align: left; }
-    .book .pages .page {
-      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+        font-family: "Gloria Hallelujah", cursive;
+        font-size: 2rem;
+        font-weight: 100;
+        line-height: 2.25rem;
+        margin: 1rem auto;
+        text-align: center;
+        text-transform: uppercase; }
+      .book .page.front-cover .subtitle {
+        display: block;
+        font-family: "Gloria Hallelujah", cursive;
+        font-size: 1rem;
+        font-weight: normal;
+        text-transform: lowercase; }
+      .book .page.front-cover .author-name {
+        display: block;
+        font-family: "Gloria Hallelujah", cursive;
+        font-size: 1.4rem;
+        font-weight: 100; }
+      .book .page.front-cover .meta {
+        animation: basicBg 59s ease infinite;
+        background: linear-gradient(90deg, #165aff, #c00);
+        background-size: 800% 800%;
+        border-top: 1rem double #fff;
+        bottom: 0;
+        color: #fff;
+        display: block;
+        padding: 2rem 0;
+        position: absolute;
+        text-align: center;
+        transition: background 125ms;
+        width: 100%;
+        z-index: 10000; }
+@keyframes basicBg {
+  0% {
+    background-position: 0% 82%; }
+  50% {
+    background-position: 70% 50%; }
+  100% {
+    background-position: 0% 82%; } }
+        .book .page.front-cover .meta .title {
+          text-align: center;
+          text-shadow: 0 5px 5px solid #fff; }
+        .book .page.front-cover .meta .subtitle {
+          text-align: center; }
+      .book .page.front-cover .page-content {
+        padding: 0; }
+    .book .page.moto {
+      display: table;
+      height: 100%; }
+      .book .page.moto .page-content {
+        display: table;
+        height: 100%;
+        padding: 0;
+        vertical-align: middle; }
+      .book .page.moto .inner {
+        display: table-cell;
+        height: 100%;
+        vertical-align: middle; }
+  .book .sheet .page {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    float: left; }
+  @media (min-device-width: 960px) {
+    .book .wrap {
+      box-shadow: inset 0 0 0.2rem rgba(0, 0, 0, 0.02);
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      margin: 2rem auto;
+      padding: .15rem;
+      position: relative; }
+      .book .wrap:after {
+        content: " ";
+        display: block;
+        clear: both; }
+    .book .page {
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       width: 50%;
       float: left;
-      background: #fff;
-      border: 1px solid rgba(0, 0, 0, 0.05);
-      min-height: 800px;
-      position: relative; }
-      .book .pages .page .page-order {
-        bottom: 0;
-        left: 0;
-        position: absolute;
-        text-align: right;
-        width: 100%; }
-        .book .pages .page .page-order i {
-          display: inline-block;
-          font-family: "Miriam Libre", sans-serif;
-          font-style: normal;
-          line-height: 2rem;
-          margin: 1rem 2rem; }
-      .book .pages .page:first-child .page-order {
-        text-align: left; }
-      .book .pages .page .page-content {
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      min-height: 800px; }
+      .book .page .page-title {
+        font-size: 2.5rem;
+        font-weight: 100; }
+        .book .page .page-title input {
+          font-size: 2.5rem;
+          font-weight: 100; }
+        .book .page .page-title::after {
+          text-align: left; }
+      .book .page .page-content {
         padding: 4rem 6rem; }
-      .book .pages .page.leaflet {
-        box-shadow: 0 0 0 transparent;
-        background: none;
-        border: 0;
+      .book .page .toc {
+        margin-top: 6rem; }
+      .book .page.moto {
+        padding: 4rem; }
+        .book .page.moto blockquote p {
+          font-size: 1.25rem;
+          font-weight: 500;
+          line-height: 2rem; } }
+  @media (max-device-height: 667px) {
+    .book {
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: hidden; }
+      .book:after {
+        content: " ";
+        display: block;
+        clear: both; }
+      .book .page {
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
-        width: 50%;
+        width: 100%;
         float: left;
         padding-left: 0.46296%;
-        padding-right: 0.46296%;
-        background: none; }
-        .book .pages .page.leaflet .page-content {
-          min-height: 500px;
-          padding-left: 0;
-          padding-top: 0;
-          position: relative; }
-          .book .pages .page.leaflet .page-content .teaser {
-            text-transform: uppercase; }
-          .book .pages .page.leaflet .page-content a,
-          .book .pages .page.leaflet .page-content p {
-            font-family: "Gloria Hallelujah", cursive; }
-          .book .pages .page.leaflet .page-content p {
-            font-size: 2rem;
-            line-height: 3rem;
-            margin: 0;
-            opacity: .7;
+        padding-right: 0.46296%; }
+        .book .page .page-content {
+          padding: 2rem; }
+        .book .page .page-title {
+          font-size: 1.5rem;
+          font-weight: 300;
+          text-align: center; }
+          .book .page .page-title::after {
             text-align: center; }
-          .book .pages .page.leaflet .page-content .small {
-            display: block;
-            font-size: 1rem;
-            line-height: 1.8rem;
-            margin-top: 4rem;
-            text-align: left; }
-            .book .pages .page.leaflet .page-content .small strong {
-              font-weight: 900; }
-            .book .pages .page.leaflet .page-content .small .sup {
-              -moz-box-sizing: border-box;
-              -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-              width: 8.33333%;
-              float: left; }
-            .book .pages .page.leaflet .page-content .small .text {
-              -moz-box-sizing: border-box;
-              -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-              width: 91.66667%;
-              float: left; }
-      .book .pages .page.back-cover-leaflet {
-        box-shadow: 0 0 0 transparent;
-        background: none;
-        border: 0;
-        background: none;
-        padding-right: 0;
-        padding-top: 0; }
-        .book .pages .page.back-cover-leaflet .social-bar {
-          margin-top: 2rem; }
-          .book .pages .page.back-cover-leaflet .social-bar .share-buttons {
+        .book .page .page-order {
+          display: none; }
+        .book .page.moto {
+          padding: 2rem 0; }
+          .book .page.moto blockquote {
             text-align: center; }
-          .book .pages .page.back-cover-leaflet .social-bar .share-button {
-            display: inline-block;
-            vertical-align: top; }
-        .book .pages .page.back-cover-leaflet .simple-info-box {
+            .book .page.moto blockquote p {
+              font-size: 1.2rem;
+              font-weight: 300;
+              line-height: 1.8rem; }
+            .book .page.moto blockquote .source {
+              text-align: center; }
+        .book .page.leaflet {
           -moz-box-sizing: border-box;
           -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -820,166 +1032,150 @@ template {
           float: left;
           padding-left: 0.46296%;
           padding-right: 0.46296%;
-          display: block;
-          margin-bottom: 8rem;
-          text-align: center;
-          text-transform: uppercase; }
-          .book .pages .page.back-cover-leaflet .simple-info-box.info-foss {
-            display: block;
-            padding: 4rem; }
-          .book .pages .page.back-cover-leaflet .simple-info-box .title {
-            font-size: 1.4rem;
-            font-weight: 900;
-            margin-bottom: 1rem; }
-          .book .pages .page.back-cover-leaflet .simple-info-box .subtitle {
-            font-size: 1rem;
-            text-transform: uppercase; }
-      .book .pages .page.back-cover {
-        background: #165aff;
-        color: #fff;
-        position: relative; }
-        .book .pages .page.back-cover p {
-          font-family: "Miriam Libre", sans-serif;
-          font-weight: 300;
-          margin: 0; }
-        .book .pages .page.back-cover a {
-          border-bottom: 2px solid #fff;
-          color: #fff; }
-          .book .pages .page.back-cover a:hover {
-            border-bottom: 3px solid #fff; }
-        .book .pages .page.back-cover .summary {
-          margin-bottom: 2rem;
-          padding-bottom: 2rem; }
-          .book .pages .page.back-cover .summary p {
-            font-size: 1.15rem;
-            line-height: 1.85rem; }
-          .book .pages .page.back-cover .summary .signature {
-            display: inline-block;
-            float: right;
-            font-size: .8rem;
-            line-height: 1.4rem;
-            margin-top: 4rem;
-            text-align: left; }
-            .book .pages .page.back-cover .summary .signature .initials {
-              display: block;
-              font-weight: 900;
-              letter-spacing: .1rem; }
-            .book .pages .page.back-cover .summary .signature .date,
-            .book .pages .page.back-cover .summary .signature .location {
-              display: block;
-              text-transform: uppercase; }
-        .book .pages .page.back-cover .author {
-          overflow: hidden; }
-          .book .pages .page.back-cover .author .author-image {
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            width: 25%;
-            float: left;
-            padding-left: 0.46296%;
-            padding-right: 0.46296%;
-            float: right; }
-            .book .pages .page.back-cover .author .author-image img {
-              border-radius: 50%;
-              display: block;
-              width: 100%; }
-          .book .pages .page.back-cover .author .author-bio {
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            width: 66.66667%;
-            float: left;
-            padding-left: 0.46296%;
-            padding-right: 0.46296%; }
-            .book .pages .page.back-cover .author .author-bio .name,
-            .book .pages .page.back-cover .author .author-bio .location {
-              display: block;
-              font-size: .9rem;
-              line-height: 1.6rem; }
-      .book .pages .page.front-cover .social-bar {
-        position: absolute;
-        right: -100px;
-        top: 0;
-        width: 100px; }
-        .book .pages .page.front-cover .social-bar .share-button {
-          margin-bottom: 5px; }
-      .book .pages .page.front-cover .meta .author {
-        text-transform: uppercase; }
-      .book .pages .page.front-cover .meta .subtitle {
-        line-height: 2rem; }
-      .book .pages .page.front-cover .page-content {
-        padding: 0; }
-      .book .pages .page.moto {
-        display: table;
-        height: 100%; }
-        .book .pages .page.moto .page-content {
-          display: table;
-          height: 100%;
-          padding: 0;
-          vertical-align: middle; }
-        .book .pages .page.moto .inner {
-          display: table-cell;
-          height: 100%;
-          padding: 4rem;
-          vertical-align: middle; }
-      .book .pages .page p {
-        font-family: "Assistant", sans-serif;
-        font-size: 1rem;
-        font-weight: 300;
-        line-height: 2rem; }
-      .book .pages .page blockquote {
-        font-family: "Assistant", sans-serif;
-        overflow: hidden; }
-        .book .pages .page blockquote p {
-          font-size: 1.5rem;
-          line-height: 2rem;
-          margin: 0; }
-          .book .pages .page blockquote p strong {
-            font-family: "Assistant", sans-serif;
-            font-size: 80%;
-            font-weight: 300;
-            letter-spacing: .1rem;
-            text-transform: uppercase; }
-        .book .pages .page blockquote .source {
-          display: block;
-          font-size: 1rem;
-          margin-top: 1rem;
-          text-align: right; }
-          .book .pages .page blockquote .source a {
-            display: inline-block;
-            font-weight: 500;
-            line-height: 1rem; }
-          .book .pages .page blockquote .source::before {
-            content: '\2014';
-            margin-right: .5rem; }
-  .book .toc {
-    margin-top: 6rem; }
-    .book .toc .toc-list .toc-list-title {
-      font-family: "Assistant", sans-serif;
-      font-size: 1.5rem;
-      font-style: italic;
-      font-weight: 300; }
-    .book .toc .toc-list .toc-entry-list {
-      color: #babab0; }
-      .book .toc .toc-list .toc-entry-list .toc-entry {
-        font-family: "Assistant", sans-serif;
-        font-size: 1.5rem;
-        font-weight: 300;
-        line-height: 2rem;
-        padding-left: .75rem; }
+          min-height: 0; }
+          .book .page.leaflet .page-content {
+            background: none;
+            overflow: hidden; }
+            .book .page.leaflet .page-content p {
+              font-size: 1.25rem;
+              line-height: 1.75rem;
+              margin: 0 2rem; }
+            .book .page.leaflet .page-content .small {
+              font-size: .8rem;
+              line-height: 1.5rem;
+              margin-top: 2rem; } }
+
+.toc .toc-list .toc-list-title {
+  font-family: "Assistant", sans-serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 300; }
+.toc .toc-list .toc-entry-list {
+  color: #babab0;
+  list-style-position: inside;
+  list-style-type: cjk-ideographic;
+  margin: 0;
+  padding: 0; }
+  .toc .toc-list .toc-entry-list .toc-entry {
+    font-family: "Assistant", sans-serif;
+    font-size: 1.15rem;
+    font-weight: 300;
+    line-height: 2rem; }
+  .toc .toc-list .toc-entry-list a {
+    font-weight: 900;
+    margin-left: .5rem; }
+
+.author {
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff; }
+  .author .title {
+    color: #fff;
+    font-family: "Gloria Hallelujah", cursive;
+    margin: 0 0 2rem;
+    padding: 0;
+    text-transform: uppercase; }
+  .author .inner {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4rem 6rem; }
+    .author .inner:after {
+      content: " ";
+      display: block;
+      clear: both; }
+  .author .photo {
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    float: left;
+    margin-right: 1rem;
+    overflow: hidden;
+    width: 105px; }
+    .author .photo .image {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: block;
+      padding: 2px; }
+    .author .photo img {
+      display: block;
+      width: 100%; }
+  .author .meta {
+    float: left;
+    font-family: "Gloria Hallelujah", cursive;
+    width: 60%; }
+    .author .meta .name,
+    .author .meta .location,
+    .author .meta .description {
+      display: block;
+      font-size: .9rem;
+      line-height: 1.2rem; }
+    .author .meta .name {
+      font-weight: 900;
+      letter-spacing: .2rem;
+      margin-bottom: .5rem;
+      text-transform: uppercase; }
+  .author .social {
+    margin: 1rem 0 0;
+    padding: 0;
+    position: relative; }
+  .author .channel {
+    display: inline-block;
+    float: left;
+    font-size: .9rem;
+    list-style: none;
+    margin: 0;
+    padding: 0 1rem 0 0;
+    text-transform: lowercase; }
+    .author .channel a {
+      background-position: top left;
+      display: inline-block;
+      height: 18px;
+      padding-bottom: .25rem;
+      vertical-align: middle;
+      width: 18px; }
+      .author .channel a span {
+        display: none; }
+      .author .channel a:hover span {
+        opacity: 0; }
+      .author .channel a.facebook {
+        background: transparent url("./../img/social/facebook.png") no-repeat;
+        background-size: contain; }
+      .author .channel a.instagram {
+        background: transparent url("./../img/social/instagram.png") no-repeat;
+        background-size: contain; }
+      .author .channel a.linkedin {
+        background: transparent url("./../img/social/linkedin.png") no-repeat;
+        background-size: contain; }
+      .author .channel a.twitter {
+        background: transparent url("./../img/social/twitter.png") no-repeat;
+        background-size: contain; }
+      .author .channel a.github {
+        background: transparent url("./../img/social/github.png") no-repeat;
+        background-size: contain; }
+    .author .channel span {
+      transition: all 125ms ease-in;
+      bottom: -55px;
+      left: 0;
+      opacity: 0;
+      position: absolute; }
 
 html,
 body {
-  background: #fff;
-  color: #232a3b;
+  background: #f6f9ff;
+  color: rgba(25, 25, 25, 0.6);
   font-weight: 100;
+  min-height: 100%;
   margin: 0; }
 
 a {
   border-bottom: 2px solid transparent;
   color: #165aff;
   font-family: "Miriam Libre", sans-serif;
-  font-weight: 500;
   text-decoration: none;
   transition: border 100ms; }
   a:hover {
@@ -990,19 +1186,43 @@ a {
     a[disabled='true']:hover {
       border-bottom: 2px solid transparent; }
 
-.book-nav {
+blockquote {
+  font-family: "Miriam Libre", sans-serif;
   overflow: hidden; }
-  .book-nav .next,
-  .book-nav .close,
-  .book-nav .start {
+  blockquote p {
+    margin: 0; }
+    blockquote p strong {
+      font-weight: 700;
+      text-transform: uppercase; }
+  blockquote .source {
     display: block;
-    float: right;
-    padding: 0 0 1rem;
+    font-size: 1rem;
+    margin-top: 1rem;
     text-align: right; }
-    .book-nav .next::after,
-    .book-nav .close::after,
-    .book-nav .start::after {
-      content: '\203A';
-      font-size: 1rem;
-      font-weight: 100;
-      margin-left: .5rem; }
+    blockquote .source a {
+      display: inline-block;
+      font-weight: 500;
+      line-height: 1rem; }
+    blockquote .source::before {
+      content: '\2014';
+      margin-right: .5rem; }
+
+svg text {
+  cursor: pointer; }
+  svg text:hover {
+    border-bottom: 1px solid red; }
+svg > g > text {
+  cursor: default;
+  font-weight: 100;
+  font-family: "Gloria Hallelujah", cursive; }
+
+.off-screen {
+  clip: rect(1px 1px 1px 1px);
+  /* IE 6/7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  /* added line */
+  width: 1px; }

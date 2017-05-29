@@ -1,30 +1,39 @@
 ---
 # DO NOT REMOVE THIS COMMENT
 ---
+
+%disable-user-select {
+  // -webkit-user-select: none;
+  // -moz-user-select: none;
+  // -ms-user-select: none;
+  user-select: none;
+}
+
 @import 'vendor/normalize';
 @import 'vendor/susy';
 @import 'colors';
 @import 'typography';
 @import 'mixins';
-@import 'settings';
-@import 'header';
 @import 'footer';
 @import 'nav';
+@import 'page_nav';
 @import 'layout';
+@import 'author-profile';
 
 html,
 body {
   background: $bg-color;
   color: $body-text-color;
   font-weight: 100;
+  min-height: 100%;
   margin: 0;
 }
 
 a {
   border-bottom: 2px solid transparent;
-  color: $c1;
+  color: $link-color;
   font-family: $font2;
-  font-weight: 500;
+  // font-weight: 500;
   text-decoration: none;
   transition: border 100ms;
 
@@ -42,22 +51,61 @@ a {
   }
 }
 
-.book-nav {
+blockquote {
+  font-family: $font2;
   overflow: hidden;
 
-  .next,
-  .close,
-  .start {
-    display: block;
-    float: right;
-    padding: 0 0 1rem;
-    text-align: right;
+  p {
+    margin: 0;
 
-    &::after {
-      content: '\203A';
-      font-size: 1rem;
-      font-weight: 100;
-      margin-left: .5rem;
+    strong {
+      @include strong-text;
     }
   }
+
+  .source {
+    display: block;
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-align: right;
+
+    a {
+      display: inline-block;
+      font-weight: 500;
+      line-height: 1rem;
+    }
+
+    &::before {
+      content: '\2014';
+      margin-right: .5rem;
+    }
+  }
+}
+
+svg {
+  text {
+    cursor: pointer;
+    &:hover {
+      border-bottom: 1px solid red;
+    }
+  }
+
+  > g {
+    > text {
+      cursor: default;
+      font-weight: 100;
+      font-family: $font5;
+    }
+  }
+}
+
+.off-screen {
+  @extend %disable-user-select;
+  clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; /* added line */
+  width: 1px;
 }

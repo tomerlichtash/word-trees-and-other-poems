@@ -1,30 +1,40 @@
-$transp1: rgba(0, 0, 0, .05);
-$transp2: rgba(0, 0, 0, .1);
-
+// base
 $white: #fff;
-$black: #232a3b;
+$black: #000;
 
+// transparent colors
+$transparent1: rgba(0, 0, 0, .1);
+$transparent2: rgba(0, 0, 0, .2);
+$pages-border-color: rgba(193, 196, 204, .5);
+$white-on-color: rgba(255, 255, 255, .2);
+
+// theme
 $c1: #165aff;
-$c2: #064aef;
+$c2: #1012ff;
 $c3: #c00;
 
-$bg-color: $white; //rgba(6, 74, 239, .04);
-$body-text-color: $black;
+//$c2: #064aef;
+//$c2a: rgba(25, 25, 25, .6);
 
-$nav-selected-color: #063adf;
-$image-background-color: #fafafa;
-$image-border-color: #e0e0e0;
+// backgrounds
+$bg-color: lighten($c1, 44%);
+
+$nav-background: $bg-color;
+//$nav-selected-color: $c2;
+
+$book-background: lighten($c1, 45%);
+$footer-background: rgba(0, 0, 0, .05);
+
+// text color
+$body-text-color: rgba(25, 25, 25, .6);
+$footer-color-text: $body-text-color;
+
+$link-color: $c1;
 $toc-neutral-text-color: #babab0;
 
-$footer-background: $transp1; //rgba(0, 0, 0, .05);
-$footer-color-text: $body-text-color; //rgba(0, 0, 0, .8);
+// photo frame
+$image-background-color: rgba(255, 255, 255, .3);
+$image-border-color: rgba(255, 255, 255, .2);
 
-// theme colors
-$c1a: #444;
-$c2a: #888;
-$c3a: #aaa;
-$c4a: #ccc;
-$c5a: #eee;
-
-// debug
+// icon background
 $icon-bg-color: transparent;
