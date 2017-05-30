@@ -23,7 +23,7 @@
     <ul class="menu left">
 
       <li class="home site-title" {% if page.url == '/' %}data-active="true"{% endif %}>
-        <a href="{{ '' | prepend: site.baseurl }}">
+        <a href="{{ site.baseurl }}">
           <div class="icon front-cover">
             {% include {{ front_icon | prepend: 'svg/' | append: '.svg' }} %}
           </div>
@@ -32,7 +32,7 @@
       </li>
 
       <li class="toc" {% if page.url == '/toc' %}data-active="true"{% endif %}>
-        <a href="{{ 'toc' | prepend: site.baseurl }}">
+        <a href="{{ site.url }}{{ site.baseurl }}toc">
           <div class="icon toc-index">
             {% include {{ toc_icon | prepend: 'svg/' | append: '.svg' }} %}
           </div>
@@ -41,7 +41,7 @@
       </li>
 
       <li class="end" {% if page.url == '/end' %}data-active="true"{% endif %}>
-        <a href="{{ 'end' | prepend: site.baseurl }}">
+        <a href="{{ site.url }}{{ site.baseurl }}end">
           <div class="icon back-cover">
             {% include {{ back_icon | prepend: 'svg/' | append: '.svg' }} %}
           </div>
