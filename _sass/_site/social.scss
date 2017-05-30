@@ -1,0 +1,89 @@
+.social-bar {
+  @extend %disable-user-select;
+  @include span(12 of 12 no-gutters);
+
+  left: 1rem;
+  position: absolute;
+  top: 2rem;
+  width: 130px;
+  z-index: 10000;
+
+  .share-button {
+    margin: .25rem 0 0;
+  }
+
+  .social-bar-inner {
+    &:hover {
+      cursor: default;
+
+      svg {
+        cursor: default;
+        fill: $c3;
+      }
+
+      .toggle {
+        cursor: default;
+      }
+
+      .caption {
+        color: $c3;
+        cursor: default;
+        display: inline-block;
+        opacity: 1;
+      }
+
+      .social-media-channels-menu {
+        cursor: default;
+        display: block;
+        opacity: 1;
+        top: -1rem;
+      }
+    }
+  }
+
+  .toggle {
+    cursor: pointer;
+    display: block;
+    font-family: $font2;
+    font-size: .9rem;
+    margin-right: 1.5rem;
+    text-align: center;
+    z-index: 10000;
+
+    svg {
+      fill: $body-text-color;
+    }
+
+    .icon {
+      @include svg(18px);
+    }
+
+    .caption {
+      //display: none;
+      color: $body-text-color;
+      font-weight: 300;
+      position: relative;
+      text-transform: uppercase;
+    }
+  }
+
+}
+
+
+.social-media-channels-menu {
+  @include box-shadow(0, 0, .5rem, rgba(0, 0, 0, .2));
+  @include radius(5px);
+
+  border: 1px solid $transparent2;
+  border-top: 0;
+  display: none;
+  opacity: 1;
+  padding-top: 2rem;
+  position: absolute;
+  right: 1rem;
+  z-index: -1;
+
+  .social-media-channels-menu-inner {
+    padding: 1rem;
+  }
+}
