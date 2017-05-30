@@ -7,6 +7,37 @@
 $desktop: (min-device-width: 960px);
 $mobile: (min-device-width: 375px) and (max-device-height: 667px);
 
+.toc-wrap {
+  .toc-list {
+    .toc-list-title {
+      font-family: $font3;
+      font-size: 1.5rem;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .toc-entry-list {
+      color: $toc-neutral-text-color;
+      list-style-position: inside;
+      list-style-type: cjk-ideographic;
+      margin: 0;
+      padding: 0;
+
+      .toc-entry {
+        font-family: $font3;
+        font-size: 1.15rem;
+        font-weight: 300;
+        line-height: 2rem;
+      }
+
+      a {
+        font-weight: 900;
+        margin-left: .5rem;
+      }
+    }
+  }
+}
+
 .book {
   @include container(100%);
   @include box-shadow(0, -1px, 0, $pages-border-color);
@@ -25,6 +56,7 @@ $mobile: (min-device-width: 375px) and (max-device-height: 667px);
     font-family: $font3;
     margin: 0;
     text-transform: uppercase;
+    @extend %disable-user-select;
 
     input {
       border: 0;
@@ -33,6 +65,8 @@ $mobile: (min-device-width: 375px) and (max-device-height: 667px);
     }
 
     .page-index {
+      @extend %disable-user-select;
+
       &::after {
         content: '.';
       }
@@ -48,6 +82,8 @@ $mobile: (min-device-width: 375px) and (max-device-height: 667px);
     position: relative;
 
     .page-order {
+      @extend %disable-user-select;
+
       bottom: 0;
       left: 0;
       position: absolute;
@@ -57,6 +93,7 @@ $mobile: (min-device-width: 375px) and (max-device-height: 667px);
       i {
         display: inline-block;
         font-family: $font2;
+        font-size: 0.9rem;
         font-style: normal;
         line-height: 2rem;
         margin: 1rem 2rem;
@@ -97,92 +134,10 @@ $mobile: (min-device-width: 375px) and (max-device-height: 667px);
       }
     }
 
-    &.back-cover {
-      background: $c1;
-      color: $white;
-      position: relative;
-
-      .page-content {
-        padding: 0;
+    &.toc {
+      .page-title {
+        margin: 0 0 6rem;
       }
-
-      strong {
-        font-weight: 700;
-        text-transform: uppercase;
-      }
-
-      p,
-      a {
-        font-family: $font2;
-      }
-
-      p {
-        font-weight: 500;
-        margin: 0;
-      }
-
-      .summary {
-        margin-bottom: 2rem;
-        padding: 4rem 6rem 0;
-
-        p {
-          line-height: 1.7rem;
-          text-shadow: 0 1px 1px rgba(0, 0, 255, .5);
-        }
-
-        a {
-          color: $white;
-        }
-
-        //.signature {
-        //  display: inline-block;
-        //  // font-size: 1rem;
-        //  float: right;
-        //  font-size: .8rem;
-        //  line-height: 1.4rem;
-        //  margin-top: 4rem;
-        //  text-align: left;
-        //
-        //  .initials {
-        //    display: block;
-        //    font-weight: 900;
-        //    letter-spacing: .1rem;
-        //  }
-        //
-        //  .date,
-        //  .location {
-        //    display: block;
-        //    text-transform: uppercase;
-        //  }
-        //}
-      }
-
-      // back cover author
-      //.author {
-      //  overflow: hidden;
-      //
-      //  .author-image {
-      //    @include span(3 of 12);
-      //    float: right;
-      //
-      //    img {
-      //      @include radius(50%);
-      //      display: block;
-      //      width: 100%;
-      //    }
-      //  }
-      //
-      //  .author-bio {
-      //    @include span(8 of 12);
-      //
-      //    .name,
-      //    .location {
-      //      display: block;
-      //      font-size: .9rem;
-      //      line-height: 1.6rem;
-      //    }
-      //  }
-      //}
     }
 
     &.appendix {
@@ -192,7 +147,8 @@ $mobile: (min-device-width: 375px) and (max-device-height: 667px);
     }
 
     &.front-cover {
-      float: right;
+      float: none;
+      margin: 0 auto;
 
       .title {
         display: block;
@@ -223,8 +179,8 @@ $mobile: (min-device-width: 375px) and (max-device-height: 667px);
 
       .meta {
         @include bg1;
-        //border-bottom: 1rem double $white;
-        border-top: 1rem double $white;
+        @include box-shadow-inset(0, 0, .5rem, rgba(0, 0, 0, .2));
+
         bottom: 0;
         color: $white;
         display: block;
@@ -247,6 +203,47 @@ $mobile: (min-device-width: 375px) and (max-device-height: 667px);
 
       .page-content {
         padding: 0;
+      }
+    }
+
+    &.back-cover {
+      background: $c1;
+      color: $white;
+      position: relative;
+      float: none;
+      margin: 0 auto;
+
+      .page-content {
+        padding: 0;
+      }
+
+      strong {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      p,
+      a {
+        font-family: $font2;
+      }
+
+      p {
+        font-weight: 500;
+        margin: 0;
+      }
+
+      .summary {
+        //margin-bottom: 2rem;
+        padding: 4rem 6rem 0;
+
+        p {
+          line-height: 1.7rem;
+          text-shadow: 0 1px 1px rgba(0, 0, 255, .5);
+        }
+
+        a {
+          color: $white;
+        }
       }
     }
 
@@ -289,7 +286,7 @@ $mobile: (min-device-width: 375px) and (max-device-height: 667px);
       @include span(6 of 12 no-gutters);
       @include box-shadow(0, 0, 1rem, rgba(0, 0, 0, .2));
 
-      border: 1px solid $image-border-color;
+      //border: 1px solid $image-border-color;
       min-height: 800px;
 
       .page-title {
@@ -332,20 +329,43 @@ $mobile: (min-device-width: 375px) and (max-device-height: 667px);
     @include container(100%);
     overflow: hidden;
 
+    .pages {
+      padding: 0;
+
+    }
+
     .page {
       @include span(12 of 12);
 
+      float: none;
+      overflow: hidden;
+
       .page-content {
         padding: 2rem;
+
+        .page-title {
+          font-size: 1.5rem;
+          font-weight: 300;
+          text-align: center;
+          text-align: left;
+
+          &::after {
+            text-align: center;
+          }
+        }
       }
 
-      .page-title {
-        font-size: 1.5rem;
-        font-weight: 300;
-        text-align: center;
-
-        &::after {
+      &.toc {
+        .page-title {
+          margin-bottom: 2rem;
           text-align: center;
+
+          &:before {
+            content: '\2042';
+            text-align: center;
+            padding: 0 0 2rem;
+            display: block;
+          }
         }
       }
 
@@ -354,7 +374,7 @@ $mobile: (min-device-width: 375px) and (max-device-height: 667px);
       }
 
       &.moto {
-        padding: 2rem 0;
+        padding: 2rem 0 0;
 
         blockquote {
           text-align: center;
@@ -396,37 +416,26 @@ $mobile: (min-device-width: 375px) and (max-device-height: 667px);
 
         }
       }
-    }
-  }
-}
 
-.toc {
-  .toc-list {
-    .toc-list-title {
-      font-family: $font3;
-      font-size: 1.5rem;
-      font-style: italic;
-      font-weight: 300;
-    }
 
-    .toc-entry-list {
-      color: $toc-neutral-text-color;
-      list-style-position: inside;
-      list-style-type: cjk-ideographic;
-      margin: 0;
-      padding: 0;
+      &.back-cover {
+        .summary {
+          padding: 2rem;
+        }
 
-      .toc-entry {
-        font-family: $font3;
-        font-size: 1.15rem;
-        font-weight: 300;
-        line-height: 2rem;
-      }
+        .author {
+          margin-top: 0;
 
-      a {
-        font-weight: 900;
-        margin-left: .5rem;
+          .inner {
+            padding: 2rem;
+          }
+        }
+
+        .barcode {
+          padding: 2rem 0;
+        }
       }
     }
   }
 }
+

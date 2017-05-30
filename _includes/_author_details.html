@@ -10,19 +10,16 @@
       <span class="description">{{ site.author.description }}</span>
       <span class="location">{{ site.author.location }}</span>
       <ul class="social">
-        <li class="channel facebook" title="Facebook"><a  class="facebook" target="_blank" href="http://facebook.com/tomerlichtash"><span>Find me on Facebook</span></a></li>
-        <li class="channel twitter" aria-label="Twitter"><a class="twitter"  target="_blank" href="http://twitter.com/tomerlichtash"><span>Follow my Twitter updates</span></a></li>
-        <li class="channel instagram" aria-label="Instagram"><a class="instagram" target="_blank" href="http://instagram.com/tomerlichtash"><span>My photos on Instagram</span></a></li>
-        <li class="channel linkedin" aria-label="LinkedIn"><a class="linkedin"  target="_blank" href="http://linkedin.com/tomerlichtash"><span>Join my professional network on LinkedIn</span></a></li>
-        <li class="channel github" aria-label="Github"><a class="github"  target="_blank" href="http://github.com/tomerlichtash"><span>Check out my code on Github</span></a></li>
+        <!-- http://davidensinger.com/2014/11/how-to-dynamically-include-svgs-inline-with-jekyll/ -->
+        {% for icon in page.social-icons %}
+        <li class="channel facebook" title="Facebook">
+          <a target="_blank" class="social-icon--link {{ icon.class }}" href="{{ icon.url }}">
+            {% include {{ icon.class | prepend: 'social/' | append: '.svg' }} %}
+            <span class="social-icon--title off-screen">{{ icon.title }}</span>
+          </a>
+        </li>
+        {% endfor %}
       </ul>
     </div>
   </div>
 </div>
-
-<!-- <li class="channel linkedin" title="LinkedIn"><a target="_blank" href="http://linkedin.com/tomerlichtash">LinkedIn</a></li> -->
-<!-- <li class="channel flickr" title="Flickr"><a target="_blank" href="http://flickr.com/tomerlichtash">Flickr</a></li> -->
-<!-- <li class="channel metafilter" title="MetaFilter"><a target="_blank" href="http://metafilter.com/lipsum">MetaFilter</a></li> -->
-<!-- <li class="channel soundcloud" title="SoundCloud"><a target="_blank" href="http://soundcloud.com/tomerlichtash">SoundCloud</a></li> -->
-<!-- <li class="channel github" title="Github"><a target="_blank" href="http://github.com/tomerlichtash">Github</a></li> -->
-<!-- <li class="channel codepen" title="CodePen"><a target="_blank" href="http://codepen.com/loremipsum">CodePen</a></li> -->

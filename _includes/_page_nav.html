@@ -10,31 +10,45 @@
         <strong>{{ site.title }}</strong><br/>{{ site.subtitle }}
       </a>
     </h1>
-    {% include _social_bar.html %}
   </div>
 </div>
 
 <nav class="nav" id="primary-nav" data-page-count="{{ site.page_count }}">
   <div class="menu-container">
     <ul class="menu left">
+
       <li class="home site-title" {% if page.url == '/' %}data-active="true"{% endif %}>
         <a href="{{ site.url }}">
+          <span class="short-caption">Front</span>
           <span class="caption">Front Page</span>
         </a>
       </li>
-      <li class="toc" {% if page.url == '/toc' %}data-active="true"{% endif %}>
-      <a href="{{ site.url }}/toc">
-        <span class="short-caption">Index</span>
-        <span class="caption">Table of Contents</span>
-      </a>
-      </li>
-      <li class="end" {% if page.url == '/end' %}data-active="true"{% endif %}><a href="{{ site.url }}/end">Back Cover</a></li>
 
-      <li class="random"><i class="icon random"></i><a id="random-poem" href="{{ site.url }}/poem">Random Page</a></li>
+      <li class="toc" {% if page.url == '/toc' %}data-active="true"{% endif %}>
+        <a href="{{ site.url }}/toc">
+          <span class="short-caption">Index</span>
+          <span class="caption">Table of Contents</span>
+        </a>
+      </li>
+
+      <li class="end" {% if page.url == '/end' %}data-active="true"{% endif %}>
+        <a href="{{ site.url }}/end">
+          <span class="short-caption">Info</span>
+          <span class="caption">Back Cover</span>
+        </a>
+      </li>
+
+      <li class="random">
+        <a id="random-poem" href="{{ site.url }}/poem">
+          <span class="short-caption">Random</span>
+          <span class="caption">Random Page</span>
+        </a>
+      </li>
+
       {% if page.path != 'index.html' %}
         {% if page.path != 'pages/last.md' %}
           {% if page.path != 'pages/toc.md' %}
-            <li class="page-index-preview" data-active="true"><a href="{{ site.url }}/poem{{ page.order }}">Page {{ page.order }}/{{ site.page_count }}: <strong>{{ page.title}}</strong></a></li>
+            <li class="page-index-preview" data-active="true"><a href="{{ site.url }}/poem{{ page.order }}">Page {{ page.order }}/{{ site.page_count }} &mdash; <strong>{{ page.title}}</strong></a></li>
           {% endif %}
         {% endif %}
       {% endif %}
@@ -47,7 +61,6 @@
       {% if page.path != 'index.html' %}
         {% if prevPage == 0 %}
         <li class="prev"><a href="{{ site.url }}/toc">Previous</a></li>
-        <!--<li class="page-index-preview" data-active="true"><a href="{{ site.url }}/poem{{ page.order }}"><strong>{{ page.order }}</strong>/{{ site.page_count }}</a></li>-->
         <li class="next"><a href="{{ site.url }}/poem{{ nextPage }}">Next</a></li>
         {% else %}
           {% if page.path == "pages/last.md" %}
@@ -55,10 +68,8 @@
           {% else %}
             {% if page.path == "pages/toc.md" %}
             <li class="prev"><a href="{{ site.url }}">Previous</a></li>
-            <!--<li class="page-index-preview" data-active="true"><a href="{{ site.url }}/toc"><strong>{{ page.order }}</strong></a></li>-->
             {% else %}
             <li class="prev"><a href="{{ site.url }}/poem{{ prevPage }}">Previous</a></li>
-            <!--<li class="page-index-preview" data-active="true"><a href="{{ site.url }}/poem{{ page.order }}"><strong>{{ page.order }}</strong>/{{ site.page_count }}</a></li>-->
             {% endif %}
           {% endif %}
           {% if page.lastPage == true %}
@@ -76,3 +87,5 @@
     </ul>
   </div>
 </nav>
+
+{% include _social_bar.html %}

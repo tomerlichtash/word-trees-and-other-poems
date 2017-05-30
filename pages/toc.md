@@ -2,6 +2,7 @@
 layout: default
 permalink: "/toc"
 order: i-ii
+title: Table of Contents
 ---
 <main role="main" class="content">
   <div class="book">
@@ -23,10 +24,10 @@ order: i-ii
                 </div>
               </div>
             </div>
-            <div class="page">
+            <div class="page toc">
               <div class="page-content">
                 <h2 class="page-title">Table of Contents</h2>
-                <div class="toc">
+                <div class="toc-wrap">
                   <div class="toc-list">
                     <ol class="toc-entry-list">
                       {% for p in site.pages %}

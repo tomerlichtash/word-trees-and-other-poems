@@ -2,6 +2,7 @@ title: Word Trees
 subtitle: and Other Poems
 bookserial: 3-14159265359
 page_count: 9
+
 author:
   name: Tomer Lichtash
   description: Writer / Developer
@@ -12,8 +13,6 @@ license:
   symbol: cc
   description: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
   url: http://creativecommons.org/licenses/by-nc-sa/4.0/
-#teaser: It's a free web book for interactive visual poems made of Word Trees
-#description: Interactive Visual Poetry by Tomer Lichtash
 
 # Config
 source: .
@@ -26,7 +25,6 @@ markdown: kramdown
 highlight: rouge
 excerpt_separator: "<!--more-->"
 
-# Used: default.html front-matter and compress.html
 # Options: http://jch.penibelst.de
 compress_html:
   clippings: all
@@ -35,8 +33,6 @@ compress_html:
   profile: false
   ignore:
     envs: [development]
-
-category-list: [poem]
 
 exclude:
     - .bundle
@@ -64,18 +60,14 @@ msapplication_tileimage: 'msapplication_tileimage.png' # Size 144x144
 msapplication_tilecolor: '#fabb00'
 
 # SEO
-google_author: 'https://plus.google.com/103964054247332182133' # tomerlichtash
+google_author: 'https://plus.google.com/103964054247332182133'
 google_site_verification: ''
 bing_webmastertools_id: ''
 
 # Analytics
-google_analytics_tracking_id: UA-26201270-10 # hyper-and-non-linear web book
+google_analytics_tracking_id: UA-26201270-10
 
 # Facebook - https://developers.facebook.com/docs/sharing/opengraph/custom#propertytypes
 og_image: 'http://images.phlow.de/phlow/phlow_de-logo-512x.png'
 og_locale: 'en_EN'
 og_type: 'website'
-
-socialmedia:
-  twitter: tomerlichtash
-  facebook: tomerlichtash

@@ -1,6 +1,16 @@
 {% assign shareUrl = page.url | prepend: site.url %}
+{% assign icon = 'license-cc' %}
 <footer class="footer">
   <div class="site-content-strip">
-    <p><a class="btn" href={{ site.url }}><strong>{{ site.title }} {{ site.subtitle }}</strong></a> &mdash; 2017 <a rel="license" class="license-type" target="_blank" title="This work is licensed under a {{ site.license.description }}" href="{{ site.license.url }}"><i class="icon license"></i><span class="caption">{{ site.license.symbol }}</span></a> <strong>{{ site.author.name }}</strong></p>
+    <p>
+      <span class="year">2017</span>
+      <span class="license-type">
+        <a rel="license" target="_blank" title="This work is licensed under a {{ site.license.description }}" href="{{ site.license.url }}">
+          <i class="icon license"></i>
+          {{ site.license.symbol }}
+        </a>
+      </span>
+      {{ site.author.name }}
+    </p>
   </div>
 </footer>

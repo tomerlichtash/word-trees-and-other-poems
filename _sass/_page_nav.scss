@@ -35,10 +35,10 @@
       border-bottom: 0;
       display: table-cell;
       height: 100%;
-      position: relative;
       vertical-align: middle;
       width: 50px;
       z-index: 10000;
+      margin: 0;
 
       .link-caption {
         display: none;
@@ -49,11 +49,11 @@
       }
 
       &::after {
+        position: relative;
         display: table-cell;
         font-family: $font3;
         font-size: 4rem;
         font-weight: 100;
-        right: 0;
         text-align: center;
         vertical-align: middle;
         width: 50px;
@@ -64,6 +64,8 @@
   .next {
     a {
       &::after {
+        @include transition(all, 125ms);
+        right: 0;
         content: '\203A';
       }
     }
@@ -72,6 +74,8 @@
   .prev {
     a {
       &::after {
+        @include transition(all, 125ms);
+        left: 0;
         content: '\2039';
       }
     }
@@ -84,21 +88,34 @@
 
   &:hover {
     a {
-      right: -3px;
       color: $c3;
+
+      &::after {
+        right: -3px;
+      }
     }
   }
 }
 
 .inner-page-nav-prev {
-  @include transition(all, 125ms);
-
+  @include transition(all, 150ms);
   left: -50px;
 
   &:hover {
     a {
-      left: -3px;
       color: $c3;
+
+      &::after {
+        left: -3px;
+      }
     }
+  }
+}
+
+@include breakpoint($mobile) {
+  .social-bar,
+  .inner-page-nav-next,
+  .inner-page-nav-prev {
+    display: none;
   }
 }

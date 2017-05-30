@@ -4,9 +4,11 @@
 .author {
   @include box-shadow(0, 0, .5rem, rgba(0, 0, 0, .2));
   @include span(12 of 12 no-gutters);
+
   border-bottom: 1px solid $white-on-color;
   border-top: 1px solid $white-on-color;
   color: $white;
+  margin-top: 2rem;
 
   .title {
     color: $white;
@@ -19,11 +21,12 @@
   .inner {
     @include container(100%);
     background: rgba(255, 255, 255, .1);
-    padding: 4rem 6rem;
+    padding: 2rem 6rem;
   }
 
   .photo {
     @include box-shadow(0, 0, .5rem, rgba(0, 0, 0, .2));
+    @extend %disable-user-select;
 
     float: left;
     margin-right: 1rem;
@@ -81,56 +84,41 @@
     text-transform: lowercase;
 
     a {
-      background-position: top left;
-      display: inline-block;
-      height: 18px;
-      padding-bottom: .25rem;
-      vertical-align: middle;
-      width: 18px;
+      background: $white;
+      border-bottom: 0;
+      background: #f00;
 
-      span {
-        display: none;
+      svg {
+        fill: $white;
       }
 
+      $svg-size: 20px;
+
       &:hover {
-        span {
-          opacity: 0;
+        svg {
+          fill: #fd0;
         }
       }
 
       &.facebook {
-        background: $icon-bg-color url('./../img/social/facebook.png') no-repeat;
-        background-size: contain;
+        @include svg('./../img/social/facebook.svg', $svg-size);
       }
 
       &.instagram {
-        background: $icon-bg-color url('./../img/social/instagram.png') no-repeat;
-        background-size: contain;
+        @include svg('./../img/social/instagram.svg', $svg-size);
       }
 
       &.linkedin {
-        background: $icon-bg-color url('./../img/social/linkedin.png') no-repeat;
-        background-size: contain;
+        @include svg('./../img/social/linkedin.svg', $svg-size);
       }
 
       &.twitter {
-        background: $icon-bg-color url('./../img/social/twitter.png') no-repeat;
-        background-size: contain;
+        @include svg('./../img/social/twitter.svg', $svg-size);
       }
 
       &.github {
-        background: $icon-bg-color url('./../img/social/github.png') no-repeat;
-        background-size: contain;
+        @include svg('./../img/social/github.svg', $svg-size);
       }
-    }
-
-    span {
-      @include transition(all, 125ms, ease-in);
-
-      bottom: -55px;
-      left: 0;
-      opacity: 0;
-      position: absolute;
     }
   }
 }

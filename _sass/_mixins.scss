@@ -3,6 +3,13 @@
 @import 'typography';
 @import 'colors';
 
+%disable-user-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 //@mixin dashify {
 //&::before,
 //&::after {

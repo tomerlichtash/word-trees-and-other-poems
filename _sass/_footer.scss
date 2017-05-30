@@ -2,22 +2,17 @@
 @import 'mixins';
 @import 'typography';
 
-// todo: move to settings
-$desktop: (min-device-width: 960px);
-$mobile: (min-device-width: 375px) and (max-device-height: 667px);
-
 .footer {
   @include span(12 of 12);
+  @extend %disable-user-select;
 
+  position: relative;
   color: $footer-color-text;
   display: block;
   font-family: $font2;
   font-weight: 300;
   padding: 1rem 0;
-
-  strong {
-    font-weight: 900;
-  }
+  text-align: center;
 
   @include breakpoint($desktop) {
     font-size: .8rem;
@@ -66,3 +61,4 @@ $mobile: (min-device-width: 375px) and (max-device-height: 667px);
     content: ')';
   }
 }
+
