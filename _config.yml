@@ -17,7 +17,7 @@ license:
 # Config
 source: .
 destination: docs
-prod_url: 'http://tomerlichtash.com/word-trees-and-other-poems'
+url: 'http://tomerlichtash.com/word-trees-and-other-poems'
 baseurl: '/'
 permalink: /:title/
 
