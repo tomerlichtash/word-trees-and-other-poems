@@ -16,7 +16,7 @@ license:
 
 # Config
 source: .
-destination: public
+destination: docs
 url: 'https://tomerlichtash.com/nlp'
 baseurl: '/'
 permalink: /:title/
