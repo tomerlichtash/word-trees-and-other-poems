@@ -39,12 +39,12 @@ gems:
   - jekyll-minifier
 
 jekyll-minifier:
-  remove_spaces_inside_tags: true   # Default: true
-  remove_multi_spaces: true         # Default: true
-  remove_comments: true             # Default: true
-  remove_quotes: false              # Default: false
-  compress_css: true                # Default: true
-  compress_javascript: true         # Default: true
+  remove_spaces_inside_tags: true
+  remove_multi_spaces: true
+  remove_comments: true
+  remove_quotes: false
+  compress_css: true
+  compress_javascript: true
 
 exclude:
     - .bundle
