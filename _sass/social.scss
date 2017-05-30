@@ -2,21 +2,17 @@
   @extend %disable-user-select;
   @include span(12 of 12 no-gutters);
 
+  left: 1rem;
   position: absolute;
-  z-index: 10000;
+  top: 2rem;
   width: 130px;
-  top: 1rem;
+  z-index: 10000;
 
   .share-button {
-    margin: 0.25rem 0 0;
+    margin: .25rem 0 0;
   }
 
   .social-bar-inner {
-    //background-color: #0f0;
-    //position: relative;
-    //text-align: center;
-    //float: left;
-
     &:hover {
       cursor: default;
 
@@ -30,10 +26,10 @@
       }
 
       .caption {
-        opacity: 1;
         color: $c3;
-        display: inline-block;
         cursor: default;
+        display: inline-block;
+        opacity: 1;
       }
 
       .social-media-channels-menu {
@@ -46,28 +42,20 @@
   }
 
   .toggle {
-    //-webkit-border-top-left-radius: 5px;
-    //-webkit-border-top-right-radius: 5px;
-    //-moz-border-radius-topleft: 5px;
-    //-moz-border-radius-topright: 5px;
-    //border-top-left-radius: 5px;
-    //border-top-right-radius: 5px;
-
     cursor: pointer;
     display: block;
-    text-align: center;
     font-family: $font2;
     font-size: .9rem;
-    z-index: 10000;
     margin-right: 1.5rem;
+    text-align: center;
+    z-index: 10000;
 
     svg {
       fill: $body-text-color;
     }
 
     .icon {
-      @include svg('./../img/share.svg', 17px);
-      //opacity: .5;
+      @include svg(18px);
     }
 
     .caption {
@@ -83,28 +71,19 @@
 
 
 .social-media-channels-menu {
-  //@include transition(all, 35ms, ease-in);
   @include box-shadow(0, 0, .5rem, rgba(0, 0, 0, .2));
-
-  //width: 0;
-
-  .social-media-channels-menu-inner {
-    padding: 1rem;
-  }
-
-  -webkit-border-bottom-right-radius: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-  -moz-border-radius-bottomright: 5px;
-  -moz-border-radius-bottomleft: 5px;
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
+  @include radius(5px);
 
   border: 1px solid $transparent2;
   border-top: 0;
   display: none;
   opacity: 1;
+  padding-top: 2rem;
   position: absolute;
   right: 1rem;
-  padding-top: 2rem;
   z-index: -1;
+
+  .social-media-channels-menu-inner {
+    padding: 1rem;
+  }
 }

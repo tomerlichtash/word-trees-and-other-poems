@@ -52,11 +52,12 @@ $mobile: (min-device-width: 375px) and (max-device-height: 667px);
   }
 
   .page-title {
+    @extend %disable-user-select;
+
     display: block;
     font-family: $font3;
     margin: 0;
     text-transform: uppercase;
-    @extend %disable-user-select;
 
     input {
       border: 0;
@@ -93,7 +94,7 @@ $mobile: (min-device-width: 375px) and (max-device-height: 667px);
       i {
         display: inline-block;
         font-family: $font2;
-        font-size: 0.9rem;
+        font-size: .9rem;
         font-style: normal;
         line-height: 2rem;
         margin: 1rem 2rem;
@@ -209,9 +210,9 @@ $mobile: (min-device-width: 375px) and (max-device-height: 667px);
     &.back-cover {
       background: $c1;
       color: $white;
-      position: relative;
       float: none;
       margin: 0 auto;
+      position: relative;
 
       .page-content {
         padding: 0;
@@ -238,7 +239,7 @@ $mobile: (min-device-width: 375px) and (max-device-height: 667px);
 
         p {
           line-height: 1.7rem;
-          text-shadow: 0 1px 1px rgba(0, 0, 255, .5);
+          text-shadow: 0 1px 1px $transparent5;
         }
 
         a {
@@ -342,16 +343,15 @@ $mobile: (min-device-width: 375px) and (max-device-height: 667px);
 
       .page-content {
         padding: 2rem;
+      }
 
-        .page-title {
-          font-size: 1.5rem;
-          font-weight: 300;
+      .page-title {
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-align: left;
+
+        &::after {
           text-align: center;
-          text-align: left;
-
-          &::after {
-            text-align: center;
-          }
         }
       }
 
@@ -360,11 +360,11 @@ $mobile: (min-device-width: 375px) and (max-device-height: 667px);
           margin-bottom: 2rem;
           text-align: center;
 
-          &:before {
+          &::before {
             content: '\2042';
-            text-align: center;
-            padding: 0 0 2rem;
             display: block;
+            padding: 0 0 2rem;
+            text-align: center;
           }
         }
       }

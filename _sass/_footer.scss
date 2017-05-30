@@ -3,16 +3,30 @@
 @import 'typography';
 
 .footer {
-  @include span(12 of 12);
   @extend %disable-user-select;
+  @include span(12 of 12);
 
-  position: relative;
   color: $footer-color-text;
   display: block;
   font-family: $font2;
   font-weight: 300;
   padding: 1rem 0;
+  position: relative;
   text-align: center;
+
+  .author-name,
+  .license-type,
+  .publish-year {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .license {
+    &.cc {
+      @include svg(22px);
+    }
+  }
+
 
   @include breakpoint($desktop) {
     font-size: .8rem;
@@ -52,13 +66,4 @@
   }
 }
 
-.license-type {
-  &::before {
-    content: '(';
-  }
-
-  &::after {
-    content: ')';
-  }
-}
 

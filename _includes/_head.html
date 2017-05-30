@@ -6,13 +6,10 @@
 {% assign title = title | strip_html | escape | strip_newlines %}
 {% endcapture %}
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% if page.path == 'index.html' %}
-<title>{{ site.title }}</title>
-{% else %}
-<title>{{ site.title }} | {{ title }}</title>
-{% endif %}
+<title>{{ title }}</title>
 <!-- <link rel="stylesheet" type="text/css" href="{{ url }}/assets/css/normalize.css"> -->
 <link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700,800|Cinzel+Decorative:400,700,900|Gloria+Hallelujah|Miriam+Libre:400,700&amp;subset=hebrew,latin-ext" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
@@ -68,9 +65,9 @@
       if (!res) {
         titleInput.value = '{{ page.title }}';
       }
-      
+
       titleInput.removeEventListener('change', render);
-      
+
       drawWordTree(id, res ? res.toLowerCase() : '{{ page.title }}', format, type, str, maxFontSize, bgColor, fgColor);
     }
 
@@ -87,7 +84,7 @@
 
     poems.forEach(function(poem, index) {
       return poem.items.forEach(function(item, itemIndex) {
-        var color = fgColor || "#064aef"; //"{{ fgColor }}"
+        var color = fgColor || "#064aef";
         poemData.push([item, 10, color]);
       });
     });
@@ -95,7 +92,7 @@
     var data = google.visualization.arrayToDataTable(poemData);
 
     var options = {
-      backgroundColor: "#fff", //"{{ bgColor }}",
+      backgroundColor: "#fff",
       maxFontSize: maxFontSize || 15,
       fontName: "Miriam Libre",
       wordtree: {
@@ -116,6 +113,6 @@
     });
     google.charts.setOnLoadCallback(function() {
       drawWordTree(id, word, format, type, str, maxFontSize, bgColor, fgColor);
-    });    
+    });
   }
 </script>

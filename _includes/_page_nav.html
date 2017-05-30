@@ -1,7 +1,12 @@
-
 {% assign prevPage = page.order | minus:1 %}
 {% assign nextPage = page.order | plus:1 %}
 {% assign isHome = page.path == 'index.html' %}
+
+{% assign front_icon = 'book-dark' %}
+{% assign back_icon = 'information' %}
+{% assign random_icon = 'random' %}
+{% assign toc_icon = 'pages' %}
+{% assign page_icon = 'document' %}
 
 <div class="site-header">
   <div class="inner">
@@ -19,53 +24,65 @@
 
       <li class="home site-title" {% if page.url == '/' %}data-active="true"{% endif %}>
         <a href="{{ site.url }}">
-          <span class="short-caption">Front</span>
+          <div class="icon front-cover">
+            {% include {{ front_icon | prepend: 'svg/' | append: '.svg' }} %}
+          </div>
           <span class="caption">Front Page</span>
         </a>
       </li>
 
       <li class="toc" {% if page.url == '/toc' %}data-active="true"{% endif %}>
         <a href="{{ site.url }}/toc">
-          <span class="short-caption">Index</span>
+          <div class="icon toc-index">
+            {% include {{ toc_icon | prepend: 'svg/' | append: '.svg' }} %}
+          </div>
           <span class="caption">Table of Contents</span>
         </a>
       </li>
 
       <li class="end" {% if page.url == '/end' %}data-active="true"{% endif %}>
         <a href="{{ site.url }}/end">
-          <span class="short-caption">Info</span>
+          <div class="icon back-cover">
+            {% include {{ back_icon | prepend: 'svg/' | append: '.svg' }} %}
+          </div>
           <span class="caption">Back Cover</span>
         </a>
       </li>
 
       <li class="random">
         <a id="random-poem" href="{{ site.url }}/poem">
-          <span class="short-caption">Random</span>
+          <div class="icon random">
+            {% include {{ random_icon | prepend: 'svg/' | append: '.svg' }} %}
+          </div>
           <span class="caption">Random Page</span>
         </a>
       </li>
 
+    </ul>
+
+    <ul class="menu right">
       {% if page.path != 'index.html' %}
         {% if page.path != 'pages/last.md' %}
           {% if page.path != 'pages/toc.md' %}
-            <li class="page-index-preview" data-active="true"><a href="{{ site.url }}/poem{{ page.order }}">Page {{ page.order }}/{{ site.page_count }} &mdash; <strong>{{ page.title}}</strong></a></li>
+            <li class="page-index-preview" data-active="true">
+              <a href="{{ site.url }}/poem{{ page.order }}">
+                <div class="icon page">
+                  {% include {{ page_icon | prepend: 'svg/' | append: '.svg' }} %}
+                </div>
+                <span class="caption">Page {{ page.order }}/{{ site.page_count }} &mdash; <strong>{{ page.title}}</strong></span>
+              </a>
+            </li>
           {% endif %}
         {% endif %}
       {% endif %}
 
-      {% if page.path == 'index.html' %}
-      {% endif %}
-    </ul>
-
-    <ul class="menu right">
       {% if page.path != 'index.html' %}
         {% if prevPage == 0 %}
         <li class="prev"><a href="{{ site.url }}/toc">Previous</a></li>
         <li class="next"><a href="{{ site.url }}/poem{{ nextPage }}">Next</a></li>
         {% else %}
-          {% if page.path == "pages/last.md" %}
-          <li class="prev"><a href="{{ site.url }}/poem9">Back to Last Poem</a></li>
-          {% else %}
+          {% if page.path != "pages/last.md" %}
+          <!--<li class="prev"><a href="{{ site.url }}/poem9">Back to Last Poem</a></li>-->
             {% if page.path == "pages/toc.md" %}
             <li class="prev"><a href="{{ site.url }}">Previous</a></li>
             {% else %}

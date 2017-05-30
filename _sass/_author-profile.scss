@@ -20,13 +20,13 @@
 
   .inner {
     @include container(100%);
-    background: rgba(255, 255, 255, .1);
+    background: $transparent6;
     padding: 2rem 6rem;
   }
 
   .photo {
-    @include box-shadow(0, 0, .5rem, rgba(0, 0, 0, .2));
     @extend %disable-user-select;
+    @include box-shadow(0, 0, .5rem, rgba(0, 0, 0, .2));
 
     float: left;
     margin-right: 1rem;
@@ -84,9 +84,7 @@
     text-transform: lowercase;
 
     a {
-      background: $white;
       border-bottom: 0;
-      background: #f00;
 
       svg {
         fill: $white;
@@ -96,28 +94,28 @@
 
       &:hover {
         svg {
-          fill: #fd0;
+          fill: $highlight;
         }
       }
 
       &.facebook {
-        @include svg('./../img/social/facebook.svg', $svg-size);
+        @include svg($svg-size);
       }
 
       &.instagram {
-        @include svg('./../img/social/instagram.svg', $svg-size);
+        @include svg($svg-size);
       }
 
       &.linkedin {
-        @include svg('./../img/social/linkedin.svg', $svg-size);
+        @include svg($svg-size);
       }
 
       &.twitter {
-        @include svg('./../img/social/twitter.svg', $svg-size);
+        @include svg($svg-size);
       }
 
       &.github {
-        @include svg('./../img/social/github.svg', $svg-size);
+        @include svg($svg-size);
       }
     }
   }

@@ -34,30 +34,31 @@ compress_html:
   ignore:
     envs: [development]
 
+gems:
+  - octopress-autoprefixer
+  - jekyll-minifier
+
+jekyll-minifier:
+  remove_spaces_inside_tags: true   # Default: true
+  remove_multi_spaces: true         # Default: true
+  remove_comments: true             # Default: true
+  remove_quotes: false              # Default: false
+  compress_css: true                # Default: true
+  compress_javascript: true         # Default: true
+
 exclude:
     - .bundle
     - .sass-cache
     - Gemfile
     - Gemfile.lock
-    - LICENSE
-    - README.md
     - package.json
     - assets/scss
     - assets/xslt
+    - node_modules
+    - npm-debug.log
 
-# Favicons - https://mathiasbynens.be/notes/touch-icons
-favicon-32x32: 'favicon-32x32.png'
-touch-icon-192x192: 'touch-icon-192x192.png'
-apple-touch-icon-180x180-precomposed: 'apple-touch-icon-180x180-precomposed.png'
-apple-touch-icon-152x152-precomposed: 'apple-touch-icon-152x152-precomposed.png'
-apple-touch-icon-144x144-precomposed: 'apple-touch-icon-144x144-precomposed.png'
-apple-touch-icon-120x120-precomposed: 'apple-touch-icon-120x120-precomposed.png'
-apple-touch-icon-114x114-precomposed: 'apple-touch-icon-114x114-precomposed.png'
-apple-touch-icon-76x76-precomposed: 'apple-touch-icon-76x76-precomposed.png'
-apple-touch-icon-72x72-precomposed: 'apple-touch-icon-72x72-precomposed.png'
-apple-touch-icon-precomposed: 'apple-touch-icon-precomposed.png'
-msapplication_tileimage: 'msapplication_tileimage.png' # Size 144x144
-msapplication_tilecolor: '#fabb00'
+#msapplication_tileimage: 'msapplication_tileimage.png' # Size 144x144
+#msapplication_tilecolor: '#fabb00'
 
 # SEO
 google_author: 'https://plus.google.com/103964054247332182133'
@@ -68,6 +69,11 @@ bing_webmastertools_id: ''
 google_analytics_tracking_id: UA-26201270-10
 
 # Facebook - https://developers.facebook.com/docs/sharing/opengraph/custom#propertytypes
-og_image: 'http://images.phlow.de/phlow/phlow_de-logo-512x.png'
+og_image: 'http://tomerlichtash.com/wordtree/assets/img/screenshot.png'
 og_locale: 'en_EN'
 og_type: 'website'
+
+autoprefixer:
+  only_production: false
+  browsers:
+    - last 2 versions

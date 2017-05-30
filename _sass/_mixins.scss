@@ -4,49 +4,72 @@
 @import 'colors';
 
 %disable-user-select {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  //-webkit-user-select: none;
+  //-moz-user-select: none;
+  //-ms-user-select: none;
   user-select: none;
 }
 
-//@mixin dashify {
-//&::before,
-//&::after {
-//  content: '\2014';
-//  margin: 0 .5rem;
-//  opacity: .7;
-//}
-//}
-// @mixin opacity($opacity) {
-//   opacity: $opacity;
-//   $opacity-ie: $opacity * 100;
-//   filter: alpha(opacity=$opacity-ie); //IE8
-// }
+@mixin icon-hover {
+  a {
+    &:hover {
+      background-color: $c1;
+
+      .icon {
+        fill: $white;
+      }
+    }
+  }
+}
+
+@mixin svg($size) {
+  background-size: $size $size;
+  display: inline-block;
+  height: $size;
+  vertical-align: middle;
+  width: $size;
+  //margin: 0 auto;
+}
+
+@mixin icon($path, $size) {
+  background-image: url($path);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  height: $size;
+  width: $size;
+}
+
+@mixin opacity($opacity) {
+  filter: alpha(opacity=$opacity-ie); //IE8
+  $opacity-ie: $opacity * 100;
+  opacity: $opacity;
+}
 
 @mixin box-shadow($hoff, $voff, $blur, $color) {
-  // -webkit-box-shadow: $hoff $voff $blur $color;
-  // -moz-box-shadow: $hoff $voff $blur $color;
+  //-webkit-box-shadow: $hoff $voff $blur $color;
+  //-moz-box-shadow: $hoff $voff $blur $color;
   box-shadow: $hoff $voff $blur $color;
 }
 
 @mixin box-shadow-inset($hoff, $voff, $blur, $color) {
-  // -webkit-box-shadow: inset $hoff $voff $blur $color;
-  // -moz-box-shadow: inset $hoff $voff $blur $color;
+  //-webkit-box-shadow: inset $hoff $voff $blur $color;
+  //-moz-box-shadow: inset $hoff $voff $blur $color;
   box-shadow: inset $hoff $voff $blur $color;
 }
 
 @mixin transition($prop, $time, $ease: ease-in-out) {
-  // -webkit-transition: $prop $time $ease;
-  // -moz-transition: $prop $time $ease;
-  // -ms-transition: $prop $time $ease;
-  // -o-transition: $prop $time $ease;
+  //-webkit-transition: $prop $time $ease;
+  //-moz-transition: $prop $time $ease;
+  //-ms-transition: $prop $time $ease;
+  //-o-transition: $prop $time $ease;
   transition: $prop $time $ease;
 }
 
 @mixin radius($rad) {
-  // -webkit-border-radius: $rad;
-  // -moz-border-radius: $rad;
+  //-webkit-border-radius: $rad;
+  //-moz-border-radius: $rad;
   border-radius: $rad;
 }
 
