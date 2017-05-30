@@ -23,7 +23,7 @@
     <ul class="menu left">
 
       <li class="home site-title" {% if page.url == '/' %}data-active="true"{% endif %}>
-        <a href="{{ site.url }}">
+        <a href="{{ site.prod_url }}">
           <div class="icon front-cover">
             {% include {{ front_icon | prepend: 'svg/' | append: '.svg' }} %}
           </div>
@@ -32,7 +32,7 @@
       </li>
 
       <li class="toc" {% if page.url == '/toc' %}data-active="true"{% endif %}>
-        <a href="{{ site.url }}{{ site.baseurl }}/toc">
+        <a href="{{ site.prod_url }}{{ site.baseurl }}/toc">
           <div class="icon toc-index">
             {% include {{ toc_icon | prepend: 'svg/' | append: '.svg' }} %}
           </div>
@@ -41,7 +41,7 @@
       </li>
 
       <li class="end" {% if page.url == '/end' %}data-active="true"{% endif %}>
-        <a href="{{ site.url }}{{ site.baseurl }}/end">
+        <a href="{{ site.prod_url }}/end">
           <div class="icon back-cover">
             {% include {{ back_icon | prepend: 'svg/' | append: '.svg' }} %}
           </div>
@@ -50,7 +50,7 @@
       </li>
 
       <li class="random">
-        <a id="random-poem" href="{{ site.url }}/poem">
+        <a id="random-poem" href="{{ site.baseurl }}/poem">
           <div class="icon random">
             {% include {{ random_icon | prepend: 'svg/' | append: '.svg' }} %}
           </div>
