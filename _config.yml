@@ -17,7 +17,7 @@ license:
 # Config
 source: .
 destination: docs
-url: 'https://tomerlichtash.com/nlp'
+url: 'http://tomerlichtash.com/word-trees-and-other-poems'
 baseurl: '/'
 permalink: /:title/
 
