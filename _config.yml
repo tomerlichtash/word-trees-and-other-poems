@@ -35,8 +35,8 @@ compress_html:
     envs: [development]
 
 gems:
-  - octopress-autoprefixer
-  - jekyll-minifier
+#  - octopress-autoprefixer
+#  - jekyll-minifier
 
 jekyll-minifier:
   remove_spaces_inside_tags: true
