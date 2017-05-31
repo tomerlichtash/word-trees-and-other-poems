@@ -21,10 +21,11 @@
     return Math.floor(Math.random() * (max - min)) + min;
   }
 
-  var randPoem = getRandomInt(1, countTotal);
-  console.log('randPoem', randPoem);
+  var randPoemId = getRandomInt(1, countTotal);
+  console.log('randPoemId', randPoemId);
 
   // update random poem index
   var href = document.getElementById('random-poem').getAttribute('href');
+  console.log('href', href + randPoemId);
   document.getElementById("random-poem").setAttribute("href", href + randPoem);
 </script>
