@@ -23,7 +23,7 @@
         "dev": "JEKYLL_ENV=development bundle exec jekyll serve -d dev",
         "lint": "bundle exec sass-lint '_sass/**/*.scss' -v -q -i '_sass/vendor/**/*.scss'",
         "clean": "bundle exec jekyll clean && bundle exec jekyll clean -d dev",
-        "dist": "JEKYLL_ENV=production bundle exec jekyll clean && bundle exec jekyll build && versiony minor",
+        "dist": "bundle exec jekyll clean && JEKYLL_ENV=production && bundle exec jekyll build && versiony minor",
         "deploy": "npm run clean && JEKYLL_ENV=production bundle exec jekyll build && git push github master"
     },
     "dependencies": {
