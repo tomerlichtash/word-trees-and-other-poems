@@ -11,21 +11,24 @@
     {% endif %}
 {% endif %}
 <script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function(event) {
+    console.log('event', event);
+    
+    var primaryNav = document.getElementById("primary-nav");
+    var countTotal = Number(primaryNav.getAttribute("data-page-count"));
 
-  var primaryNav = document.getElementById("primary-nav");
-  var countTotal = Number(primaryNav.getAttribute("data-page-count"));
+    function getRandomInt(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min)) + min;
+    }
 
-  function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min;
-  }
+    var randPoemId = getRandomInt(1, countTotal);
+    console.log('randPoemId', randPoemId);
 
-  var randPoemId = getRandomInt(1, countTotal);
-  console.log('randPoemId', randPoemId);
-
-  // update random poem index
-  var href = document.getElementById('random-poem').getAttribute('href');
-  console.log('href', href + randPoemId);
-  document.getElementById("random-poem").setAttribute("href", href + randPoem);
+    // update random poem index
+    var href = document.getElementById('random-poem').getAttribute('href');
+    console.log('href', href + randPoemId);
+    document.getElementById("random-poem").setAttribute("href", href + randPoem);
+  });
 </script>
