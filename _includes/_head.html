@@ -34,14 +34,14 @@
 
 <link rel="canonical" href="{{ url }}{{ page.url }}">
 
-<meta property="og:title" content="{{ title }} {{ subtitle }}">
+<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/img/screenshot.png">
+<meta property="article:author" content="https://www.facebook.com/{{ site.socialmedia.facebook }}">
+<meta property="og:title" content="{{ title }}">
 <meta property="og:description" content="{{ description }}">
 <meta property="og:url" content="{{ url }}{{ page.url }}">
 <meta property="og:locale" content="{% if site.og_locale == nil %}en_EN{% else %}{{ site.og_locale }}{% endif %}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{{ title }}">
-<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/img/screenshot.png">
-<meta property="article:author" content="https://www.facebook.com/{{ site.socialmedia.facebook }}">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="{{ site.socialmedia.twitter }}">
