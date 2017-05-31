@@ -11,6 +11,7 @@
 {% assign subtitle = subtitle | strip_html | escape | strip_newlines %}
 
 {% endcapture %}
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,17 +40,15 @@
 <meta property="og:locale" content="{% if site.og_locale == nil %}en_EN{% else %}{{ site.og_locale }}{% endif %}">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{{ title }}">
+<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/img/screenshot.png">
+<meta property="article:author" content="https://www.facebook.com/{{ site.socialmedia.facebook }}">
 
-<!--{% if page.image.title %}<meta property="og:image" content="{{ site.urlimg }}{{ page.image.title }}">{% endif %}-->
-{% if site.socialmedia.facebook %}<meta property="article:author" content="https://www.facebook.com/{{ site.socialmedia.facebook }}">{% endif %}
-{% if site.socialmedia.twitter %}
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="{{ site.socialmedia.twitter }}">
 <meta name="twitter:creator" content="{{ site.socialmedia.twitter }}">
 <meta name="twitter:title" content="{{ title }}">
-<meta name="twitter:description" content="{{ description }}">{% if page.image.title %}
-<meta name="twitter:image" content="{{ site.urlimg }}{{ page.image.title }}">{% endif %}
-{% endif %}
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/assets/img/screenshot.png">
 
 <link type="text/plain" rel="author" href="{{url}}/humans.txt">
 
