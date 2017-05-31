@@ -187,10 +187,17 @@
   }
 }
 
+@include breakpoint($tablet) {
+  //.caption,
+  //.page-index-preview {
+  //  display: none;
+  //}
+}
+
 @include breakpoint($mobile) {
   .site-header {
     .site-title {
-      padding: 1rem;
+      padding: 2rem;
       text-align: center;
     }
   }
@@ -199,10 +206,6 @@
   .page-index-preview {
     display: none;
   }
-
-  //.short-caption {
-  //  display: block;
-  //}
 
   .menu-container {
     @include span(12 of 12 no-gutters);

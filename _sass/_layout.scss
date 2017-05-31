@@ -3,10 +3,6 @@
 @import 'colors';
 @import 'typography';
 
-// todo: move to settings
-$desktop: (min-device-width: 960px);
-$mobile: (min-device-width: 375px) and (max-device-height: 667px);
-
 .toc-wrap {
   .toc-list {
     .toc-list-title {
@@ -336,7 +332,7 @@ $mobile: (min-device-width: 375px) and (max-device-height: 667px);
     }
 
     .page {
-      @include span(12 of 12);
+      @include span(12 of 12 no-gutters);
 
       float: none;
       overflow: hidden;

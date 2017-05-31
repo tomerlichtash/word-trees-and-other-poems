@@ -27,7 +27,7 @@
           <div class="icon front-cover">
             {% include {{ front_icon | prepend: 'svg/' | append: '.svg' }} %}
           </div>
-          <span class="caption">Front Page</span>
+          <span class="caption">Front Cover</span>
         </a>
       </li>
 
@@ -36,7 +36,7 @@
           <div class="icon toc-index">
             {% include {{ toc_icon | prepend: 'svg/' | append: '.svg' }} %}
           </div>
-          <span class="caption">Table of Contents</span>
+          <span class="caption">Contents</span>
         </a>
       </li>
 
@@ -54,7 +54,7 @@
           <div class="icon random">
             {% include {{ random_icon | prepend: 'svg/' | append: '.svg' }} %}
           </div>
-          <span class="caption">Random Page</span>
+          <span class="caption">Random</span>
         </a>
       </li>
     </ul>
@@ -64,11 +64,13 @@
         {% if page.path != 'pages/last.md' %}
           {% if page.path != 'pages/toc.md' %}
             <li class="page-index-preview" data-active="true">
-              <a href="{{ site.url }}{{ site.baseurl }}/poem{{ page.order }}">
+              <a href="{{ site.url }}{{ site.baseurl }}/poem{{ page.order }}"
+                 aria-label="Page {{ page.order }}/{{ site.page_count }} &mdash; {{ page.title }}"
+                 title="Page {{ page.order }}/{{ site.page_count }} &mdash; {{ page.title }}">
                 <div class="icon page">
                   {% include {{ page_icon | prepend: 'svg/' | append: '.svg' }} %}
                 </div>
-                <span class="caption">Page {{ page.order }}/{{ site.page_count }} &mdash; <strong>{{ page.title}}</strong></span>
+                <span class="caption">Page {{ page.order }}/{{ site.page_count }} &mdash; <strong>{{ page.title }}</strong></span>
               </a>
             </li>
           {% endif %}
@@ -80,8 +82,9 @@
         <li class="prev"><a href="{{ site.url }}{{ site.baseurl }}/toc">Previous</a></li>
         <li class="next"><a href="{{ site.url }}{{ site.baseurl }}/poem{{ nextPage }}">Next</a></li>
         {% else %}
-          {% if page.path != "pages/last.md" %}
-          <!--<li class="prev"><a href="{{ site.url }}/poem9">Back to Last Poem</a></li>-->
+          {% if page.path == "pages/last.md" %}
+            <li class="prev"><a href="{{ site.url }}{{ site.baseurl }}/poem9">Previous</a></li>
+          {% else %}
             {% if page.path == "pages/toc.md" %}
             <li class="prev"><a href="{{ site.url }}{{ site.baseurl }}">Previous</a></li>
             {% else %}

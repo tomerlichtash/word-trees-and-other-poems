@@ -2,8 +2,9 @@
 # DO NOT REMOVE THIS COMMENT
 ---
 
-$desktop: (min-device-width: 960px);
-$mobile: (min-device-width: 375px) and (max-device-height: 667px);
+$desktop: (min-device-width: 700px) and (min-device-height: 800px);
+$tablet: (min-device-width: 660px);
+$mobile: (min-device-width: 450px) and (max-device-height: 700px);
 
 @import 'vendor/normalize';
 @import 'vendor/susy';
@@ -30,7 +31,6 @@ a {
   border-bottom: 2px solid transparent;
   color: $link-color;
   font-family: $font2;
-  // font-weight: 500;
   text-decoration: none;
   transition: border 100ms;
 
