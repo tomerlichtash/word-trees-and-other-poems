@@ -11,7 +11,7 @@
 <div class="site-header">
   <div class="inner">
     <h1 class="site-title">
-      <a href="{{ site.url }}{{ site.baseurl }}">
+      <a href="{{ site.url }}{{ site.baseurl }}/">
         <strong>{{ site.title }}</strong><br/>{{ site.subtitle }}
       </a>
     </h1>
@@ -23,7 +23,7 @@
     <ul class="menu left">
 
       <li class="home site-title" {% if page.url == '/' %}data-active="true"{% endif %}>
-        <a href="{{ site.baseurl }}">
+        <a href="{{ site.url }}{{ site.baseurl }}/">
           <div class="icon front-cover">
             {% include {{ front_icon | prepend: 'svg/' | append: '.svg' }} %}
           </div>
