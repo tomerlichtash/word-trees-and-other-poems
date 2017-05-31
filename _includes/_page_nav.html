@@ -77,28 +77,28 @@
 
       {% if page.path != 'index.html' %}
         {% if prevPage == 0 %}
-        <li class="prev"><a href="{{ site.url }}/toc">Previous</a></li>
-        <li class="next"><a href="{{ site.url }}/poem{{ nextPage }}">Next</a></li>
+        <li class="prev"><a href="{{ site.url }}{{ site.baseurl }}/toc">Previous</a></li>
+        <li class="next"><a href="{{ site.url }}{{ site.baseurl }}/poem{{ nextPage }}">Next</a></li>
         {% else %}
           {% if page.path != "pages/last.md" %}
           <!--<li class="prev"><a href="{{ site.url }}/poem9">Back to Last Poem</a></li>-->
             {% if page.path == "pages/toc.md" %}
-            <li class="prev"><a href="{{ site.url }}">Previous</a></li>
+            <li class="prev"><a href="{{ site.url }}{{ site.baseurl }}">Previous</a></li>
             {% else %}
-            <li class="prev"><a href="{{ site.url }}/poem{{ prevPage }}">Previous</a></li>
+            <li class="prev"><a href="{{ site.url }}{{ site.baseurl }}/poem{{ prevPage }}">Previous</a></li>
             {% endif %}
           {% endif %}
           {% if page.lastPage == true %}
-          <li class="next"><a href="{{ site.url }}/end">Next</a></li>
+          <li class="next"><a href="{{ site.url }}{{ site.baseurl }}/end">Next</a></li>
           {% else %}
             {% if page.path != 'pages/last.md' %}
-            <li class="next"><a href="{{ site.url }}/poem{{ nextPage }}">Next</a></li>
+            <li class="next"><a href="{{ site.url }}{{ site.baseurl }}/poem{{ nextPage }}">Next</a></li>
             {% endif %}
           {% endif %}
         {% endif %}
       {% endif %}
       {% if page.path == 'index.html' %}
-      <li class="next"><a href="{{ site.url }}/toc" class="start-here">Next</a></li>
+      <li class="next"><a href="{{ site.url }}{{ site.baseurl }}/toc" class="start-here">Next</a></li>
       {% endif %}
     </ul>
   </div>
