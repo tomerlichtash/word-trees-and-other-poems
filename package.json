@@ -20,6 +20,7 @@
   "scripts": {
     "start": "JEKYLL_ENV=production bundle exec jekyll serve",
     "dev": "JEKYLL_ENV=development bundle exec jekyll serve",
+    "deploy": "JEKYLL_ENV=production bundle exec jekyll build && git push github master",
     "lint": "bundle exec sass-lint '_sass/**/*.scss' -v -q -i '_sass/vendor/**/*.scss'"
   },
   "dependencies": {
