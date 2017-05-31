@@ -16,7 +16,7 @@
                data-mobile-iframe="true">
             <a class="fb-xfbml-parse-ignore"
                target="_blank"
-               href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Ftomerlichtash.com&amp;src=tomerlichtash">Share</a>
+               href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}&amp;src=tomerlichtash">Share</a>
           </div>
         </div>
         <div class="share-button">
@@ -24,10 +24,9 @@
              href="https://twitter.com/share"
              target="_blank"
              data-size="{{ shareButtonSize }}"
-             data-text="{{ site.title }} &mdash; {{ site.description }}"
-             data-url="{{ site.url }}"
-             data-hashtags="visual_poetry,web_book"
-             data-via="tomerlichtash">Tweet</a>
+             data-text="{{ site.title }} {{ site.description }} &mdash; visual poetry book by @tomerlichtash ~ "
+             data-url="{{ site.url }}{{ site.baseurl }}"
+             data-hashtags="vis,poetry">Tweet</a>
         </div>
       </div>
     </div>
