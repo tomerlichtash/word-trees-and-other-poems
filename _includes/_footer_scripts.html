@@ -20,5 +20,6 @@
     return Math.floor(Math.random() * (max - min)) + min;
   }
 
-  document.getElementById('random-poem').setAttribute('href', '{{ site.url }}/poem' + getRandomInt(1, countTotal));
+  // update random poem index
+  document.getElementById('random-poem').setAttribute('href', '{{ site.url }}{{ site.baseurl }}/poem' + getRandomInt(1, countTotal));
 </script>
