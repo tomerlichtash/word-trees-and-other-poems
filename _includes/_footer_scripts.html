@@ -25,5 +25,6 @@
   console.log('randPoem', randPoem);
 
   // update random poem index
-  document.getElementById("random-poem").setAttribute("href", "{{ site.url }}{{ site.baseurl }}/poem" + randPoem);
+  var href = document.getElementById('random-poem').getAttribute('href');
+  document.getElementById("random-poem").setAttribute("href", href + randPoem);
 </script>
