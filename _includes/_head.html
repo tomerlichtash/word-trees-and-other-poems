@@ -122,8 +122,6 @@
 
 <script type="text/javascript">
   document.addEventListener("DOMContentLoaded", function(event) {
-    console.log('event', event);
-
     var primaryNav = document.getElementById("primary-nav");
     var countTotal = Number(primaryNav.getAttribute("data-page-count"));
 
@@ -134,9 +132,7 @@
     }
 
     var randPoemId = getRandomInt(1, countTotal);
-    console.log('randPoemId', randPoemId);
     var href = document.getElementById('random-poem').getAttribute('href');
-    console.log('href', href + randPoemId);
     document.getElementById("random-poem").setAttribute("href", href + randPoemId);
   });
 </script>
