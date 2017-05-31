@@ -46,7 +46,7 @@ jekyll-minifier:
   remove_comments: true
   remove_quotes: false
   compress_css: true
-  compress_javascript: true
+  compress_javascript: false
 
 exclude:
     - .bundle
