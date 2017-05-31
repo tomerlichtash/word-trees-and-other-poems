@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: //sitemap.xml
+Sitemap: http://tomerlichtash.com/word-trees-and-other-poems/sitemap.xml

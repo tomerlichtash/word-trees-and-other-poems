@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="//assets/xslt/atom.xslt" ?>
-<?xml-stylesheet type="text/css" href="//assets/css/atom.css" ?>
+<?xml-stylesheet type="text/xsl" href="/word-trees-and-other-poems/assets/xslt/atom.xslt" ?>
+<?xml-stylesheet type="text/css" href="/word-trees-and-other-poems/assets/css/atom.css" ?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<id>//</id>
+	<id>http://tomerlichtash.com/word-trees-and-other-poems/</id>
 	<title>Word Trees</title>
-	<updated>2017-05-30T22:20:21+03:00</updated>
+	<updated>2017-05-31T06:06:27+03:00</updated>
 
 	<subtitle></subtitle>
 
@@ -19,8 +19,8 @@
 		</author>
 	
 
-	<link href="//atom.xml" rel="self" type="application/rss+xml" />
-	<link href="//" rel="alternate" type="text/html" />
+	<link href="http://tomerlichtash.com/word-trees-and-other-poems/atom.xml" rel="self" type="application/rss+xml" />
+	<link href="http://tomerlichtash.com/word-trees-and-other-poems/" rel="alternate" type="text/html" />
 
 	<generator uri="http://jekyllrb.com" version="3.3.1">Jekyll</generator>
 

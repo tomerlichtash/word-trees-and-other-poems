@@ -17,8 +17,13 @@ license:
 # Config
 source: .
 destination: docs
-url: 'http://tomerlichtash.com/word-trees-and-other-poems'
-baseurl: '/'
+
+#url: 'https://tomerlichtash.github.io'
+#baseurl: ''
+
+url: 'http://tomerlichtash.com'
+baseurl: '/word-trees-and-other-poems'
+
 permalink: /:title/
 
 markdown: kramdown
@@ -26,13 +31,13 @@ highlight: rouge
 excerpt_separator: "<!--more-->"
 
 # Options: http://jch.penibelst.de
-compress_html:
-  clippings: all
-  comments: ["<!-- ", " -->"]
-  endings: all
-  profile: false
-  ignore:
-    envs: [development]
+#compress_html:
+#  clippings: all
+#  comments: ["<!-- ", " -->"]
+#  endings: all
+#  profile: false
+#  ignore:
+#    envs: [development]
 
 gems:
 #  - octopress-autoprefixer
