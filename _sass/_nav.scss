@@ -187,13 +187,6 @@
   }
 }
 
-@include breakpoint($tablet) {
-  //.caption,
-  //.page-index-preview {
-  //  display: none;
-  //}
-}
-
 @include breakpoint($mobile) {
   .site-header {
     .site-title {

@@ -5,24 +5,9 @@
 
 	
 	<url>
-	<loc>http://tomerlichtash.com/word-trees-and-other-poems/404.html</loc>
+	<loc>http://localhost:4000/word-trees-and-other-poems/404.html</loc>
 	
-		<lastmod>2017-05-31T09:03:09+03:00</lastmod>
-	
-	
-		<changefreq>monthly</changefreq>
-	
-	
-		<priority>0.3</priority>
-	
-	</url>
-	
-
-	
-	<url>
-	<loc>http://tomerlichtash.com/word-trees-and-other-poems/atom.xml</loc>
-	
-		<lastmod>2017-05-31T09:03:09+03:00</lastmod>
+		<lastmod>2017-05-31T16:20:08+03:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -35,24 +20,9 @@
 
 	
 	<url>
-	<loc>http://tomerlichtash.com/word-trees-and-other-poems/feed.xml</loc>
+	<loc>http://localhost:4000/word-trees-and-other-poems/atom.xml</loc>
 	
-		<lastmod>2017-05-31T09:03:09+03:00</lastmod>
-	
-	
-		<changefreq>monthly</changefreq>
-	
-	
-		<priority>0.3</priority>
-	
-	</url>
-	
-
-	
-	<url>
-	<loc>http://tomerlichtash.com/word-trees-and-other-poems/humans.txt</loc>
-	
-		<lastmod>2017-05-31T09:03:09+03:00</lastmod>
+		<lastmod>2017-05-31T16:20:08+03:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -65,24 +35,9 @@
 
 	
 	<url>
-	<loc>http://tomerlichtash.com/word-trees-and-other-poems/</loc>
+	<loc>http://localhost:4000/word-trees-and-other-poems/feed.xml</loc>
 	
-		<lastmod>2017-05-31T09:03:09+03:00</lastmod>
-	
-	
-		<changefreq>monthly</changefreq>
-	
-	
-		<priority>0.3</priority>
-	
-	</url>
-	
-
-	
-	<url>
-	<loc>http://tomerlichtash.com/word-trees-and-other-poems/end</loc>
-	
-		<lastmod>2017-05-31T09:03:09+03:00</lastmod>
+		<lastmod>2017-05-31T16:20:08+03:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -95,24 +50,9 @@
 
 	
 	<url>
-	<loc>http://tomerlichtash.com/word-trees-and-other-poems/assets/css/main.css</loc>
+	<loc>http://localhost:4000/word-trees-and-other-poems/humans.txt</loc>
 	
-		<lastmod>2017-05-31T09:03:09+03:00</lastmod>
-	
-	
-		<changefreq>monthly</changefreq>
-	
-	
-		<priority>0.3</priority>
-	
-	</url>
-	
-
-	
-	<url>
-	<loc>http://tomerlichtash.com/word-trees-and-other-poems/poem1/</loc>
-	
-		<lastmod>2017-05-31T09:03:09+03:00</lastmod>
+		<lastmod>2017-05-31T16:20:08+03:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -125,24 +65,9 @@
 
 	
 	<url>
-	<loc>http://tomerlichtash.com/word-trees-and-other-poems/poem2/</loc>
+	<loc>http://localhost:4000/word-trees-and-other-poems/</loc>
 	
-		<lastmod>2017-05-31T09:03:09+03:00</lastmod>
-	
-	
-		<changefreq>monthly</changefreq>
-	
-	
-		<priority>0.3</priority>
-	
-	</url>
-	
-
-	
-	<url>
-	<loc>http://tomerlichtash.com/word-trees-and-other-poems/poem3/</loc>
-	
-		<lastmod>2017-05-31T09:03:09+03:00</lastmod>
+		<lastmod>2017-05-31T16:20:08+03:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -155,24 +80,9 @@
 
 	
 	<url>
-	<loc>http://tomerlichtash.com/word-trees-and-other-poems/poem4/</loc>
+	<loc>http://localhost:4000/word-trees-and-other-poems/end</loc>
 	
-		<lastmod>2017-05-31T09:03:09+03:00</lastmod>
-	
-	
-		<changefreq>monthly</changefreq>
-	
-	
-		<priority>0.3</priority>
-	
-	</url>
-	
-
-	
-	<url>
-	<loc>http://tomerlichtash.com/word-trees-and-other-poems/poem5/</loc>
-	
-		<lastmod>2017-05-31T09:03:09+03:00</lastmod>
+		<lastmod>2017-05-31T16:20:08+03:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -185,24 +95,9 @@
 
 	
 	<url>
-	<loc>http://tomerlichtash.com/word-trees-and-other-poems/poem6/</loc>
+	<loc>http://localhost:4000/word-trees-and-other-poems/assets/css/main.css</loc>
 	
-		<lastmod>2017-05-31T09:03:09+03:00</lastmod>
-	
-	
-		<changefreq>monthly</changefreq>
-	
-	
-		<priority>0.3</priority>
-	
-	</url>
-	
-
-	
-	<url>
-	<loc>http://tomerlichtash.com/word-trees-and-other-poems/poem7/</loc>
-	
-		<lastmod>2017-05-31T09:03:09+03:00</lastmod>
+		<lastmod>2017-05-31T16:20:08+03:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -215,24 +110,9 @@
 
 	
 	<url>
-	<loc>http://tomerlichtash.com/word-trees-and-other-poems/poem8/</loc>
+	<loc>http://localhost:4000/word-trees-and-other-poems/poem1/</loc>
 	
-		<lastmod>2017-05-31T09:03:09+03:00</lastmod>
-	
-	
-		<changefreq>monthly</changefreq>
-	
-	
-		<priority>0.3</priority>
-	
-	</url>
-	
-
-	
-	<url>
-	<loc>http://tomerlichtash.com/word-trees-and-other-poems/poem9/</loc>
-	
-		<lastmod>2017-05-31T09:03:09+03:00</lastmod>
+		<lastmod>2017-05-31T16:20:08+03:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -245,24 +125,9 @@
 
 	
 	<url>
-	<loc>http://tomerlichtash.com/word-trees-and-other-poems/robots.txt</loc>
+	<loc>http://localhost:4000/word-trees-and-other-poems/poem2/</loc>
 	
-		<lastmod>2017-05-31T09:03:09+03:00</lastmod>
-	
-	
-		<changefreq>monthly</changefreq>
-	
-	
-		<priority>0.3</priority>
-	
-	</url>
-	
-
-	
-	<url>
-	<loc>http://tomerlichtash.com/word-trees-and-other-poems/sitemap.xml</loc>
-	
-		<lastmod>2017-05-31T09:03:09+03:00</lastmod>
+		<lastmod>2017-05-31T16:20:08+03:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>
@@ -275,9 +140,144 @@
 
 	
 	<url>
-	<loc>http://tomerlichtash.com/word-trees-and-other-poems/toc</loc>
+	<loc>http://localhost:4000/word-trees-and-other-poems/poem3/</loc>
 	
-		<lastmod>2017-05-31T09:03:09+03:00</lastmod>
+		<lastmod>2017-05-31T16:20:08+03:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://localhost:4000/word-trees-and-other-poems/poem4/</loc>
+	
+		<lastmod>2017-05-31T16:20:08+03:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://localhost:4000/word-trees-and-other-poems/poem5/</loc>
+	
+		<lastmod>2017-05-31T16:20:08+03:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://localhost:4000/word-trees-and-other-poems/poem6/</loc>
+	
+		<lastmod>2017-05-31T16:20:08+03:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://localhost:4000/word-trees-and-other-poems/poem7/</loc>
+	
+		<lastmod>2017-05-31T16:20:08+03:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://localhost:4000/word-trees-and-other-poems/poem8/</loc>
+	
+		<lastmod>2017-05-31T16:20:08+03:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://localhost:4000/word-trees-and-other-poems/poem9/</loc>
+	
+		<lastmod>2017-05-31T16:20:08+03:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://localhost:4000/word-trees-and-other-poems/robots.txt</loc>
+	
+		<lastmod>2017-05-31T16:20:08+03:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://localhost:4000/word-trees-and-other-poems/sitemap.xml</loc>
+	
+		<lastmod>2017-05-31T16:20:08+03:00</lastmod>
+	
+	
+		<changefreq>monthly</changefreq>
+	
+	
+		<priority>0.3</priority>
+	
+	</url>
+	
+
+	
+	<url>
+	<loc>http://localhost:4000/word-trees-and-other-poems/toc</loc>
+	
+		<lastmod>2017-05-31T16:20:08+03:00</lastmod>
 	
 	
 		<changefreq>monthly</changefreq>

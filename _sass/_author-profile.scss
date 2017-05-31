@@ -31,7 +31,8 @@
     float: left;
     margin-right: 1rem;
     overflow: hidden;
-    width: 105px;
+
+    @include span(3 of 12);
 
     .image {
       border: 1px solid $image-border-color;
@@ -46,9 +47,8 @@
   }
 
   .meta {
-    float: left;
+    @include span(8 of 12);
     font-family: $font5;
-    width: 60%;
 
     .name,
     .location,
@@ -56,11 +56,9 @@
       display: block;
       font-size: .9rem;
       line-height: 1.2rem;
-      //margin-bottom: 0.25rem;
     }
 
     .name {
-      //font-size: 1rem;
       font-weight: 900;
       letter-spacing: .2rem;
       margin-bottom: .5rem;
