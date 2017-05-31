@@ -4,11 +4,10 @@
 
 <nav class="inner-page-nav inner-page-nav-prev">
   <div class="menu-container">
-
     <ul class="link-wrap link-wrap-prev">
       {% if prevPage == 0 %}
       <li class="prev">
-        <a href="{{ site.url }}/toc">
+        <a href="{{ site.url }}{{ site.baseurl }}/toc">
           <span class="link-caption-wrap">
             <span class="link-caption" aria-label="Previous Page">Previous Page</span>
           </span>
@@ -17,7 +16,7 @@
       {% else %}
         {% if page.is_last_page %}
         <li class="prev">
-          <a href="{{ site.url }}/poem{{ page.page_count }}">
+          <a href="{{ site.url }}{{ site.baseurl }}/poem{{ page.page_count }}">
             <span class="link-caption-wrap">
               <span class="link-caption" aria-label="Back to Last Poem">Back</span>
             </span>
@@ -27,7 +26,7 @@
           {% if prevPage == -1 %}
 
           <li class="prev">
-            <a href="{{ site.url }}/">
+            <a href="{{ site.url }}{{ site.baseurl }}/">
               <span class="link-caption-wrap">
                 <span class="link-caption" aria-label="Back to Last Poem">Back</span>
               </span>
@@ -35,7 +34,7 @@
           </li>
           {% else %}
           <li class="prev">
-            <a href="{{ site.url }}/poem{{ prevPage }}">
+            <a href="{{ site.url }}{{ site.baseurl }}/poem{{ prevPage }}">
               <span class="link-caption-wrap">
                 <span class="link-caption" aria-label="Previous Page">Previous Page</span>
               </span>
@@ -45,7 +44,6 @@
         {% endif %}
       {% endif %}
     </ul>
-
   </div>
 </nav>
 

@@ -4,11 +4,10 @@
 
 <nav class="inner-page-nav inner-page-nav-next">
   <div class="menu-container">
-
     <ul class="link-wrap link-wrap-next">
       {% if page.path == 'index.html' %}
       <li class="next">
-        <a href="{{ site.url }}/toc">
+        <a href="{{ site.url }}{{ site.baseurl }}/toc">
           <span class="link-caption-wrap">
             <span class="link-caption" aria-label="Next Page">Next Page</span>
           </span>
@@ -17,7 +16,7 @@
       {% else %}
         {% if nextPage > site.page_count %}
         <li class="next">
-          <a href="{{ site.url }}/end">
+          <a href="{{ site.url }}{{ site.baseurl }}/end">
             <span class="link-caption-wrap">
               <span class="link-caption" aria-label="Back Cover">Back Cover</span>
             </span>
@@ -25,17 +24,14 @@
         </li>
         {% else %}
         <li class="next">
-          <a href="{{ site.url }}/poem{{ nextPage }}">
+          <a href="{{ site.url }}{{ site.baseurl }}/poem{{ nextPage }}">
             <span class="link-caption-wrap">
               <span class="link-caption" aria-label="Next Page">Next Page</span>
             </span>
           </a>
         </li>
         {% endif %}
-
       {% endif %}
     </ul>
-
-
   </div>
 </nav>
