@@ -1,7 +1,6 @@
 {% assign prevPage = page.order | minus:1 %}
 {% assign nextPage = page.order | plus:1 %}
 {% assign isHome = page.path == 'index.html' %}
-
 <nav class="inner-page-nav inner-page-nav-prev">
   <div class="menu-container">
     <ul class="link-wrap link-wrap-prev">
@@ -24,7 +23,6 @@
         </li>
         {% else %}
           {% if prevPage == -1 %}
-
           <li class="prev">
             <a href="{{ site.url }}{{ site.baseurl }}/">
               <span class="link-caption-wrap">
