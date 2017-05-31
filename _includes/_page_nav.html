@@ -32,7 +32,7 @@
       </li>
 
       <li class="toc" {% if page.url == '/toc' %}data-active="true"{% endif %}>
-        <a href="{{ site.url }}{{ site.baseurl }}toc">
+        <a href="{{ site.url }}{{ site.baseurl }}/toc">
           <div class="icon toc-index">
             {% include {{ toc_icon | prepend: 'svg/' | append: '.svg' }} %}
           </div>
@@ -41,7 +41,7 @@
       </li>
 
       <li class="end" {% if page.url == '/end' %}data-active="true"{% endif %}>
-        <a href="{{ site.url }}{{ site.baseurl }}end">
+        <a href="{{ site.url }}{{ site.baseurl }}/end">
           <div class="icon back-cover">
             {% include {{ back_icon | prepend: 'svg/' | append: '.svg' }} %}
           </div>
@@ -50,14 +50,13 @@
       </li>
 
       <li class="random">
-        <a id="random-poem" href="{{ site.url }}{{ site.baseurl }}poem">
+        <a id="random-poem" href="{{ site.url }}{{ site.baseurl }}/poem">
           <div class="icon random">
             {% include {{ random_icon | prepend: 'svg/' | append: '.svg' }} %}
           </div>
           <span class="caption">Random Page</span>
         </a>
       </li>
-
     </ul>
 
     <ul class="menu right">
@@ -65,7 +64,7 @@
         {% if page.path != 'pages/last.md' %}
           {% if page.path != 'pages/toc.md' %}
             <li class="page-index-preview" data-active="true">
-              <a href="{{ site.url }}/poem{{ page.order }}">
+              <a href="{{ site.url }}{{ site.baseurl }}/poem{{ page.order }}">
                 <div class="icon page">
                   {% include {{ page_icon | prepend: 'svg/' | append: '.svg' }} %}
                 </div>
