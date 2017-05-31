@@ -23,6 +23,7 @@ $ npm start
 * Susy
 * Breakpoint
 * Jekyll
+* Versiony (```npm i -g versiony```)
 
 ---
 ### Icons
