@@ -20,7 +20,7 @@
     },
     "scripts": {
         "start": "JEKYLL_ENV=production bundle exec jekyll serve",
-        "dev": "JEKYLL_ENV=development bundle exec jekyll serve -d dev",
+        "dev": "JEKYLL_ENV=development bundle exec jekyll serve -d dev --incremental",
         "lint": "bundle exec sass-lint '_sass/**/*.scss' -v -q -i '_sass/vendor/**/*.scss'",
         "clean": "bundle exec jekyll clean && bundle exec jekyll clean -d dev",
         "dist": "JEKYLL_ENV=production bundle exec jekyll build -d docs --incremental --verbose && versiony minor",

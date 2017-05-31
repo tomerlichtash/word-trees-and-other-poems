@@ -3,11 +3,17 @@ subtitle: and Other Poems
 bookserial: 3-14159265359
 page_count: 9
 
+description: Free online publication for interactive visual poetry
+
 author:
   name: Tomer Lichtash
   description: Writer / Developer
   location: Tel-Aviv, Israel
-  url: http://tomerlichtash.com/word-trees-and-other-poems/
+  url: http://tomerlichtash.com/
+
+socialmedia:
+  twitter: tomerlichtash
+  facebook: tomerlichtash
 
 license:
   symbol: cc
