@@ -50,7 +50,7 @@ a {
 
 blockquote {
   font-family: $font2;
-  overflow: hidden;
+  //overflow: hidden;
 
   p {
     margin: 0;
@@ -82,9 +82,6 @@ blockquote {
 svg {
   text {
     cursor: pointer;
-    &:hover {
-      border-bottom: 1px solid red;
-    }
   }
 
   > g {
@@ -98,6 +95,7 @@ svg {
 
 .off-screen {
   @extend %disable-user-select;
+
   clip: rect(1px 1px 1px 1px); /* IE 6/7 */
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
