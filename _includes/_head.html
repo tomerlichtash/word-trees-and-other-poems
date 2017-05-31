@@ -1,9 +1,15 @@
 {% capture ignore %}
 {% assign url = site.baseurl | prepend: site.url %}
+
 {% capture description %}{% if page.meta_description %}{{ page.meta_description }}{% elsif page.teaser %}{{ page.teaser }}{% elsif page.excerpt %}{{ page.excerpt }}{% elsif site.description %}{{ site.description }}{% endif %}{% endcapture %}
 {% assign description = description | strip_html | escape | strip %}
-{% capture title %}{% if page.meta_title %}{{ page.meta_title}}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title | strip_html | strip }}{% endif %}{% endcapture %}
+
+{% capture title %}{{ site.title | strip_html | strip }}{% endcapture %}
 {% assign title = title | strip_html | escape | strip_newlines %}
+
+{% capture subtitle %}{{ site.subtitle | strip_html | strip }}{% endcapture %}
+{% assign subtitle = subtitle | strip_html | escape | strip_newlines %}
+
 {% endcapture %}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,20 +33,20 @@
 
 <link rel="canonical" href="{{ url }}{{ page.url }}">
 
-<meta property="og:title" content="{{ site.title }} / {{ title }}">
+<meta property="og:title" content="{{ title }} {{ subtitle }}">
 <meta property="og:description" content="{{ description }}">
 <meta property="og:url" content="{{ url }}{{ page.url }}">
 <meta property="og:locale" content="{% if site.og_locale == nil %}en_EN{% else %}{{ site.og_locale }}{% endif %}">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="{{ site.title }} {{ site.subtitle }}">
+<meta property="og:site_name" content="{{ title }}">
 
-{% if page.image.title %}<meta property="og:image" content="{{ site.urlimg }}{{ page.image.title }}">{% endif %}
+<!--{% if page.image.title %}<meta property="og:image" content="{{ site.urlimg }}{{ page.image.title }}">{% endif %}-->
 {% if site.socialmedia.facebook %}<meta property="article:author" content="https://www.facebook.com/{{ site.socialmedia.facebook }}">{% endif %}
 {% if site.socialmedia.twitter %}
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="{{ site.socialmedia.twitter }}">
 <meta name="twitter:creator" content="{{ site.socialmedia.twitter }}">
-<meta name="twitter:title" content="{{site.title }} / {{ title }}">
+<meta name="twitter:title" content="{{ title }}">
 <meta name="twitter:description" content="{{ description }}">{% if page.image.title %}
 <meta name="twitter:image" content="{{ site.urlimg }}{{ page.image.title }}">{% endif %}
 {% endif %}
