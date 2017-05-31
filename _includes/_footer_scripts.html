@@ -21,7 +21,9 @@
     return Math.floor(Math.random() * (max - min)) + min;
   }
 
+  var randPoem = getRandomInt(1, countTotal);
+  console.log('randPoem', randPoem);
+
   // update random poem index
-  debugger;
-  document.getElementById("random-poem").setAttribute("href", "{{ site.url }}{{ site.baseurl }}/poem" + getRandomInt(1, countTotal));
+  document.getElementById("random-poem").setAttribute("href", "{{ site.url }}{{ site.baseurl }}/poem" + randPoem);
 </script>
