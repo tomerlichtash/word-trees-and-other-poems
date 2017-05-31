@@ -32,7 +32,7 @@ title: Table of Contents
                     <ol class="toc-entry-list">
                       {% for p in site.pages %}
                         {% if p.categories[0] == 'poem' %}
-                          <li class="toc-entry"><a href="{{ site.url }}{{ p.permalink }}">{{ p.title }}</a></li>
+                          <li class="toc-entry"><a href="{{ site.url }}{{ site.baseurl }}/{{ p.permalink }}">{{ p.title }}</a></li>
                         {% endif %}
                       {% endfor %}
                     </ol>
