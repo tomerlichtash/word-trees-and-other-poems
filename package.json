@@ -1,7 +1,7 @@
 {
     "name": "hyper-and-non-linear-in-real-time-run-time",
     "description": "a short free visual poetry publication made with Google Charts",
-    "version": "0.8.0",
+    "version": "0.9.0",
     "author": "Tomer Lichtash",
     "bugs": {
         "url": "https://github.com/tomerlichtash/hyper-and-non-linear-in-real-time-run-time/issues"
