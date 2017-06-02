@@ -1,4 +1,4 @@
-# Word Trees &amp; Other Poems
+# Word Trees and Other Poems
 ## Experiments in Visual Poetry, Web Publication and Text Visualisation
 
 This project is a poetry book for visual poems made with Google Charts, but it's also a static book boilerplate for short publications online. You're welcome free to fork it, use it and contribute. This project is still under development.
