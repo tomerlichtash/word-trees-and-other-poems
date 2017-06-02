@@ -1,0 +1,17 @@
+{% if page.path == 'index.html' %}
+<title>{{ site.title }} {{ site.subtitle }} / {{ site.author.name }}</title>
+{% else %}
+
+  {% if page.path == 'toc.md' %}
+    <title>toc</title>
+  {% else %}
+    {% if page.path == 'last.html' %}
+      <title>last</title>
+    {% else %}
+      <title>else</title>
+    {% endif %}
+  {% endif %}
+
+{% endif %}
+
+

@@ -1,9 +1,14 @@
 title: Word Trees
 subtitle: and Other Poems
+description: A free web book of interactive visual poetry
+
 bookserial: 3-14159265359
 page_count: 9
 
-description: A free web book of interactive visual poetry
+license:
+  symbol: cc
+  description: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+  url: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
 author:
   name: Tomer Lichtash
@@ -14,11 +19,6 @@ author:
 socialmedia:
   twitter: tomerlichtash
   facebook: tomerlichtash
-
-license:
-  symbol: cc
-  description: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
-  url: http://creativecommons.org/licenses/by-nc-sa/4.0/
 
 # Config
 source: .

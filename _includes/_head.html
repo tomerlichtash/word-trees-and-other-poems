@@ -16,13 +16,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% if page.path == 'index.html' %}
-<title>{{ site.title }} {{ site.subtitle }} / {{ site.author.name }}</title>
-{% else %}
-<title>{{ site.title }} / {{ title }}</title>
-{% endif %}
+{% include _site_title.html %}
 
-<link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700,800|Cinzel+Decorative:400,700,900|Gloria+Hallelujah|Miriam+Libre:400,700&amp;subset=hebrew,latin-ext" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700,800|Gloria+Hallelujah|Miriam+Libre:400,700&amp;subset=hebrew,latin-ext" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="{{ site.url }}{{ site.baseurl }}/assets/css/main.css">
 
 <meta name="description" content="{{ description }}">
@@ -39,9 +35,9 @@
 <meta property="og:title" content="{{ title }}">
 <meta property="og:description" content="{{ description }}">
 <meta property="og:url" content="{{ url }}{{ page.url }}">
-<meta property="og:locale" content="{% if site.og_locale == nil %}en_EN{% else %}{{ site.og_locale }}{% endif %}">
+<!--<meta property="og:locale" content="{% if site.og_locale == nil %}en_EN{% else %}{{ site.og_locale }}{% endif %}">-->
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="{{ title }}">
+<!--<meta property="og:site_name" content="{{ title }}">-->
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="{{ site.socialmedia.twitter }}">
