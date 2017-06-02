@@ -26,13 +26,14 @@
 
   .photo {
     @extend %disable-user-select;
+
     @include box-shadow(0, 0, .5rem, rgba(0, 0, 0, .2));
+    @include span(3 of 12);
 
     float: left;
     margin-right: 1rem;
     overflow: hidden;
 
-    @include span(3 of 12);
 
     .image {
       border: 1px solid $image-border-color;

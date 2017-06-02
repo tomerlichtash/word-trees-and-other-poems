@@ -2,8 +2,8 @@
   @extend %disable-user-select;
   @include span(12 of 12 no-gutters);
 
-  right: 1rem;
   position: absolute;
+  right: 1rem;
   top: 2rem;
   width: 130px;
   z-index: 10000;
@@ -68,7 +68,6 @@
   }
 
 }
-
 
 .social-media-channels-menu {
   @include box-shadow(0, 0, .5rem, rgba(0, 0, 0, .2));
