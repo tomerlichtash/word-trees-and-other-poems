@@ -1,7 +1,7 @@
 {
     "name": "hyper-and-non-linear-in-real-time-run-time",
     "description": "a short free visual poetry publication made with Google Charts",
-    "version": "0.16.0",
+    "version": "0.17.0",
     "author": "Tomer Lichtash",
     "bugs": {
         "url": "https://github.com/tomerlichtash/hyper-and-non-linear-in-real-time-run-time/issues"
@@ -23,7 +23,7 @@
         "dev": "JEKYLL_ENV=development bundle exec jekyll serve -d dev --incremental",
         "lint": "bundle exec sass-lint '_sass/**/*.scss' -v -q -i '_sass/vendor/**/*.scss'",
         "clean": "bundle exec jekyll clean && bundle exec jekyll clean -d dev",
-        "dist": "npm run lint && bundle exec jekyll clean -d docs && JEKYLL_ENV=production bundle exec jekyll build -d docs --incremental && versiony minor",
+        "dist": "npm run lint && bundle exec jekyll clean -d docs && JEKYLL_ENV=production bundle exec jekyll build -d docs --incremental --verbose && versiony minor",
         "deploy": "npm run clean && JEKYLL_ENV=production bundle exec jekyll build && git push github master"
     },
     "dependencies": {
