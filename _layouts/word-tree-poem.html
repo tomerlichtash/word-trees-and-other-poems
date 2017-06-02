@@ -9,30 +9,30 @@ format: word-tree-poem
         {% include _page_nav_prev.html %}
         <div class="page word-tree-poem">
           <div class="page-content">
-            <article itemscope itemtype="http://schema.org/Article">
-              <header>
-                <div itemprop="name">
-                  <!-- {% if page.subheadline %}<p class="subheadline">{{ page.subheadline }}</p>{% endif %} -->
-                  <!-- <h1 class="page-title">{{ page.order }}. {{ page.title }}</h1> -->
-                  <div class="page-title">
-                    <span class="page-index">{{ page.order }}</span>
-                    <input placeholder="Enter a word" type="text" id="word-tree-input" name="word-tree-poem-title" value="{{ page.title }}">
-                    <!-- <button type="submit" name="word-tree-poem-title">Submit</button> -->
-                  </div>
-                  
+
+
+
+
+            <div class="poem">
+              <div class="visual">
+                <div class="page-title">
+                  <span class="page-index">{{ page.order }}</span>
+                  <input placeholder="Enter a word" type="text" id="word-tree-input" name="word-tree-poem-title" value="{{ page.title }}">
+                  <!-- <button type="submit" name="word-tree-poem-title">Submit</button> -->
                 </div>
-              </header>
-              <div itemprop="articleSection">
-                <div id="{{page.wordtreeid}}" style="width: 100%; margin: 0 auto; height: 550px;"></div>
-                {{ content }}
+
+                <div id="{{page.wordtreeid}}" class="word-tree" data-style="width: 100%; margin: 0 auto; height: 550px;"></div>
               </div>
-              <!-- <div class="page-order">
-                <i>{{ page.order }}</i>
-              </div> -->
-            </article>
-            <!--<div class="fold">-->
-              <!---->
-            <!--</div>-->
+
+              <div class="text">
+                <div class="inner">
+                  <div class="gutters">
+                    {{ content }}
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
         {% include _page_nav_next.html %}
@@ -40,3 +40,9 @@ format: word-tree-poem
     </div>
   </div>
 </div>
+
+<!--<article class="item" itemscope itemtype="http://schema.org/Article">-->
+  <!--<div itemprop="articleSection">-->
+    <!--<div id="{{page.wordtreeid}}" class="word-tree" data-style="width: 100%; margin: 0 auto; height: 550px;"></div>-->
+  <!--</div>-->
+<!--</article>-->
