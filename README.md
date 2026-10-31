@@ -5,10 +5,13 @@ This project is a poetry book for visual poems made with Google Charts, but it's
 
 ---
 ### Install
+Needs Ruby 3+ (e.g. `brew install ruby`) and Node.
+
 ```
 $ npm install
 $ bundle install
-$ npm start
+$ npm start          # dev server with livereload
+$ npm run build      # production build into docs/
 ```
 
 ---
@@ -23,7 +26,6 @@ $ npm start
 * Susy
 * Breakpoint
 * Jekyll
-* Versiony (```npm i -g versiony```)
 
 ---
 ### Icons
