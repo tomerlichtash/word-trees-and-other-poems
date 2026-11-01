@@ -1,9 +1,1 @@
-.idea
-.sass-cache
 .DS_Store
-node_modules/
-npm-debug.log
-dev/
-.jekyll-metadata
-vendor/
-.bundle/
