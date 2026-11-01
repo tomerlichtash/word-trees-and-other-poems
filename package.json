@@ -1,27 +1,10 @@
 {
-    "name": "word-trees-and-other-poems",
-    "description": "a short free visual poetry publication made with Google Charts",
-    "version": "0.17.0",
-    "author": "Tomer Lichtash",
-    "bugs": {
-        "url": "https://github.com/tomerlichtash/word-trees-and-other-poems/issues"
-    },
-    "devDependencies": {
-        "breakpoint-sass": "^2.7.1",
-        "susy": "^2.2.12"
-    },
-    "homepage": "https://github.com/tomerlichtash/word-trees-and-other-poems#readme",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/tomerlichtash/word-trees-and-other-poems.git"
-    },
-    "scripts": {
-        "start": "bundle exec jekyll serve --livereload -d dev",
-        "build": "JEKYLL_ENV=production bundle exec jekyll build -d docs",
-        "clean": "bundle exec jekyll clean -d docs && bundle exec jekyll clean -d dev"
-    },
-    "dependencies": {
-        "normalize.css": "^7.0.0"
-    }
+  "name": "word-trees-and-other-poems",
+  "private": true,
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.50.0"
+  }
 }
