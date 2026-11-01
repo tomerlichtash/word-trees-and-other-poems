@@ -1,30 +1,25 @@
 {
-    "name": "hyper-and-non-linear-in-real-time-run-time",
+    "name": "word-trees-and-other-poems",
     "description": "a short free visual poetry publication made with Google Charts",
     "version": "0.17.0",
     "author": "Tomer Lichtash",
     "bugs": {
-        "url": "https://github.com/tomerlichtash/hyper-and-non-linear-in-real-time-run-time/issues"
+        "url": "https://github.com/tomerlichtash/word-trees-and-other-poems/issues"
     },
     "devDependencies": {
         "breakpoint-sass": "^2.7.1",
-        "susy": "^2.2.12",
-        "versiony": "^1.4.0"
+        "susy": "^2.2.12"
     },
-    "homepage": "https://github.com/tomerlichtash/hyper-and-non-linear-in-real-time-run-time#readme",
+    "homepage": "https://github.com/tomerlichtash/word-trees-and-other-poems#readme",
     "license": "MIT",
-    "main": "index.js",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/tomerlichtash/hyper-and-non-linear-in-real-time-run-time.github.io.git"
+        "url": "git+https://github.com/tomerlichtash/word-trees-and-other-poems.git"
     },
     "scripts": {
-        "start": "JEKYLL_ENV=production bundle exec jekyll serve",
-        "dev": "JEKYLL_ENV=development bundle exec jekyll serve -d dev --incremental",
-        "lint": "bundle exec sass-lint '_sass/**/*.scss' -v -q -i '_sass/vendor/**/*.scss'",
-        "clean": "bundle exec jekyll clean && bundle exec jekyll clean -d dev",
-        "dist": "npm run lint && bundle exec jekyll clean -d docs && JEKYLL_ENV=production bundle exec jekyll build -d docs --incremental --verbose && versiony minor",
-        "deploy": "npm run clean && JEKYLL_ENV=production bundle exec jekyll build && git push github master"
+        "start": "bundle exec jekyll serve --livereload -d dev",
+        "build": "JEKYLL_ENV=production bundle exec jekyll build -d docs",
+        "clean": "bundle exec jekyll clean -d docs && bundle exec jekyll clean -d dev"
     },
     "dependencies": {
         "normalize.css": "^7.0.0"
