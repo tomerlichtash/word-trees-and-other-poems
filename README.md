@@ -5,6 +5,8 @@ A free web book of nine visual poems, each drawn as an interactive [Google Chart
 
 Live: https://wordtrees.tomerlichtash.com
 
+Code is [MIT](LICENCE.md). The poems are [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
 ---
 ### Run
 
