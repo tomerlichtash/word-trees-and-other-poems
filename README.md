@@ -5,6 +5,10 @@ A free web book of nine visual poems, each drawn as an interactive [Google Chart
 
 Live: https://wordtrees.tomerlichtash.com
 
+Written and published May–June 2017 as a Jekyll site. Revived in November 2026: rebuilt as plain HTML/JS, moved to GitHub Pages, tests added. The poems are unchanged.
+
+Code is [MIT](LICENCE.md). The poems are [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
 ---
 ### Run
 
