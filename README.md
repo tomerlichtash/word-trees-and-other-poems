@@ -24,6 +24,15 @@ $ python3 -m http.server 8000
 
 Deployed by GitHub Pages from the repo root on `main`.
 
+### Test
+
+Playwright end-to-end tests, run in CI on every pull request:
+
+```
+$ npm ci && npx playwright install chromium
+$ MODE=hash npm test
+```
+
 ---
 ### Stack
 
@@ -34,19 +43,4 @@ Deployed by GitHub Pages from the repo root on `main`.
 ---
 ### Icons
 
-#### Simple Icons ([demo](https://simpleicons.org/), [repo](https://github.com/danleech/simple-icons), [license](https://github.com/danleech/simple-icons/blob/develop/LICENSE.md))
-
-* Facebook
-* Twitter
-* Instagram
-* LinkedIn
-* Github
-
-#### The Noun Project ([site](https://thenounproject.com/), [license](https://creativecommons.org/licenses/by/3.0/))
-
-* [Random](https://thenounproject.com/search/?q=random&creator=32263&i=1030511) by [mikicon](https://thenounproject.com/mikicon/)
-* [Document](https://thenounproject.com/term/document/83985/) by [Ayesha Rana](https://thenounproject.com/ayesha%20rana/)
-* [Share](https://thenounproject.com/search/?q=share&creator=1971447&i=871485) by [Aya Sofya](https://thenounproject.com/ayasofya/)
-* [Creative Commons](https://thenounproject.com/search/?q=creative%20commons&i=70967) by [Austin Condiff](https://thenounproject.com/acondiff/)
-* [Files](https://thenounproject.com/search/?q=pages&i=1014541) &amp; [Info](https://thenounproject.com/search/?q=information&i=1014238) by [Genius Icons](https://thenounproject.com/rajappar29/)
-* [Diary](https://thenounproject.com/search/?q=book&creator=1777682&i=621463) by [Karthik Srinivas](https://thenounproject.com/aathis/)
+Social icons from [Simple Icons](https://simpleicons.org/) ([license](https://github.com/simple-icons/simple-icons/blob/develop/LICENSE.md)). Navigation icons from [The Noun Project](https://thenounproject.com/) under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/): [Random](https://thenounproject.com/search/?q=random&creator=32263&i=1030511) by [mikicon](https://thenounproject.com/mikicon/), [Document](https://thenounproject.com/term/document/83985/) by [Ayesha Rana](https://thenounproject.com/ayesha%20rana/), [Share](https://thenounproject.com/search/?q=share&creator=1971447&i=871485) by [Aya Sofya](https://thenounproject.com/ayasofya/), [Creative Commons](https://thenounproject.com/search/?q=creative%20commons&i=70967) by [Austin Condiff](https://thenounproject.com/acondiff/), [Files](https://thenounproject.com/search/?q=pages&i=1014541) and [Info](https://thenounproject.com/search/?q=information&i=1014238) by [Genius Icons](https://thenounproject.com/rajappar29/), [Diary](https://thenounproject.com/search/?q=book&creator=1777682&i=621463) by [Karthik Srinivas](https://thenounproject.com/aathis/).
