@@ -24,8 +24,8 @@ socialmedia:
 source: .
 destination: docs
 
-url: 'https://tomerlichtash.github.io'
-baseurl: '/word-trees-and-other-poems'
+url: 'https://wordtrees.tomerlichtash.com'
+baseurl: ''
 
 permalink: /:title/
 
