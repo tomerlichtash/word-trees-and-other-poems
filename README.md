@@ -1,31 +1,35 @@
 # Word Trees and Other Poems
 ## Experiments in Visual Poetry, Web Publication and Text Visualisation
 
-This project is a poetry book for visual poems made with Google Charts, but it's also a static book boilerplate for short publications online. You're welcome free to fork it, use it and contribute. This project is still under development.
+A free web book of nine visual poems, each drawn as an interactive [Google Charts word tree](https://developers.google.com/chart/interactive/docs/gallery/wordtree). Type any word from a poem into the box above its tree to re-root the tree on that word.
+
+Live: https://wordtrees.tomerlichtash.com
 
 ---
-### Install
-Needs Ruby 3+ (e.g. `brew install ruby`) and Node.
+### Run
+
+No build, no dependencies. Open `index.html` in a browser, or serve the folder:
 
 ```
-$ npm install
-$ bundle install
-$ npm start          # dev server with livereload
-$ npm run build      # production build into docs/
+$ python3 -m http.server 8000
 ```
+
+### Files
+
+- `index.html` — shell, nav, page templates, inline icons
+- `app.js` — hash router (`#/`, `#/toc`, `#/poem/N`, `#/end`, `#/random`) and word-tree drawing
+- `poems.js` — the poems. Add one: append `{ title, lines }` to `POEMS`
+- `assets/main.css` — compiled once from the original Sass, now hand-edited
+- `404.html` — redirects old `/poemN/`, `/toc`, `/end` URLs to hash routes
+
+Deployed by GitHub Pages from the repo root on `main`.
 
 ---
 ### Stack
 
-#### Client
-* Normalize CSS
-* Google Charts
-* Google Fonts
-
-#### Build
-* Susy
-* Breakpoint
-* Jekyll
+* Google Charts (word tree)
+* Google Fonts (Assistant, Gloria Hallelujah, Miriam Libre)
+* Normalize CSS (baked into `main.css`)
 
 ---
 ### Icons
@@ -46,4 +50,3 @@ $ npm run build      # production build into docs/
 * [Creative Commons](https://thenounproject.com/search/?q=creative%20commons&i=70967) by [Austin Condiff](https://thenounproject.com/acondiff/)
 * [Files](https://thenounproject.com/search/?q=pages&i=1014541) &amp; [Info](https://thenounproject.com/search/?q=information&i=1014238) by [Genius Icons](https://thenounproject.com/rajappar29/)
 * [Diary](https://thenounproject.com/search/?q=book&creator=1777682&i=621463) by [Karthik Srinivas](https://thenounproject.com/aathis/)
-
