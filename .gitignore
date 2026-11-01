@@ -7,3 +7,6 @@ dev/
 .jekyll-metadata
 vendor/
 .bundle/
+node_modules/
+test-results/
+playwright-report/

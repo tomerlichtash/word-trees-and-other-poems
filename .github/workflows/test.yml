@@ -1,0 +1,21 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  playwright:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      # Jekyll output lives in docs/; the plain-html site serves from the repo root with hash routes.
+      - run: |
+          if [ -f docs/index.html ]; then SITE_DIR=docs npx playwright test; else MODE=hash npx playwright test; fi
