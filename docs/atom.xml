@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="/word-trees-and-other-poems/assets/xslt/atom.xslt" ?>
-<?xml-stylesheet type="text/css" href="/word-trees-and-other-poems/assets/css/atom.css" ?>
+<?xml-stylesheet type="text/xsl" href="/assets/xslt/atom.xslt" ?>
+<?xml-stylesheet type="text/css" href="/assets/css/atom.css" ?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<id>https://tomerlichtash.github.io/word-trees-and-other-poems/</id>
+	<id>https://wordtrees.tomerlichtash.com/</id>
 	<title>Word Trees</title>
-	<updated>2026-10-31T13:13:01+02:00</updated>
+	<updated>2026-11-01T10:44:27+02:00</updated>
 
 	<subtitle>A free web book of interactive visual poetry</subtitle>
 
@@ -19,8 +19,8 @@
 		</author>
 	
 
-	<link href="https://tomerlichtash.github.io/word-trees-and-other-poems/atom.xml" rel="self" type="application/rss+xml" />
-	<link href="https://tomerlichtash.github.io/word-trees-and-other-poems/" rel="alternate" type="text/html" />
+	<link href="https://wordtrees.tomerlichtash.com/atom.xml" rel="self" type="application/rss+xml" />
+	<link href="https://wordtrees.tomerlichtash.com/" rel="alternate" type="text/html" />
 
 	<generator uri="http://jekyllrb.com" version="4.4.1">Jekyll</generator>
 
