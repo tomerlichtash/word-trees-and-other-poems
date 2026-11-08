@@ -3,7 +3,7 @@
 
 A free web book of nine visual poems, each drawn as an interactive [Google Charts word tree](https://developers.google.com/chart/interactive/docs/gallery/wordtree). Type any word from a poem into the box above its tree to re-root the tree on that word.
 
-Live: https://wordtrees.tomerlichtash.com
+Live: https://lab.tomerlichtash.com/word-trees-and-other-poems/
 
 Written and published May–June 2017 as a Jekyll site. Revived in November 2026: rebuilt as plain HTML/JS, moved to GitHub Pages, tests added. The poems are unchanged.
 
